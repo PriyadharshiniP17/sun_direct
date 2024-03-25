@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titles_layout"
+        android:layout_below="@+id/layout_container"
+    >
+
+        <TextView
+            android:id="@+id/textview_title_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_gap_4"
+            android:layout_marginLeft="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="@string/no_info_available"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.FontRegular"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:textSize="@dimen/textsize_14"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/vod_info1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_title_show"
+            android:layout_marginStart="@dimen/margin_gap_4"
+            android:ellipsize="end"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:text="@string/no_info_available"
+            android:textAppearance="@style/TextAppearance.FontLight"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_12"
+            android:visibility="visible"
+            android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/vod_info1"
+        android:layout_margin="@dimen/margin_gap_16"
+        android:background="@color/nav_menu_seperator_colors"
+        />
+
+    </RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "920956840296",
+    "project_id": "sun-direct-go",
+    "storage_bucket": "sun-direct-go.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920956840296:android:e920e0244d8d84af448edd",
+        "android_client_info": {
+          "package_name": "com.sundirect.android.preprod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920956840296-91561q3hvpb37tiqtpis6jtfvhafgg4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD92RN3BSRdDUp512uYYyYgu6IK2R-YLnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920956840296-91561q3hvpb37tiqtpis6jtfvhafgg4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

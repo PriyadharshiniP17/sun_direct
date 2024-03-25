@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>On Demand Code Activation - KOP for Java</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="js/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "On Demand Code Activation";
+    var mkdocs_page_input_path = "SF-Odca.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="js/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> KOP for Java </a> <img src="./images/IconeKOP4JWhite2.png"> </a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Concepts.html">General concept</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_java.html">Java applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_android.html">Android applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Commands.html">Commands</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="CodeShrinking.html">Code shrinking and optimization</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security features</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="SF-00-FeatureList.html">Feature list</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Renaming.html">Renaming</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Flattening.html">Flattening</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-StringMasking.html">String Masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-OpaquePredicate.html">Opaque Predicate</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CallMasking.html">Call masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckCertificate.html">Certificate Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckInstallers.html">Installers Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckManifest.html">Manifest Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckShelfLife.html">Shelf Life Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexIntegrity.html">DEX integrity Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexSignature.html">DEX signature Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckContext.html">Execution Context Checks</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="SF-Odca.html">On Demand Code Activation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general-description">General description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#security-note">Security note</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#protection-configuration">Protection Configuration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-DelayedReaction.html">Delayed Reaction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-InAppMonitoring.html">In-app Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-AnNaNaS.html">Android Nagra Native Secure Lib</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Protection-file.html">How to design the protection file</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Limitations.html">Limitations</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="compatibility.html">Compatibility</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="99.99-license.html">License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">KOP for Java</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Security features &raquo;</li>
+      <li>On Demand Code Activation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="on-demand-code-activation">On Demand Code Activation</h1>
+<h2 id="general-description">General description</h2>
+<p>ODCA (On-Demand Code Activation) is a security mechanism, that causes a code to be non-functional until some initialization has been performed. <br />
+ODCA-protected code uses a dedicated opacity source.<br />
+This dedicated opacity source is injected either by the user or by a kop4j command. 
+The contents of the array for this opacity source would either:<br />
+    - be initialized by the user (fill a table from the results of a server request, or from a computation derived from customer data...)<br />
+    - be initialized by a kop4j command.  </p>
+<h2 id="security-note">Security note</h2>
+<div class="admonition danger">
+<p class="admonition-title">Security</p>
+<p>The array for ODCA opacity source must be long enough to resist to static analysis and its entropy must be high.   </p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Security</p>
+<p>This protection must be used with flattening and opacity control. This protection has no impact if any opacity control is used to define 
+which part of the code must be protected with ODCA. (See ODCA examples).</p>
+</div>
+<h2 id="protection-configuration">Protection Configuration</h2>
+<p>ODCA is disabled by default.  </p>
+<p>Two commands are available:<br />
+- one for the odca definition   <code>-kop-odca-define</code><br />
+- one for the odca initialization (if needed, according to the use case) <code>-kop-odca-init</code>  </p>
+<p>ODCA is implemented with opaque predicates, so a <code>-kop-opacity-control</code> command must be used to protect a piece of code with ODCA.  </p>
+<p><strong>Use case 1:</strong><br />
+The user handles by himself the initialization of the odca field.  </p>
+<pre><code>-kop-odca-define,name:odca_01,field:com.package.user.fieldName,value:C45ECA43004DECB3960EFDCBA7842095  
+-kop-opacity-control,include:odca_01 class com.nagra.protect.MyClass { public int secureAdd(...); }  
+</code></pre>
+<p>In that case kop4j considers that this is the responsability of the user to correctly initialize the field "com.package.user.fieldName" if he wants to activate the code targeted by the <code>-kop-opacity-control</code> command.<br />
+The "value" is the value that the user has to put in the "com.package.user.fieldName" if he wants to activate the code targeted by the <code>-kop-opacity-control</code>.  </p>
+<p><strong>Use case 1 bis:</strong><br />
+The user wants to choose the field to initialize and its value, but he delegates the initialization of the field to ko4j.  </p>
+<pre><code>-kop-odca-define,name:odca_01,field:com.package.user.fieldName,value:C45ECA43004DECB3960EFDCBA7842095  
+-kop-odca-init,name:odca_01,value:C45ECA43004DECB3960EFDCBA7842095  class com.nagra.example.Main { static int main(...); }
+-kop-opacity-control,include:odca_01 class com.nagra.protect.MyClass { public int secureAdd(...); }  
+</code></pre>
+<p><strong>Use case 2:</strong><br />
+The odca initialization is handled by kop4j. </p>
+<pre><code> -kop-odca-define,name:odca_02,value:C45ECA43004DECB3960EFDCBA7842095  
+ -kop-odca-init,name:odca_02,value:C45ECA43004DECB3960EFDCBA7842095 class com.nagra.example.Main { static int main(...); }
+ -kop-opacity-control,include:odca_02 class com.nagra.protect.MyClass2 { public int secureSub(...); }  
+</code></pre>
+<p>Here in <code>-kop-odca-init</code> command the "value" is optional. The "value" of <code>-kop-odca-define</code> command will be used by default.
+In that case kop4j will create a field for odca, and will initialize it to "value" in class com.nagra.example.Main { static int main(...); }  </p>
+<p><strong>Use case 3:</strong><br />
+ Same as use case 2, but during the protection definition, the user can choose to use different initialization values in order to activate or deactivate the protected code.  </p>
+<pre><code> -kop-odca-define,name:odca_02,value:C45ECA43004DECB3960EFDCBA7842095  
+ -kop-odca-init,name:odca_02,value:C45ECA43004DECB3960EFDCBA7842095 class com.nagra.example.Main { static int main(...); } 
+ -kop-odca-init,name:odca_02,value:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF class com.nagra.example.OtherClass { static int method1(...); }  
+ -kop-opacity-control,include:odca_02 class com.nagra.protect.MyClass2 { public int secureSub(...); }  
+</code></pre>
+<p>In that case the code  "com.nagra.protect.MyClass2 { public int secureSub(...); }" will be fonctional after the initialisation of the field in class com.nagra.example.Main { static int main(...); }),
+and will not be functional after the execution of "class com.nagra.example.OtherClass { static int method1(...); }".<br />
+The user should make sure that the protected code "secureSub" is called after the initialization of the field in "main" and before the reset of the field in "method1".  </p>
+<p>The order of commands is important:<br />
+The <code>-kop-odca-define</code> command for a given name must be set before its associated <code>-kop-o dca-init</code> command.  </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The code that initializes the odca field must be called before the code that is protected by this odca. </p>
+</div>
+<h2 id="examples">Examples</h2>
+<p><strong>Use case 1</strong><br />
+The user handles by himself the initialization of the array.<br />
+In his code he defines and initializes the field to get the code functional.  </p>
+<pre><code>    @androidx.annotation.Keep  
+    public static byte[] odca_02 = new byte[] {(byte)0xC4, (byte)0x5E, (byte)0xCA, (byte)0x43, (byte)0x00, (byte)0x4D} .... ;  
+</code></pre>
+<p>In the kop protection rules he gives the name of the field and the value for which the code must be functional.  </p>
+<pre><code>-kop-odca-define,name:odca_02,field:com.nagra.kop.demo.ui.login.LoginResult.odca_02,value:C45ECA43004DECB3960EFDCBA7842095  
+</code></pre>
+<p>He also mentions which part of the code will be protected by this odca protection.  </p>
+<pre><code>-kop-opacity-control,include:odca_02 public class com.nagra.kop.demo.ui.login.LoginActivity {void updateUiWithUser(...);}  
+</code></pre>
+<p>In this example the method updateUiWithUser, that should be flattened for security reason, will use opaque predicates built with the value defined in <code>-kop-odca-define</code>.<br />
+If the odca value does not match between the initialization value in the code of the user and the one in the protection file, the code in updateUiWithUser method will not be functional.  </p>
+<p><strong>Use case 2</strong><br />
+The odca initialization is handled by kop4j. </p>
+<pre><code>-kop-odca-define,name:odca_03,value:C45ECA43004DECB3960EFDCBA7842095   
+-kop-odca-init,name:odca_03 public class com.nagra.kop.demo.ui.login.LoginActivity {void onCreate(...);}  
+-kop-opacity-control,include:odca_03,include:odca_02 public class com.nagra.kop.demo.ui.login.LoginActivity {void updateUiWithUser(...);}  
+</code></pre>
+<p>The user defines which value he wants to build the opaque predicates.<br />
+Then he specifies in which method the initialization of the field will be done.<br />
+And finally he defines which part of the code will be protected by this ODCA.  </p>
+              
+            </div>
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="SF-CheckContext.html" class="btn btn-neutral float-left" title="Execution Context Checks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="SF-DelayedReaction.html" class="btn btn-neutral float-right" title="Delayed Reaction">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="SF-CheckContext.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="SF-DelayedReaction.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

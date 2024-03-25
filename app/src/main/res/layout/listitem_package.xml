@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_gap_8"
+        android:layout_marginTop="@dimen/margin_gap_8">
+
+        <ImageView
+            android:id="@+id/radio_indicator"
+            android:layout_width="@dimen/margin_gap_24"
+            android:layout_height="@dimen/margin_gap_24"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_gap_8"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:background="@drawable/radio_btn_default" />
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_gap_8"
+            android:layout_toEndOf="@+id/radio_indicator"
+            android:layout_toRightOf="@+id/radio_indicator"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toStartOf="@+id/discount_layout"
+                    android:layout_toLeftOf="@+id/discount_layout">
+
+                    <com.myplex.myplex.ui.views.StrikedTextView
+                        android:id="@+id/carddetailpack_original_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:singleLine="true"
+                        android:text="1000"
+                        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                        android:textColor="@color/white_40"
+                        android:textSize="@dimen/textsize_26"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carddetailpack_offer_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_gap_8"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:singleLine="true"
+                        android:text="1000"
+                        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                        android:textColor="@color/white_100"
+                        android:textSize="@dimen/textsize_26"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carddetailpack_offer_per_month_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:paddingTop="@dimen/margin_gap_8"
+                        android:singleLine="true"
+                        android:text="/MONTH"
+                        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                        android:textColor="@color/white_40"
+                        android:textSize="@dimen/textsize_12"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/discount_layout"
+                    android:layout_width="@dimen/margin_gap_100"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_gap_8"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/carddetailpack_offer_percent_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/color_fe001b"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/margin_gap_8"
+                        android:paddingTop="@dimen/margin_gap_8"
+                        android:singleLine="true"
+                        android:text="30 DAYS FREE"
+                        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                        android:textColor="@color/white_100"
+                        android:textSize="@dimen/textsize_16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/carddetailpack_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_gap_8"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/no_info_available"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/white_100"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/carddetailpack_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_gap_8"
+                    android:layout_marginTop="@dimen/margin_gap_8"
+                    android:ellipsize="end"
+                    android:text="No Info"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/white_80"
+                    android:textSize="@dimen/textsize_12" />
+
+                <TextView
+                    android:id="@+id/carddetailpack_offer_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/carddetailpack_description"
+                    android:layout_marginBottom="@dimen/margin_gap_8"
+                    android:lineSpacingExtra="4dp"
+                    android:text="asdf"
+                    android:textAppearance="@style/TextAppearance.FontLight"
+                    android:textColor="@color/color_e60000"
+                    android:textSize="@dimen/textsize_13" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_gap_1"
+            android:layout_below="@+id/container"
+            android:layout_marginLeft="@dimen/margin_gap_8"
+            android:layout_marginRight="@dimen/margin_gap_8"
+            android:background="@color/color_dadada"
+            android:id="@+id/divider_view"/>
+
+        <ProgressBar
+            android:id="@+id/customProgress"
+            style="@style/EpgCustomProgressBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/imageview_thumbnail"
+            android:baselineAligned="false"
+            android:progress="30"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>

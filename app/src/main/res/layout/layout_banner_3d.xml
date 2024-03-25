@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/previewLayoutLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:visibility="visible">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/previewLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/black"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize9Percent" />
+
+        <!--<ImageView
+            android:id="@+id/slider_image"
+            android:layout_width="280dp"
+            android:layout_height="420dp"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/movie_thumbnail_placeholder16x9" />-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/banner_bg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_550sdp"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            android:scaleType="fitXY"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_550sdp"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            android:background="@drawable/banner_3d_gradient"
+            android:scaleType="fitXY"
+            />
+
+        <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+            android:id="@+id/pager_ottapps_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/carousal_3d_recycler_view_height" />
+
+        <viewpagerindicator.CircleIndicator
+            android:id="@+id/view_pager_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_below="@id/pager_ottapps_1"
+            />
+
+        <ProgressBar
+            android:id="@+id/videoProgress"
+            style="@style/CustomProgressBarPortraitPlayer"
+            android:progress="0"
+            android:max="10"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="3dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/offer_description_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/slider_title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="0dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxEms="100"
+            android:text="NA"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/textsize_14" />
+    </LinearLayout>
+
+</LinearLayout>

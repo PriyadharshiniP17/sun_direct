@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.myplex.myplex.utils.FontBoldTypeFace
+        android:id="@+id/search_suggestion_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="@dimen/margin_gap_14"
+        android:text="Sun Tv"
+        android:textAllCaps="false"
+        android:textSize="@dimen/textsize_12"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/white"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sp"
+        android:background="@color/search_suggestion_divider"
+        android:layout_marginTop="@dimen/_5sp"
+        android:layout_below="@id/search_suggestion_text"
+        />
+
+
+</RelativeLayout>

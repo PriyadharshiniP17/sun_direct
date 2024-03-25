@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="156dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="false"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--        android:layout_width="@dimen/margin_gap_96"
+                android:layout_height="@dimen/margin_gap_128"-->
+        <RelativeLayout
+            android:id="@+id/thumbnail_movie_layout"
+            android:layout_width="match_parent"
+            android:layout_height="208dp">
+
+            <ImageView
+                android:id="@+id/thumbnail_movie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="start"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/movie_thumbnail_placeholder" />
+
+            <ProgressBar
+                android:id="@+id/continue_watching_progress"
+                style="@style/EpgCustomProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_gap_5"
+                android:layout_alignParentBottom="true"
+                android:baselineAligned="false"
+                android:progress="30"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/thumbnail_movie_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_gap_4"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/iv_partener_logo_right"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="2dp"
+                android:scaleType="fitStart"/>
+
+            <ImageView
+                android:id="@+id/thumbnail_movie_delete_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_gap_4"
+                android:scaleType="centerCrop"
+                android:src="@drawable/player_icon_close"
+                android:visibility="gone" />
+            <!--
+                        <ImageView
+                            android:id="@+id/thumbnail_rupee_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin_gap_4"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/thumbnail_pay_icon"
+                            android:visibility="gone" />-->
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/thumbnail_provider_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_gap_4"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hungama_logo"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/thumbnail_provider_app_install"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/thumbnail_movie_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_gap_4"
+            android:scaleType="centerCrop"
+            android:src="@drawable/install_icon"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/thumbnail_rent_band"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/thumbnail_movie_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|bottom"
+            android:src="@drawable/rent_band"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/textview_movies_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thumbnail_movie_layout"
+            android:layout_marginLeft="@dimen/margin_gap_4"
+            android:layout_marginTop="@dimen/margin_gap_2"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:singleLine="false"
+            android:text="@string/no_info_available"
+            android:textColor="@color/live_tv_text_color"
+            android:textSize="@dimen/textsize_12"
+            android:visibility="visible"
+            android:background="@color/color_e6777777"/>
+
+        <RelativeLayout
+            android:id="@+id/view_rating_parent"
+            android:layout_below="@+id/textview_movies_title"
+            android:paddingTop="@dimen/margin_gap_8"
+            android:paddingBottom="@dimen/margin_gap_8"
+            android:paddingStart="@dimen/margin_gap_4"
+            android:paddingEnd="@dimen/margin_gap_4"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_e6777777">
+
+            <ImageView
+                android:id="@+id/views_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:visibility="visible"
+                android:src="@drawable/views_icon" />
+
+            <TextView
+                android:id="@+id/views_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/views_icon"
+                android:layout_marginLeft="@dimen/margin_gap_2"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="1"
+                android:singleLine="false"
+                android:text="0"
+                android:textColor="@color/live_tv_text_color"
+                android:textSize="@dimen/textsize_11"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/rating_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="1"
+                android:singleLine="false"
+                android:text="0.0"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/textsize_11"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/rating_icon"
+                android:layout_toLeftOf="@+id/rating_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_gap_2"
+                android:visibility="gone"
+                android:src="@drawable/rating" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/overlay_ripple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_bg" />
+
+
+</androidx.cardview.widget.CardView>

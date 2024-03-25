@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <CheckedTextView
+        android:id="@+id/quality_name"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_31sdp"
+        android:layout_margin="@dimen/_5sp"
+        android:gravity="center_vertical"
+        android:checkMark="@drawable/custom_drawable_checkbox"
+        android:checked="false"
+        android:text=""
+        android:paddingStart="@dimen/_7sp"
+        android:paddingEnd="@dimen/_7sp"
+        android:textAllCaps="false"
+        android:background="@drawable/language_rounded_corner"
+        android:textSize="@dimen/textsize_13"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/text_color"/>
+
+</LinearLayout>
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<com.myplex.myplex.utils.FontRegularTypeface
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/quality_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:text=""
+    android:textColor="@color/white"
+    android:textSize="@dimen/textsize_14"
+    />
+-->
+

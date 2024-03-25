@@ -1,0 +1,77 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_bkg"
+    android:layout_gravity="center"
+    android:id="@+id/adView"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/rl_media"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/movies_slider_image_height"
+
+        android:gravity="center">
+        <RelativeLayout
+            android:id="@+id/vmax_custom_media_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/movies_slider_image_height"
+            android:layout_gravity="bottom|center"
+            android:gravity="bottom|center"
+            android:clickable="true"
+            android:visibility="gone"
+            />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/movies_slider_image_height"
+            android:layout_gravity="bottom|center"
+            android:clickable="true"
+            android:gravity="bottom|center"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="visible"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_gap_12"
+            android:layout_marginStart="@dimen/margin_gap_8"
+            android:orientation="horizontal"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/vmax_sponsored"
+                android:layout_width="@dimen/margin_gap_20"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="2dp"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textAppearance="@style/TextAppearance.FontRegular"
+                android:text="AD"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="visible" />
+
+            <FrameLayout
+                android:layout_width="25dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:gravity="top|right"
+                android:orientation="vertical"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:visibility="gone">
+
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

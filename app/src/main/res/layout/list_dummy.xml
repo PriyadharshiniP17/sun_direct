@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item_carousel_news_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_gap_30"
+        android:layout_marginRight="@dimen/margin_gap_30"
+        android:layout_marginTop="@dimen/margin_gap_20"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="@dimen/margin_gap_0">
+
+
+        <ImageView
+            android:id="@+id/titleImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_144sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/movie_thumbnail_placeholder"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_144sdp"
+            android:background="@drawable/card_bottom_gradient"/>
+
+        <com.myplex.myplex.utils.FontBoldTypeFace
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/save"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/margin_gap_20"
+            android:textSize="@dimen/textsize_16"/>
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.myplex.myplex.utils.FontBoldTypeFace
+        android:id="@+id/channel_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="gone"
+        android:textSize="@dimen/_30sdp"
+        android:textColor="@color/white_80"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_18sp"
+        android:layout_marginTop="@dimen/_9sp"
+        />
+
+</RelativeLayout>

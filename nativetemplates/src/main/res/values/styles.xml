@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="gnt_PrimaryButtonStyle" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/gnt_red</item>
+        <item name="android:background">@drawable/vmax_ad_bg</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

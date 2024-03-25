@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:background="#D8357BBF"
+	android:orientation="vertical"
+	tools:ignore="xml"
+	android:visibility="visible">
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="48dp" android:orientation="horizontal">
+
+		<ImageView android:id="@+id/playerquality"
+		    android:contentDescription="@string/hello_world"
+			android:layout_width="32dp" android:layout_height="32dp"
+			android:layout_marginBottom="6dp" android:layout_marginRight="6dp"
+			android:layout_marginTop="6dp" android:layout_toLeftOf="@+id/playervolume"
+			android:src="@drawable/player_icon_quality" />
+
+		<RelativeLayout
+            android:layout_width="fill_parent" android:layout_height="48dp"
+			android:layout_toLeftOf="@+id/playerquality" android:paddingBottom="6dp"
+			android:paddingTop="6dp">
+
+			<ProgressBar android:layout_width="fill_parent" style="?android:attr/progressBarStyleHorizontal" 
+				android:layout_height="6dp" android:layout_centerVertical="true" android:indeterminate="true"
+				android:layout_toRightOf="@+id/playerstop"></ProgressBar>
+
+
+			<ImageView android:id="@+id/playpause"
+			    android:contentDescription="@string/hello_world"
+				android:layout_width="32dp" android:layout_height="32dp"
+				android:layout_alignParentLeft="true" android:layout_centerVertical="true"
+				android:layout_margin="6dp" android:visibility="gone"
+				android:src="@drawable/player_icon_pause" />
+
+			<ImageView android:id="@+id/playerstop"
+			    android:contentDescription="@string/hello_world"
+				android:layout_width="32dp" android:layout_height="32dp"
+				android:layout_marginTop="6dp" android:layout_marginBottom="6dp"
+				android:layout_marginRight="6dp" android:layout_toRightOf="@+id/playpause"
+				android:src="@drawable/player_icon_stop" />
+
+			<TextView android:id="@+id/playerexpiredtime"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/playerstop" android:text=""
+				android:textSize="7sp" />
+
+			<TextView android:id="@+id/playertotaltime"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_alignParentRight="true" android:text=""
+				android:textSize="7sp" />
+
+		</RelativeLayout>
+
+
+		<ImageView android:id="@+id/playervolume"
+		    android:contentDescription="@string/hello_world"
+			android:layout_width="32dp" android:layout_height="32dp"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true"
+			android:layout_margin="6dp" android:src="@drawable/player_icon_volume_max" />
+	</RelativeLayout>
+</LinearLayout>

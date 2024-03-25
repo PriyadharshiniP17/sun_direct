@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cast_dialog_title">Sun Direct Chromecast</string>
+    <string name="msg_login_with_email">Please login to play</string>
+    <string name="myStuff">My Stuff</string>
+    <string name="favorites">Favorites</string>
+    <string name="share">Share</string>
+    <string name="sign_up">Signup</string>
+    <style name="CustomRatingBarDetailWatchNow" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_watch</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+    </style>
+
+    <string name="share_message">Hey you must check this out #CONTENT_NAME</string>
+    <string name="share_news_message">Hey you must check this out #CONTENT_NAME.\n #DESCRIPTION</string>
+    <string name="feedbackheading">Rate SunDirect</string>
+    <string name="feedbackmessagehint">Feedback on SunDirect</string>
+    <string name="server_client_id">112253322457-rv3ddqnrvjheldqql4eg6vvg9ddmdqai.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">470605140335467</string>
+    <string name="fb_login_protocol_scheme">fb2801436220114911</string>
+
+
+    <string name="appcode_for_deeplink">sundirect.page.link</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="permission_warning_settings">These permissions are mandatory to open the application\n- Location\nPlease allow them from settings</string>
+
+    <string name="auto">Auto</string>
+    <string name="high_def">high</string>
+    <string name="standard_def">medium</string>
+    <string name="low_def">low</string>
+
+    <string name="selected_watch_list_text">Remove Playlist</string>
+    <string name="unselected_watch_list_text">Add to Playlist</string>
+
+
+    <string name="selected_favourite_text">Unlike</string>
+    <string name="unselected_favourite_text">Like</string>
+
+    <string name="error_popup">Oops! Can you please try after some time...</string>
+
+    <!--<string name="native_video_id">21830968352</string>
+    <string name="banner_ad_id">21830968352</string>
+    <string name="player_screen_ad_id">21830968352</string>
+    <string name="interstrial_ad_id">21830968352</string>-->
+
+    <!--<string name="interstrial_ad_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="native_video_id">ca-app-pub-3940256099942544/1044960115</string>
+    <string name="banner_ad_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="player_screen_ad_id">ca-app-pub-3940256099942544/6300978111</string>-->
+
+    <string name="money_symbol">₹</string>
+    <string name="rental_expires_on">Rental Expires on: </string>
+    <string name="now_available_to_rent">Now Available to Rent</string>
+
+</resources>

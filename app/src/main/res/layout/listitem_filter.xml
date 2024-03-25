@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rowItem"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/actionBarSize">
+
+    <ImageView
+        android:id="@+id/ivFilterItem"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_gap_16"
+        android:src="@drawable/filter_tick_selection_default_icon" />
+
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:id="@+id/tvFilterItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/margin_gap_16"
+        android:layout_toRightOf="@+id/ivFilterItem"
+        android:text="Kids..."
+        android:textAllCaps="false"
+        android:textSize="@dimen/textsize_13"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/filter_item_text_color"
+         />
+</RelativeLayout>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Android Nagra Native Secure Lib - KOP for Java</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="js/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Android Nagra Native Secure Lib";
+    var mkdocs_page_input_path = "SF-AnNaNaS.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="js/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> KOP for Java </a> <img src="./images/IconeKOP4JWhite2.png"> </a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Concepts.html">General concept</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_java.html">Java applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_android.html">Android applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Commands.html">Commands</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="CodeShrinking.html">Code shrinking and optimization</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security features</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="SF-00-FeatureList.html">Feature list</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Renaming.html">Renaming</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Flattening.html">Flattening</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-StringMasking.html">String Masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-OpaquePredicate.html">Opaque Predicate</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CallMasking.html">Call masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckCertificate.html">Certificate Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckInstallers.html">Installers Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckManifest.html">Manifest Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckShelfLife.html">Shelf Life Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexIntegrity.html">DEX integrity Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexSignature.html">DEX signature Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckContext.html">Execution Context Checks</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Odca.html">On Demand Code Activation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-DelayedReaction.html">Delayed Reaction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-InAppMonitoring.html">In-app Monitoring</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="SF-AnNaNaS.html">Android Nagra Native Secure Lib</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general-description">General description</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-are-the-threats">What are the threats?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#annanas-flavors">AnNaNaS flavors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#can-kop-lib-and-annanas-coexist">Can KOP lib and AnNaNaS Coexist?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#security-note">Security note</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#protection-configuration">Protection Configuration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#available-values">Available values</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Protection-file.html">How to design the protection file</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Limitations.html">Limitations</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="compatibility.html">Compatibility</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="99.99-license.html">License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">KOP for Java</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Security features &raquo;</li>
+      <li>Android Nagra Native Secure Lib</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="android-nagra-native-secure-library-annanas">Android Nagra Native Secure Library (AnNaNaS)</h1>
+<h2 id="general-description">General description</h2>
+<p>The Android application obfuscated by KOP4J, will also include native protections, especially in terms of anti-debug and root detection. <br />
+Those native protection are more secure than Java one and are present in AnNaNaS Library (Android Nagra Native Secure lib) which can be a strong complementary protection to KOP4J.</p>
+<p><img alt="image1" src="images/AnchorAnNaNaS.png" style="width:400px" /></p>
+<p>Similar features are present on KOP native. Then if the app project includes native libraries obfuscated by KOP some of those features are already present.<br />
+<strong>The AnNaNaS lib must be executed to enable the security checks.</strong></p>
+<h3 id="what-are-the-threats">What are the threats?</h3>
+<p>Here we will not consider the static analysis, basically prevented by the obfuscation (code transformation) but more on the code instrumentation threats.</p>
+<ul>
+<li><strong>Root</strong>: root right enable the possibility to modify parameter of the OS and do action at system level</li>
+<li><strong>Native Debugger</strong> : gives the possibility to add breakpoint on the native code.</li>
+<li><strong>Magisk</strong>  : is a  tool used to root silently an android device</li>
+<li><strong>Frida</strong> : is a dynamic instrumentation tool attached as a debugger process at native level.</li>
+<li><strong>Xposed</strong> : is a plugging to Magisk able to change system behavior
+ -<strong>Emulation </strong></li>
+</ul>
+<h3 id="annanas-flavors">AnNaNaS flavors</h3>
+<p>There exits different flavors of AnNaNaS libraries</p>
+<ul>
+<li><strong>Release</strong> : includes an in-app debugger mechanism which prevents the attachment of other process. 
+This a very powerful protection. As it includes a debugger it is not compliant with an anti-debugger by detection mechanism.</li>
+<li><strong>Release B </strong> : version: includes a debugger by detection, less efficient that the in-app debugger, it cannot prevent Frida debuggers</li>
+<li><strong> Integration</strong> : doesn't include any anti-debug protection. It could be used to debug the app or if this library will coexist with another native library.</li>
+</ul>
+<table border="2" >
+    <thead>
+        <tr>
+            <th align="center"></th>
+            <th align="center"> Native KOP lib </br> Release </th>
+            <th align="center"> Native KOP lib </br> Release B </th>
+            <th align="center"> AnNaNaS lib </br> Release </th>
+            <th align="center"> AnNaNaS lib </br> Release B </th>
+            <th align="center"> AnNaNaS lib </br> Integration </th>
+            <th align="center"> Java Protection </th>
+        </tr>       
+    <tbody>
+        <tr>
+            <th align="left">  Root </th>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  Yes </font>  </td>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  Yes </font>  </td>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  Yes </font>  </td>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  Yes </font>  </td>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  Yes </font>  </td>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  Weak </font>  </td>
+        </tr>
+        <tr>
+            <th align="left">  Native debugger </th>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  In-App DBG </font>  </td>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  DBG detection </font>  </td>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  In-App DBG </font>  </td>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  DBG detection </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  Weak </font>  </td>
+        </tr>
+        <tr>
+            <th align="left">  Magisk </th>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+        </tr>
+        <tr>
+            <th align="left">  Frida </th>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  In-App DBG </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  In-App DBG </font>  </td>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  detection </font>  </td>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  detection </font>  </td>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  detection </font>  </td>
+        </tr>
+        <tr>
+            <th align="left">  Xposed </th>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  detection </font>  </td>
+        </tr>
+        <tr>
+            <th align="left">  Emulation </th>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  detection </font>  </td>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  detection </font>  </td>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  detection </font>  </td>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  detection </font>  </td>
+            <td align="center" bgcolor="#d0f5d0" > <font color='green'>  detection </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+        </tr>
+    </tbody>
+</table>
+
+<p></br></p>
+<h3 id="can-kop-lib-and-annanas-coexist">Can KOP lib and AnNaNaS Coexist?</h3>
+<p>Basically KOP and AnNaNaS .so files can coexist in the same app if we take care to the flavor used.
+For sure the sum of both libraries will impact the size of the final package
+Regarding flavor compatibility the In-app debugger not compliant with any anti-debug mechanism, then can coexist only with an Integration version of the other lib.</p>
+<p><img alt="image1" src="images/AnNaNaSKopConflict.png" style="width:360px" /></p>
+<table border="2" >
+    <thead >
+        <tr>
+            <th align="center"></th>
+            <th align="center"> Release </th>
+            <th align="center"> Release B </th>
+            <th align="center"> Integration </th>
+        </tr>       
+    <tbody>
+        <tr >
+            <th align="left">  Release </th>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  Yes </font>  </td>
+        </tr>
+        <tr>
+            <th align="left">  Release B  </th>
+            <td align="center" bgcolor="#e6aeb9" > <font color="#9c0624">  No </font>  </td>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  Yes </font>  </td>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  Yes </font>  </td>
+        </tr>
+        <tr>
+            <th align="left">  Integration </th>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  Yes </font>  </td>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  Yes </font>  </td>
+            <td align="center" bgcolor="#5db35d" > <font color='white'>  Yes </font>  </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="security-note">Security note</h2>
+<div class="admonition danger">
+<p class="admonition-title">Security</p>
+<p>Native protection is stronger than protection developed in Java.   <br />
+But both could be considered   </p>
+<p>The integration of the library AnNaNaS is not sufficient to ensure the protection.  <br />
+<strong>The library must be executed.</strong> <br />
+Its AnNANaS execution is done during the environment checks when a hash is computed by the AnNaNaS lib.</p>
+</div>
+<h2 id="protection-configuration">Protection Configuration</h2>
+<p><strong>The AnNaNaS Lib is used by default and executed at each environment check.</strong> <br />
+Then the library must be present in the project, as described chapter in <a href="run_for_android.html#annanas-library"><strong>Android project configuration</strong></a></p>
+<p>This feature can be disabled by defining the "hash" strategy, the way to compute hash of the environment checks with a AnNaNaS native implementation or with a java implementation.</p>
+<p>The <code>-kop-hash-strategy</code> controls application of the hash strategy.</p>
+<p>Native hash implementation, based on AnNaNaS delivery, is choosen by default.<br />
+You need to import this delivery to your project (see <a href="run_for_android.html">run for android readme</a> file).</p>
+<h3 id="available-values">Available values</h3>
+<p>Available option values are:<br />
+ - <code>native</code>: Native hash implementation, based on AnNaNaS delivery.<br />
+ - <code>java</code> : Java hash implementation : does not need to link any library with your project. <strong>Must be used on plain Java projects (not Android).</strong></p>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>
+<p>Use native implementation :</p>
+<p><code>-kop-hash-strategy native</code></p>
+</li>
+<li>
+<p>Use java implementation :</p>
+<p><code>-kop-hash-strategy java</code></p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="SF-InAppMonitoring.html" class="btn btn-neutral float-left" title="In-app Monitoring"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="Protection-file.html" class="btn btn-neutral float-right" title="How to design the protection file">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="SF-InAppMonitoring.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="Protection-file.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

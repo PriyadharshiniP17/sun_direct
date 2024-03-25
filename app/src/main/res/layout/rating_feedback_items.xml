@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp">
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/category"
+        android:background="@drawable/rounded_btn"
+        android:textSize="@dimen/textsize_12"
+        android:textColor="@color/gray_border"
+        android:minHeight="40dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_gap_20"
+        android:paddingRight="@dimen/margin_gap_20"
+        android:text="Download"/>
+
+</LinearLayout>

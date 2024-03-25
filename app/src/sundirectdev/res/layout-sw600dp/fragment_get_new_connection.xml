@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+    android:background="@drawable/black">
+
+    <LinearLayout
+        android:id="@+id/new_user_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30sp"
+        android:foregroundGravity="center_horizontal"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_navigation"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/arrow_back" />
+
+        <com.myplex.myplex.utils.FontRegularTypeface
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="New User"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_26" />
+    </LinearLayout>
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/new_user_suggestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/new_user_navigation"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_4sdp"
+                android:maxLines="2"
+                android:text="@string/get_new_connection_message"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_14" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/new_user_suggestion"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_30sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:id="@+id/name_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="Name"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <EditText
+                        android:id="@+id/name_edittext"
+                        style="@style/NewUserEditTextChanges"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_below="@id/name_hint"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/get_new_connection_buttons_background"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/_20sp"
+                        android:text="" />
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:id="@+id/name_valid_alert"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@id/name_edittext"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/validate_background_corner"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:text="Please enter valid name"
+                        android:textColor="@color/gray_border"
+                        android:textSize="@dimen/textsize_12"
+                        android:visibility="gone" />
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:id="@+id/mobile_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/name_valid_alert"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_15sp"
+                        android:text="Mobile Number"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <EditText
+                        android:id="@+id/mobile_no_edittext"
+                        style="@style/NewUserEditTextChanges"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_below="@id/mobile_hint"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/get_new_connection_buttons_background"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingStart="@dimen/_20sp"
+                        android:text="" />
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:id="@+id/mobile_valid_alert"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@id/mobile_no_edittext"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/validate_background_corner"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:text="Please enter valid mobile number"
+                        android:textColor="@color/gray_border"
+                        android:textSize="@dimen/textsize_12"
+                        android:visibility="gone" />
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:id="@+id/email_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mobile_valid_alert"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_15sp"
+                        android:text="Email ID"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <EditText
+                        android:id="@+id/email_id_edittext"
+                        style="@style/NewUserEditTextChanges"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_below="@id/email_hint"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/get_new_connection_buttons_background"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/_20sp"
+                        android:text="" />
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:id="@+id/email_valid_alert"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@id/email_id_edittext"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/validate_background_corner"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:text="Please enter valid email address "
+                        android:textColor="@color/gray_border"
+                        android:textSize="@dimen/textsize_12"
+                        android:visibility="gone" />
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:id="@+id/pin_code_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/email_valid_alert"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_18sp"
+                        android:text="Pin Code"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_13" />
+
+                    <EditText
+                        android:id="@+id/pin_code_edittext"
+                        style="@style/NewUserEditTextChanges"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_below="@id/pin_code_hint"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/get_new_connection_buttons_background"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:paddingStart="@dimen/_20sp"
+                        android:text="" />
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:id="@+id/pincode_valid_alert"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@id/pin_code_edittext"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/validate_background_corner"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:text="Please Enter valid Pin Code"
+                        android:textColor="@color/gray_border"
+                        android:textSize="@dimen/textsize_12"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/continue_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@id/pincode_valid_alert"
+                        android:layout_marginTop="@dimen/_30sp"
+                        android:layout_marginBottom="@dimen/_20sp"
+                        android:background="@drawable/rounded_corner_button_orange"
+                        android:text="CONTINUE"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.FontBold"
+                        android:textSize="@dimen/textsize_16" />
+
+                </RelativeLayout>
+            </ScrollView>
+</RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

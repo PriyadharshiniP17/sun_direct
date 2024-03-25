@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:attrs="http://schemas.android.com/tools"
+    app:cardBackgroundColor="@color/transparent"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/placeholderLayout"
+        >
+
+        <ImageView
+            android:id="@+id/previewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/pager_ottapps_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.myplex.myplex.ui.views.AutoPlayRecyclerView
+                android:id="@+id/playerRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <com.myplex.myplex.ui.views.circleindicator.RecyclerViewCircleIndicator
+                android:id="@+id/recyclerIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                app:ci_width="@dimen/margin_gap_18"
+                app:ci_height="5dp"
+                app:ci_margin="@dimen/margin_gap_2"
+                android:layout_marginTop="@dimen/margin_gap_32"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_gap_8"
+                android:visibility="gone"
+                android:padding="@dimen/margin_gap_3" />
+
+            <com.myplex.myplex.ui.views.circleindicator.DotsIndicator
+                android:id="@+id/dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:dotsColor="@color/tab_unselect_color"
+                app:selectedDotColor="@color/tab_text_color"
+                app:dotsStrokeColor="@color/tab_unselect_color"
+                app:dotsCornerRadius="8dp"
+                app:dotsSize="8dp"
+                app:dotsSpacing="2dp"
+                app:dotsWidthFactor="2.5"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_gap_12"
+                />
+
+            <com.rd.PageIndicatorView
+                android:id="@+id/pageIndicatorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:piv_dynamicCount="true"
+                app:piv_interactiveAnimation="false"
+                app:piv_selectedColor="@color/tab_text_color"
+                app:piv_unselectedColor="@color/tab_unselect_color"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                app:piv_strokeWidth="4dp"
+                app:piv_padding="6dp"
+                app:piv_radius="4dp"
+                />
+
+            <ProgressBar
+                android:id="@+id/videoProgress"
+                style="@style/CustomProgressBarPortraitPlayer"
+                android:progress="0"
+                android:max="10"
+                android:visibility="invisible"
+                android:layout_marginTop="@dimen/margin_gap_8"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="3dp" />
+
+            <RelativeLayout
+                android:id="@+id/grdient_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/left_gradient_view"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/left_gradient"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/right_gradient_view"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/right_gradient"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/viewpager_left_arrow"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/left_arrow"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/viewpager_right_arrow"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/right_arrow"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/count_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_gap_12"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rounded_corner_counting_text_bg"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="@dimen/margin_gap_6"
+            android:paddingEnd="@dimen/margin_gap_6"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxEms="100"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.FontRegular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/offer_description_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_item_bkg"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/slider_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxEms="100"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.FontRegular"
+                android:textColor="@color/white_100"
+                android:textSize="@dimen/textsize_14" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

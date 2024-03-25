@@ -1,0 +1,440 @@
+# This is a configuration file for ProGuard.
+# http://proguard.sourceforge.net/index.html#manual/usage.html
+
+# Optimizations: If you don't want to optimize, use the
+# proguard-android.txt configuration file instead of this one, which
+# turns off the optimization flags.  Adding optimization introduces
+# certain risks, since for example not all optimizations performed by
+# ProGuard works on all versions of Dalvik.  The following flags turn
+# off various optimizations known to have issues, but the list may not
+# be complete or up to date. (The "arithmetic" optimization can be
+# used if you are only targeting Android 2.0 or later.)  Make sure you
+# test thoroughly if you go this route.
+#-optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*
+-optimizationpasses 3
+-allowaccessmodification
+-dontpreverify
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+
+
+# The remainder of this file is identical to the non-optimized version
+# of the Proguard configuration file (except that the other file has
+# flags to turn off optimization).
+
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-verbose
+
+-keep public class com.google.vending.licensing.ILicensingService
+-keep public class com.android.vending.licensing.ILicensingService
+
+# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+
+
+# keep setters in Views so that animations can still work.
+# see http://proguard.sourceforge.net/manual/examples.html#beans
+-keepclassmembers public class * extends android.view.View {
+   void set*(***);
+   *** get*();
+}
+
+# We want to keep methods in Activity that could be used in the XML attribute onClick
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+
+# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+# The support library contains references to newer platform versions.
+# Don't warn about those in case this app is linking against an older
+# platform version.  We know about them, and they are safe.
+
+-printmapping mapping.txt 
+
+#-keepattributes *Annotation*,EnclosingMethod,Signature
+
+#-keepattributes SourceFile,LineNumberTable
+
+-dontwarn android.support.**
+
+
+-keep class com.flurry.** { *; }
+-dontwarn com.flurry.**
+
+-keep class com.crashlytics.android.** { *; }
+-keep class com.fasterxml.jackson.annotation.** { *; }
+-keep class com.fasterxml.jackson.core.** { *; }
+-keep class com.fasterxml.jackson.databind.** { *; }
+-keep class com.dd.** { *; }
+-keep class org.apache.** { *; }
+-keep class com.nineoldandroids.** { *; }
+-keep class twitter4j.** { *; }
+-keep class android.support.** { *; }
+-keep class com.inmobi.** { *; }
+-keep class info.hoang8f.** { *; }
+-keep class info.hoang8f.widget.FButton
+-keep public class com.android.vending.licensing.ILicensingService
+-dontwarn twitter4j.**
+
+-keep class com.myplex.model.** { *; }
+-keep class com.myplex.myplex.events.** {*;}
+-keep class com.android.volley.** { *; }
+-keep class com.android.volley.toolbox.** { *; }
+-keep class com.facebook.** { *; }
+-keep class javax.** { *; }
+-keep class com.google.** { *; }
+-keep class okio.** { *; }
+-keep class com.squareup.** { *; }
+-keep class retrofit.** {*;}
+-keep class uk.co.chrisjenx.calligraphy.** {*;}
+-keep class viewpagerindicator.** {*;}
+-keep class pageslidingstrip.** {*;}
+-keep class io.fabric.sdk.android.** {*;}
+-keep class com.catchmedia.cmsdk.**{*;}
+-keep class com.hungama.**{*;}
+-keep class com.intertrust.**{*;}
+-keep class com.myplex.myplex.utils.CastOptionsProvider
+-keep class com.google.android.gms.location.**{*;}
+-keep class com.comscore.** { *; }
+-keepattributes InnerClasses
+
+
+-dontskipnonpubliclibraryclassmembers
+-dontwarn com.flurry.**
+
+-dontwarn com.fasterxml.**
+-dontwarn org.apache.**
+-dontwarn org.apache.**
+-dontwarn org.slf4j.**
+-dontwarn org.json.*
+-dontwarn org.simpleframework.**
+-dontwarn twitter4j.**
+-dontwarn  javax.**
+-dontwarn  java.**
+-dontwarn  com.google.**
+-dontwarn sun.**
+-dontwarn com.sun.**
+-dontwarn okio.**
+-dontwarn com.squareup.**
+-dontwarn org.codehaus.**
+-dontwarn com.catchmedia.**
+-dontwarn com.google.android.libraries.cast.companionlibrary.**
+-dontwarn com.comscore.**
+
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+    public static *** v(...);
+    public static *** i(...);
+    public static *** e(...);
+}
+
+# event bus
+-keepclassmembers class ** {
+    public void onEvent*(***);
+}
+
+# Only required if you use AsyncExecutor
+-keepclassmembers class * extends de.greenrobot.event.util.ThrowableFailureEvent {
+    <init>(java.lang.Throwable);
+}
+
+# retrofit
+
+-dontwarn retrofit2.**
+-keep class retrofit2.** { *; }
+#-keep class com.myplex.api.** { *; }
+-keepclassmembernames interface * {
+    @retrofit.http.* <methods>;
+}
+-keepattributes *Annotation*,Signature,Exceptions,EnclosingMethod,SourceFile,LineNumberTable
+
+# For CleverTap SDK
+-dontwarn com.clevertap.android.sdk.**
+
+#Facebook:
+-dontwarn com.facebook.ads.internal.**
+-keep class com.facebook.ads.**
+-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+  public *;
+}
+# For Google Play Services
+-keep public class com.google.android.gms.ads.**{
+   public *;
+}
+
+# For old ads classes
+-keep public class com.google.ads.**{
+   public *;
+}
+
+-keep class * extends java.util.ListResourceBundle {
+   protected Object[][] getContents();
+}
+
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+   public static final *** NULL;
+}
+
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+   @com.google.android.gms.common.annotation.KeepName *;
+}
+
+-keepnames class * implements android.os.Parcelable {
+   public static final ** CREATOR;
+}
+
+#inmobi
+-keepattributes SourceFile,LineNumberTable
+-keep class com.inmobi.** { *; }
+-keep public class com.google.android.gms.**
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient{
+     public *;
+}
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient$Info{
+     public *;
+}
+
+-dontwarn com.inmobi.**
+-dontwarn com.squareup.picasso.**
+-dontwarn com.google.android.gms.**
+
+# skip the Picasso library classes
+-keep class com.squareup.picasso.** {*;}
+-dontwarn com.squareup.picasso.**
+-dontwarn com.squareup.okhttp.**
+# skip Moat classes
+-keep class com.moat.** {*;}
+-dontwarn com.moat.**
+
+#Base Sdk
+
+-keepattributes *Annotation*,JavascriptInterface,Exceptions,InnerClasses,Signature,*Annotation*,EnclosingMethod,*Annotation*,Signature
+
+#If Google IMA partner not integrated
+-dontwarn com.google.ads.**
+#If Rewarded Interstitial Ad Format not integrated
+-dontwarn com.google.firebase.**
+#If AdMob not integrated
+-dontwarn com.google.android.gms.**
+
+-keep public class com.vmax.android.ads.api.VmaxAdView {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.api.VmaxSdk {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.api.VmaxAdSettings {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.api.VmaxAdSize {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.api.ViewMandatoryListener {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.api.BitmapSampler {
+    public <fields>;
+    public <methods>;
+}
+-keep public class com.vmax.android.ads.api.AdContainer {
+    public <fields>;
+    public <methods>;
+}
+-keep public class com.vmax.android.ads.api.ImageLoader {
+    public <fields>;
+    public <methods>;
+}
+-keep public class com.vmax.android.ads.api.NativeImageDownload {
+    public <fields>;
+    public <methods>;
+}
+-keep public class com.vmax.android.ads.api.NativeImageDownloadListener {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.api.VmaxAdPartner {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.api.VmaxAdReward {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.common.VmaxAdListener {
+     <fields>;
+     <methods>;
+}
+
+-keep public class com.vmax.android.ads.common.User {
+     public <fields>;
+     public <methods>;
+}
+
+-keep public class com.vmax.android.ads.exception.** {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.exception.VmaxAdError {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.mediation.** {
+    public <fields>;
+    public <methods>;
+}
+
+-keep class com.vmax.android.ads.mediation.partners.** {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.mediation.partners.VmaxAdPlayer {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.nativeads.** {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.nativeHelper.** {
+     public <fields>;
+     public <methods>;
+}
+
+-keep public class com.vmax.android.ads.nativeview.** {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.util.** {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.util.CountryAttributes {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.util.CountryNames {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.util.Utility {
+    <fields>;
+    <methods>;
+}
+
+-keep public class com.vmax.android.ads.vast.** {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.webview.** {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public enum com.vmax.android.ads.api.VmaxAdView$AdState {
+  <fields>;
+  public static **[] values();
+  public static ** valueOf(java.lang.String);
+}
+
+-keep public class com.google.ads.** {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.google.android.gms.** {
+    <fields>;
+    <methods>;
+}
+
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+-keep,allowshrinking @com.google.android.gms.common.annotation.KeepName class *
+
+-dontwarn com.apalya.myplex.eventlogger.**
+-keep class com.apalya.myplex.eventlogger.** { *; }
+
+
+-keep public class com.vmax.android.ads.common.AdCustomizer {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.vmax.android.ads.common.AdCustomizer$Builder {
+   <fields>;
+   public <methods>;
+   public static **[] values();
+   public static ** valueOf(java.lang.String);
+}
+
+-keep public enum  com.vmax.android.ads.api.VmaxAdView$AdspotSize {
+   <fields>;
+   public static **[] values();
+   public static ** valueOf(java.lang.String);
+}
+
+-keep public class com.vmax.android.ads.common.AdsSPCListener {
+    <fields>;
+    <methods>;
+}
+
+-keep public enum  com.vmax.android.ads.api.ViewabilityTracker$VOLUME_EVENTS {
+   <fields>;
+   public static **[] values();
+   public static ** valueOf(java.lang.String);
+}
+
+-keep class android.support.v7.app.MediaRouteActionProvider{
+  *;
+}
+-keep class androidx.mediarouter.app.MediaRouteActionProvider{
+*;
+}
+
+
+# RenderScript
+-keepclasseswithmembernames class * {
+native <methods>;
+}
+-keep class androidx.renderscript.** { *; }

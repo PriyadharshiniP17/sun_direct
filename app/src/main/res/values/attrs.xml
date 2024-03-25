@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2012 Jake Wharton
+     Copyright (C) 2011 Patrik Åkerfeldt
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsDividerWidth" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsPaddingMiddle" format="boolean" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsTabTextSize" format="dimension" />
+        <attr name="pstsTabTextColor" format="reference" />
+        <attr name="pstsTabTextStyle" format="reference">
+            <flag name="normal" value="0x0" />
+            <flag name="bold" value="0x1" />
+            <flag name="italic" value="0x2" />
+        </attr>
+        <attr name="pstsTabTextAllCaps" format="boolean" />
+        <attr name="pstsTabTextAlpha" format="integer" />
+        <attr name="pstsTabTextFontFamily" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewPagerIndicator">
+
+        <!-- Style of the tab indicator's tabs. -->
+        <attr name="vpiTabPageIndicatorStyle" format="reference" />
+        <!-- Style of the title indicator. -->
+        <attr name="vpiTitlePageIndicatorStyle" format="reference" />
+        <!-- Style of the icon indicator's views. -->
+        <attr name="vpiIconPageIndicatorStyle" format="reference" />
+        <attr name="vpiCirclePageIndicatorStyle" format="reference" />
+        <attr name="vpiLinePageIndicatorStyle" format="reference" />
+        <attr name="vpiUnderlinePageIndicatorStyle" format="reference" />
+    </declare-styleable>
+
+    <attr name="selectedColor" format="color" />
+    <declare-styleable name="TitlePageIndicator">
+        <!-- Screen edge padding. -->
+        <attr name="clipPadding" format="dimension" />
+        <!-- Color of the footer line and indicator. -->
+        <attr name="footerColor" format="color" />
+        <!-- Height of the footer line. -->
+        <attr name="footerLineHeight" format="dimension" />
+        <!-- Style of the indicator. Default is triangle. -->
+        <attr name="footerIndicatorStyle">
+            <enum name="none" value="0" />
+            <enum name="triangle" value="1" />
+            <enum name="underline" value="2" />
+        </attr>
+        <!-- Height of the indicator above the footer line. -->
+        <attr name="footerIndicatorHeight" format="dimension" />
+        <!-- Left and right padding of the underline indicator. -->
+        <attr name="footerIndicatorUnderlinePadding" format="dimension" />
+        <!-- Padding between the bottom of the title and the footer. -->
+        <attr name="footerPadding" format="dimension" />
+        <!-- Position of the line. -->
+        <attr name="linePosition">
+            <enum name="bottom" value="0" />
+            <enum name="top" value="1" />
+        </attr>
+        <!-- Color of the selected title. -->
+        <attr name="selectedColor" />
+        <!-- Whether or not the selected item is displayed as bold. -->
+        <attr name="selectedBold" format="boolean" />
+        <!-- Color of regular titles. -->
+        <attr name="android:textColor" />
+        <!-- Size of title text. -->
+        <attr name="android:textSize" />
+        <!-- Padding between titles when bumping into each other. -->
+        <attr name="titlePadding" format="dimension" />
+        <!-- Padding between titles and the top of the View. -->
+        <attr name="topPadding" format="dimension" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+    <declare-styleable name="ListViewMaxHeight">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+   <!-- <declare-styleable name="SolidAnimIndicator">
+        <attr name="ci_width" format="dimension" />
+        <attr name="ci_height" format="dimension" />
+        <attr name="ci_margin" format="dimension" />
+        <attr name="ci_animator" format="reference" />
+        <attr name="ci_drawable" format="reference" />
+    </declare-styleable>-->
+
+    <declare-styleable name="CirclePageIndicator">
+        <attr name="centered" format="boolean" />
+        <attr name="fillColor" format="color" />
+        <attr name="pageColor" format="color" />
+        <attr name="android:orientation" />
+        <attr name="radius" format="dimension" />
+        <attr name="snap" format="boolean" />
+        <attr name="strokeColor" format="color" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="android:background" />
+    </declare-styleable>
+    <declare-styleable name="FixedAspectRatioRelativeLayout">
+        <attr name="aspectRatio" format="fraction" />
+    </declare-styleable>
+    <declare-styleable name="PosterRecyclerView">
+        <attr name="start_offset" format="dimension" />
+        <attr name="start_background_offset" format="dimension" />
+        <attr name="end_background_alpha" format="float" />
+        <attr name="background_step" format="integer" />
+        <attr name="end_background_offset" format="dimension" />
+        <attr name="image" format="integer" />
+        <attr name="image_scale" format="float" />
+        <attr name="background_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="RatingBar">
+        <attr name="rb_max_count" format="integer"/>
+        <attr name="rb_count" format="integer"/>
+        <attr name="rb_fill" format="reference"/>
+        <attr name="rb_empty" format="reference"/>
+        <attr name="rb_space" format="dimension"/>
+        <attr name="rb_click_rating" format="boolean"/>
+        <attr name="rb_touch_rating" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="Ratingbar">
+        <attr name="numStarts" format="integer" />
+        <attr name="rating" format="integer" />
+        <attr name="starSize" format="dimension" />
+        <attr name="innerMargin" format="dimension" />
+        <attr name="selected" format="reference" />
+        <attr name="unselected" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="BaseCircleIndicator">
+        <attr name="ci_width" format="dimension"/>
+        <attr name="ci_height" format="dimension"/>
+        <attr name="ci_margin" format="dimension"/>
+        <attr name="ci_animator" format="reference"/>
+        <attr name="ci_animator_reverse" format="reference"/>
+        <attr name="ci_drawable" format="reference"/>
+        <attr name="ci_drawable_unselected" format="reference"/>
+
+        <attr name="ci_orientation" format="enum">
+            <!-- Defines an horizontal widget. -->
+            <enum name="horizontal" value="0"/>
+            <!-- Defines a vertical widget. -->
+            <enum name="vertical" value="1"/>
+        </attr>
+
+        <attr name="ci_gravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30"/>
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50"/>
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03"/>
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05"/>
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10"/>
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70"/>
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01"/>
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07"/>
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11"/>
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77"/>
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+            the child clipped to its container's bounds.
+            The clip will be based on the vertical gravity: a top gravity will clip the bottom
+            edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80"/>
+            <!-- Additional option that can be set to have the left and/or right edges of
+            the child clipped to its container's bounds.
+            The clip will be based on the horizontal gravity: a left gravity will clip the right
+            edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08"/>
+            <!-- Push object to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003"/>
+            <!-- Push object to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005"/>
+        </attr>
+
+    </declare-styleable>
+    <declare-styleable name="PreviewSeekBar">
+        <attr name="previewFrameLayout" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ReadMoreTextView">
+        <attr name="trimExpandedText" format="string" />
+        <attr name="trimCollapsedText" format="string" />
+        <attr name="trimLength" format="integer" />
+        <attr name="showTrimExpandedText" format="boolean" />
+        <attr name="colorClickableText" format="color" />
+        <attr name="trimLines" format="integer" />
+        <attr name="trimMode">
+            <enum name="trimModeLine" value="0"/>
+            <enum name="trimModeLength" value="1"/>
+        </attr>
+        <declare-styleable name="AmazonEmberTextView">
+            <attr name="typefaceAsset" format="string"/>
+
+    </declare-styleable>
+    </declare-styleable>
+
+    <declare-styleable name="SuperEllipseImageView">
+        <attr name="shapeBackgroundColor" format="color" />
+        <attr name="shapeForegroundColor" format="color" />
+        <attr name="shapeBorderWidth" format="dimension" />
+        <attr name="shapeCurveFactor" format="float" />
+        <attr name="shapeRadius" format="dimension" />
+        <attr name="shapeScale" format="float" />
+    </declare-styleable>
+
+
+    <!-- Background image of view -->
+    <attr name="squircle_background_image" format="reference" />
+
+    <!-- Background color of view -->
+    <attr name="squircle_background_color" format="color" />
+
+    <!-- Gradient drawable displayed in view -->
+    <attr name="squircle_background_gradient_drawable" format="reference" />
+
+    <!-- Gradient start color -->
+    <attr name="squircle_background_gradient_start_color" format="color" />
+
+    <!-- Gradient end color -->
+    <attr name="squircle_background_gradient_end_color" format="color" />
+
+    <!-- Direction of the gradient (only for the color gradient) -->
+    <attr name="squircle_background_gradient_direction">
+        <enum name="top_to_bottom" value="0" />
+        <enum name="top_right_to_bottom_left" value="1" />
+        <enum name="right_to_left" value="2" />
+        <enum name="bottom_right_to_top_left" value="3" />
+        <enum name="bottom_to_top" value="4" />
+        <enum name="bottom_left_to_top_right" value="5" />
+        <enum name="left_to_right" value="6" />
+        <enum name="top_left_to_bottom_right" value="7" />
+    </attr>
+
+    <!-- Shadow elevation -->
+    <attr name="squircle_shadow_elevation" format="dimension" />
+
+    <!-- Shadow elevation color -->
+    <attr name="squircle_shadow_elevation_color" format="color" />
+
+    <!-- Border color -->
+    <attr name="squircle_border_color" format="color" />
+
+    <!-- Border gradient drawable -->
+    <attr name="squircle_border_gradient_drawable" format="reference" />
+
+    <!-- Border gradient start color -->
+    <attr name="squircle_border_gradient_start_color" format="color" />
+
+    <!-- Border gradient end color -->
+    <attr name="squircle_border_gradient_end_color" format="color" />
+
+    <!-- Direction of the border gradient (only for the color gradient) -->
+    <attr name="squircle_border_gradient_direction">
+        <enum name="top_to_bottom" value="0" />
+        <enum name="top_right_to_bottom_left" value="1" />
+        <enum name="right_to_left" value="2" />
+        <enum name="bottom_right_to_top_left" value="3" />
+        <enum name="bottom_to_top" value="4" />
+        <enum name="bottom_left_to_top_right" value="5" />
+        <enum name="left_to_right" value="6" />
+        <enum name="top_left_to_bottom_right" value="7" />
+    </attr>
+
+    <!-- Border width -->
+    <attr name="squircle_border_width" format="dimension" />
+
+    <!-- Ripple enabled or disabled -->
+    <attr name="squircle_ripple_enabled" format="boolean" />
+
+    <!-- Drawable used for drawing the ripple -->
+    <attr name="squircle_ripple_drawable" format="reference" />
+
+    <!-- Change the corner smoothing, a Squircle is 100% by default -->
+    <attr name="squircle_corner_smoothing_percentage" format="integer" value="100" />
+
+    <!-- Android attrs do not have support for a parent, thus we need to repeat all attributes.. -->
+    <declare-styleable name="SquircleView">
+        <attr name="squircle_background_image" />
+        <attr name="squircle_background_color" />
+        <attr name="squircle_background_gradient_drawable" />
+        <attr name="squircle_background_gradient_start_color" />
+        <attr name="squircle_background_gradient_end_color" />
+        <attr name="squircle_background_gradient_direction" />
+        <attr name="squircle_shadow_elevation" />
+        <attr name="squircle_shadow_elevation_color" />
+        <attr name="squircle_border_color" />
+        <attr name="squircle_border_gradient_drawable" />
+        <attr name="squircle_border_gradient_start_color" />
+        <attr name="squircle_border_gradient_end_color" />
+        <attr name="squircle_border_gradient_direction" />
+        <attr name="squircle_border_width" />
+        <attr name="squircle_ripple_enabled" />
+        <attr name="squircle_ripple_drawable" />
+        <attr name="squircle_corner_smoothing_percentage" />
+    </declare-styleable>
+
+    <declare-styleable name="SquircleButton">
+        <attr name="squircle_background_image" />
+        <attr name="squircle_background_color" />
+        <attr name="squircle_background_gradient_drawable" />
+        <attr name="squircle_background_gradient_start_color" />
+        <attr name="squircle_background_gradient_end_color" />
+        <attr name="squircle_background_gradient_direction" />
+        <attr name="squircle_shadow_elevation" />
+        <attr name="squircle_shadow_elevation_color" />
+        <attr name="squircle_border_color" />
+        <attr name="squircle_border_gradient_drawable" />
+        <attr name="squircle_border_gradient_start_color" />
+        <attr name="squircle_border_gradient_end_color" />
+        <attr name="squircle_border_gradient_direction" />
+        <attr name="squircle_border_width" />
+        <attr name="squircle_ripple_enabled" />
+        <attr name="squircle_ripple_drawable" />
+        <attr name="squircle_corner_smoothing_percentage" />
+    </declare-styleable>
+
+    <declare-styleable name="SquircleConstraintLayout">
+        <attr name="squircle_background_image" />
+        <attr name="squircle_background_color" />
+        <attr name="squircle_background_gradient_drawable" />
+        <attr name="squircle_background_gradient_start_color" />
+        <attr name="squircle_background_gradient_end_color" />
+        <attr name="squircle_background_gradient_direction" />
+        <attr name="squircle_shadow_elevation" />
+        <attr name="squircle_shadow_elevation_color" />
+        <attr name="squircle_border_color" />
+        <attr name="squircle_border_gradient_drawable" />
+        <attr name="squircle_border_gradient_start_color" />
+        <attr name="squircle_border_gradient_end_color" />
+        <attr name="squircle_border_gradient_direction" />
+        <attr name="squircle_border_width" />
+        <attr name="squircle_ripple_enabled" />
+        <attr name="squircle_ripple_drawable" />
+        <attr name="squircle_corner_smoothing_percentage" />
+    </declare-styleable>
+
+    <declare-styleable name="SquircleImageView">
+        <attr name="squircle_background_image" />
+        <attr name="squircle_background_color" />
+        <attr name="squircle_background_gradient_drawable" />
+        <attr name="squircle_background_gradient_start_color" />
+        <attr name="squircle_background_gradient_end_color" />
+        <attr name="squircle_background_gradient_direction" />
+        <attr name="squircle_shadow_elevation" />
+        <attr name="squircle_shadow_elevation_color" />
+        <attr name="squircle_border_color" />
+        <attr name="squircle_border_gradient_drawable" />
+        <attr name="squircle_border_gradient_start_color" />
+        <attr name="squircle_border_gradient_end_color" />
+        <attr name="squircle_border_gradient_direction" />
+        <attr name="squircle_border_width" />
+        <attr name="squircle_ripple_enabled" />
+        <attr name="squircle_ripple_drawable" />
+        <attr name="squircle_corner_smoothing_percentage" />
+    </declare-styleable>
+
+    <declare-styleable name="Default">
+        <attr name="android:fontFamily" />
+        <attr name="android:textStyle" />
+        <attr name="android:textAllCaps" />
+        <attr name="android:textSize" />
+        <attr name="android:letterSpacing" />
+    </declare-styleable>
+</resources>

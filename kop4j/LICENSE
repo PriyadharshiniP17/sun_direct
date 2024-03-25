@@ -1,0 +1,113 @@
+KOP – SOFTWARE LICENSE AGREEMENT 
+
+    SCOPE & PURPOSE 
+
+Customer has requested Nagravision SA - Kudelski IoT (“Kudelski IoT”) - to provide a software obfuscation and whitebox cryptography solution marketed as KOP and associated documentation and services as described in the Kudelski IoT offer (“the Offer”) to which the present KOP Software License Agreement is attached. By accepting the Offer, Customer accepts both the Offer and this KOP Software License Agreement that are indivisible and which together constitute the entire agreement (“the Agreement”) between Customer and Kudelski IoT (individually a “Party”, jointly the “Parties”) with respect to the subject matter hereof. 
+
+This Agreement covers Customer’s permitted use of the KOP Software operated by Customer on premises. 
+
+All terms of any purchase order or similar document provided by Customer, including but not limited to pre-printed terms thereon and any terms that are inconsistent, add to or conflict with the Agreement shall be null and void and of no legal force or effect. 
+
+    DEFINITIONS 
+
+“KOP Software” means a specific set of software components in object code owned by Kudelski IoT and/or owned by a third party and licensed to Kudelski IoT (including open source software components). The KOP Software includes any patches, updates, improvements, additions and other modifications or revised versions that may be provided by Kudelski IoT from time to time.  
+
+“Subscription Fee” means the recurrent fee paid by Customer for the KOP Software license and related services. 
+
+    DELIVERY AND INSTALLATION 
+
+The appliance(s) shall be delivered to the agreed delivery place and be installed as determined in the Offer. 
+
+    SOFTWARE LICENSE GRANT 
+
+Subject to the terms and conditions of this Agreement and upon Customer’s payment of the applicable Subscription Fee set forth in the Offer or in any subsequent accepted order or subscription renewal, Kudelski IoT grants to Customer a non-exclusive, non-transferable, revocable and limited license (without the right to sublicense) to use the KOP Software solely for internal purposes during the License Term in accordance with the terms of this Agreement. 
+
+Customer is solely responsible for activity in its account for use of the KOP Software and must use the KOP Software in compliance with applicable law. Any rights in the KOP Software not granted in this Agreement are expressly reserved by Kudelski IoT. 
+
+    INTELLECTUAL PROPERTY 
+
+The Agreement does not transfer to Customer any title to or any ownership right or interest in the KOP Software. Customer acknowledges that Kudelski IoT or Kudelski IoT’ licensors own and retain all right, title and interest in and to the KOP Software. All enhancements, modifications and derivative works that Kudelski IoT or any Kudelski IoT -authorized third party made to the KOP Software or accompanying documentation and all intellectual property rights therein will be the property of Kudelski IoT or its licensors. 
+
+    LICENSE RESTRICTIONS 
+
+Unless provided otherwise in the Agreement, Customer may not directly or indirectly a) sell, rent, lease redistribute or transfer the KOP Software, b) reverse engineer, decompile, disassemble or otherwise attempt to derive, obtain or modify the source code of the KOP Software c) reproduce, modify, translate or create derivative works of all or any part of the KOP Software; d) remove, alter, or obscure any proprietary notice, labels or marks on the KOP Software or e) build a competitive service or product, or copy any feature, function or graphic for competitive purposes. 
+
+Customer may make a reasonable number of copies of the KOP Software in whole or in part, only for backup or archival purposes or to replace a worn or defective original or copy. 
+
+    AUDIT 
+
+For the term of this Agreement and one (1) year thereafter, Customer agrees that Kudelski IoT or its designee shall have the right, at its own expense and under reasonable conditions of time and place, to audit all records of Customer’s use of the KOP Software. If an audit reveals any unauthorized use of the KOP Software, or a breach of this Agreement or underpayment of any fees by Customer, Customer must, in addition to such other rights and remedies as may be available to Kudelski IoT as the result of such breach, promptly order and pay for all applicable unpaid fees. 
+
+    PAYMENT TERMS AND TAXES 
+
+The Subscription Fee is payable in advance. Unless otherwise stipulated in the Offer, Customer shall pay the Subscription Fee within forty five  (45) calendar days of the date of the invoice. In case Customer fails to pay Kudelski IoT in the stipulated period, Customer shall have to pay Kudelski IoT interests of the lower between (i) one and a half percent (1,5%) per late month (pro rata temporis) and (ii) the maximum permitted by law, from the due date of each payment until the date of the full payment. Any and all prices payable by Customer in accordance with the Agreement shall be exclusive of any taxes and charges that might be assessed against Customer by any jurisdiction. All amounts payable to Kudelski IoT  under the Agreement shall be without set-off and without deduction of any taxes, levies, imposts, charges, withholdings and/or duties of any nature which may be levied or imposed, including without limitation, value added taxes, customs duties and withholding taxes.  
+
+    MAINTENANCE AND SUPPORT 
+
+Upon payment of the Subscription Fee, Kudelski IoT shall provide Customer with the applicable level of consulting, services and support set forth in the Offer or in the Order. Kudelski IoT will use reasonable commercial efforts to complete any support and services. Each bug reported by Customer shall be analyzed and corrected by Kudelski IoT in a timely manner. 
+
+    WARRANTY AND DISCLAIMERS 
+
+Kudelski IoT warrants that the KOP Software will, for a period of ninety (90) days from delivery perform substantially in accordance respects in accordance with Kudelski IoT’s service and product documentation in effect on the date of delivery. During the warranty period, Kudelski IoT will, at Kudelski IoT’s option use commercially reasonable effort to correct material, service-limiting errors detected in the KOP Software, or provide a reasonable workaround, after receiving written notification from Customer of such errors.  This warranty is void if failure is the result of accident, alteration or the introduction or use with software or hardware not authorized by Kudelski IoT. Kudelski IoT does not warrant that the operation of the KOP Software will be uninterrupted or error free. 
+
+Customer assumes full responsibility for (a) verifying the results obtained from the use of the KOP Software; and (b) taking appropriate measures to prevent loss of Customer data. 
+
+EXCEPT AS SET FORTH IN THIS AGREEMENT, THE KOP SOFTWARE IS PROVIDED “AS IS” AND WITH ALL FAULTS AND ON A “WHEN AVAILABLE” BASIS. EXCEPT FOR THE EXPLICIT WARRANTIES ABOVE, ALL OTHER REPRESENTATIONS AND WARRANTIES CONCERNING THE KOP SOFWARE, ASSOCIATED DOCUMENTATION AND SERVICES ARE EXPRESSLY DISCLAIMED TO THE EXTENT ALLOWED BY LAW AND KUDELSKI EXPRESSLY DISCLAIMS ALL OTHER WARRANTIES IN RELATION TO THE KOP SOFTWARE, ASSOCIATED DOCUMENTATION AND SERVICES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING WITHOUT LIMITATION, ANY IMPLIED WARRANTY OF CONDITION OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, TITLE, AVAILABILITY, ACCURACY, SATISFACTORY QUALITY, OR ARISING FROM A COURSE OF DEALING, LAW, USAGE OR TRADE PRACTICE. CUSTOMER ACKNOWLEDGES THAT NO EMPLOYEE OF Kudelski IoT OR ITS AFFILIATES IS AUTHORIZED TO MAKE ANY REPRESENTATION OR WARRANTY ON BEHALF OF Kudelski IoT THAT IS NOT EXPRESSLY IN THIS AGREEMENT. 
+
+11.LIABILITY LIMITATION 
+
+Notwithstanding anything to the contrary in the Agreement, in no event will Kudelski IoT be liable to Customer for (i) lost profits; (ii) loss of business; (iii) loss of revenues; (iv) loss of data or interruption or corruption of data; 
+
+(v) slowdown or interruption of Customer’s operations; (vi) any consequential or indirect damages; or (vii) any incidental, special or punitive damages (if applicable), even if advised of the possibility of such damages. 
+
+Notwithstanding anything to the contrary in the Agreement, Kudelski IoT  otal liability to Customer with respect to all claims arising from or related to the subject matter of the Agreement (including attorney’s fees) will not exceed the amount of the amount actually paid by Customer to Kudelski IoT  under the Agreement during the twelve (12) month period preceding the claim. 
+
+The limitations set forth in this section 12 will apply to all claims and causes of action, regardless of whether in contract, tort, strict liability or other theory. 
+
+    INDEMNIFICATION 
+
+Kudelski IoT shall, at its sole cost and expense, defend (or at its option, settle) and indemnify Customer and their officers, directors, employees, representatives and agents for and against any and all third party claims brought against Customer based upon a claim that use of the KOP Software in accordance with the Agreement infringes such third party’s valid patents, copyright, trademark or any other intellectual property right or misappropriates any trade secret and shall pay all damages awarded to the extent based on such claim provided that Customer gives Kudelski IoT i) prompt notice of such action or claim, ii) the right to control and direct the defense and or settlement of such claim and iii) reasonable support. 
+
+If Customer’s use of the KOP Software is, or in Kudelski IoT’s opinion is likely to be the subject of an infringement claim, Kudelski IoT may, in its sole discretion and expense i) modify the KOP Software so that it is no longer infringing, ii) procure for Customer the right to continue using the KOP Software, or iii) terminate this Agreement, accept return of the KOP Software and refund to Customer the amount of the Subscription Fee paid by Customer for the then-current License Term. 
+
+    TERM & TERMINATION 
+
+The Agreement will commence upon Customer’s confirmation as set forth in section 1 above and shall continue in force for the period set forth in the Offer or in the Order (“License Term”). 
+
+Kudelski IoT may terminate the Agreement immediately upon giving written notice to Customer i) if Customer reverses engineer or breaches any material term or condition of the Agreement and fails to cure such breach within fifteen (15) calendar days after receipt of such notice or ii) if Customer becomes unable to pay its debts as they become due, ceases to do business, enters into a deed of arrangement, undergoes judicial management, commences the process of liquidation, has a receiver appointed or begins winding up or similar arrangements. 
+
+Customer may terminate the Agreement immediately upon giving written notice to Customer if Kudelski IoT breaches any material term or condition of the Agreement and fails to cure such breach within fifteen (15) calendar days after receipt of such notice. 
+
+Kudelski IoT has no obligation to refund any Subscription Fee in the event Customer terminates for convenience or Kudelski IoT terminates for breach of this Agreement. If Customer fails to cure a monetary breach, Customer will be responsible for all collection costs including reasonable attorneys’ fees. 
+
+Immediately after termination of this Agreement, Customer shall cease use and delete all copies of the KOP Software and shall certify to Kudelski IoT in writing that all copies of the KOP Software has been removed from hosting infrastructure. 
+
+    CONFIDENTIAL INFORMATION AND DATA PROTECTION 
+
+“Confidential Information” means information disclosed by one Party to the other Party either directly or indirectly, in writing, orally or by drawings or inspection of samples, equipment or facilities; including (a) information identified by the disclosing Party, in writing or orally, as confidential at the time of disclosure; (b) information relating to the disclosing Party’s technology, products, solutions and services used, provided and/or owned by the disclosing Party, including without limitation, technical data, trade secrets, know-how, research, product plans, ideas or concepts, products, services, software, inventions, patent applications, techniques, processes, developments, algorithms, formulas, technology, designs, schematics, drawings, engineering and hardware configuration information, operations, business and financial results or financial plans or strategies, including but not limited to customer, customer lists, markets, financial statements and projections, product pricing, marketing information, financial  or other strategic business, plans or information; (c) the content and terms of the Agreement. Information is not deemed Confidential Information if it (i) is known to the receiving Party prior to receipt from the disclosing Party directly or indirectly from a source other than one having an obligation of confidentiality to the disclosing Party; (ii) becomes known (independently of disclosure by the disclosing Party) to the receiving Party directly or indirectly from a source other than one having an obligation of confidentiality to the disclosing Party; (iii) becomes publicly known or otherwise ceases to be confidential, except through a breach of the Agreement by the receiving Party; or (iv) is independently developed by the receiving Party. 
+
+Neither Party will use or disclose Confidential Information from the other Party without the prior written consent of the other Party except where (i) if in the documented opinion of counsel shared with Customer, the disclosure is required by applicable law or regulation (including securities laws regarding public disclosure of business information) or by an order of a court or other governmental body having jurisdiction after taking steps to maintain its confidentiality where practicable; or (ii) reasonably necessary to be made to that Party’s, or its affiliates’, employees, officers, directors, consultants,, attorneys, accountants and other advisors, or (iii) necessary for a Party to exercise its rights and perform its obligations under the Agreement. In any case, the disclosing Party shall ensure that disclosure shall not be broader than necessary, and that the recipient agrees prior to receipt to keep the information confidential to the same extent as under the Agreement (except that such agreement need not be obtained for disclosure to a court, regulator or arbitrator). 
+
+Neither Party grants the other Party the right to use its trademarks, service marks, trade names, copyrights, other intellectual property rights in any promotion, publication or press release without the prior written consent of the other Party in each case.  
+
+“Sensitive Data” means business contact data containing personal and/or private information of a Party, its agents, employees, customers provided to or obtained by the other Party by virtue of the performance of the Agreement and whose use, processing or transfer of such data is regulated by law or regulation as personal data. 
+
+Customer acknowledges and agrees that Kudelski IoT and its agents may use, process and/or transfer Sensitive Data: (i) in connection with the performance of the Agreement; and (ii) to incorporate Sensitive Data into databases controlled by Kudelski IoT or its agents for the purpose of account administration, billing and reconciliation, operational maintenance and support activities and fraud detection and prevention. Customer acknowledges that it has the right to access Sensitive Data upon written notice and have any agreed errors in such Sensitive Data rectified. 
+
+    MISCELLANEOUS 
+
+Entire Agreement. The Offer and the Conditions constitute the entire Agreement between the Parties with respect to the subject matter hereof, and supersede and replace all prior or contemporaneous discussions, proposals, understandings and agreements, written or oral, as well as any industry custom. Each Party acknowledges that, in entering into this Agreement, it has not relied on, and shall have no right or remedy in respect of, any statement, representation, assurance or warranty other than as expressly set out in the Agreement. Except where otherwise expressly stated herein, this Agreement and any statement of work may only be amended by the written agreement of both Parties. 
+
+Construction. Each Party agrees that it has reviewed this Agreement, and this Agreement shall not be interpreted more strictly against the drafting Party. The section headings and captions are for convenience only and will not be used to construe this Agreement. If any provision of this Agreement is adjudged by a court to be invalid, illegal or unenforceable, it will not affect the validity, legality, or enforceability of the other part(s) of the same provision or of the other provisions in this Agreement. No waiver of any breach of any provision of this Agreement will constitute a waiver of any prior, concurrent or subsequent breach of the same or any other provisions hereof, and no waiver will be effective unless made in writing and signed by an authorized representative of the waiving Party. 
+
+Survival. The terms of sections 5, 7, 8, 10, 11, 12 and 14 hereof which by their express terms extend beyond termination or expiration of the Agreement, or other terms which by their nature should so extend, shall survive and continue in full force and effect after any termination or expiration of this Agreement. 
+
+Subcontracting and Assignment. Kudelski IoT may permit any other affiliate, independent contractor or other third party, to perform any of Kudelski IoT’ obligations hereunder. A Party may only assign this Agreement or any of its rights and obligations subject to the other Party’s written consent. 
+
+Force Majeure. Except for Customer’s obligation to pay amounts owed under the Agreement, neither Party will be responsible or in any way liable to the other Party, and neither Party will have any termination or other rights, arising out of or relating to a failure by the other Party to perform any of its obligations under the Agreement if such failure is caused by events or circumstances beyond its reasonable control. These events may include but not be limited to acts of God, war, labor strike, terrorist act, fire, flood, earthquake, health epidemic or any law, order, regulation or other action of any governing authority or agency.  
+
+Independent contractors. The Parties are independent contractors and this Agreement does not establish any relationship of partnership, joint venture, employment, franchise or agency between them. 
+
+Governing law and jurisdiction. The Agreement shall be governed by the laws of Switzerland without regard to its conflict of law provision or to international treaties. Should a dispute not be amicably settled, the Parties shall submit their dispute to arbitration in accordance with the Swiss Rules of International Arbitration of the Swiss Chambers of Commerce (the “Rules”). The seat of the Arbitration shall be Lausanne, Switzerland. The arbitral proceedings shall be conducted in English. The arbitral award is final and binding upon both the Parties. 
+
+Notices. Notices must be in writing and shall be sent by registered or overnight carrier. All business communications must be sent to the addresses in the Offer. Legal notices to Kudelski IoT must be sent to: Nagravision SA, rte de Genève 22-24, 1033 Cheseaux, Switzerland, Attn: Legal Dept. 

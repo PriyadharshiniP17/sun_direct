@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_bkg"
+    android:id="@+id/main_background"
+    android:clickable="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_bkg"
+        android:contentInsetLeft="10dp"
+        android:contentInsetRight="10dp"
+        android:contentInsetStart="10dp"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="10dp"
+        app:contentInsetRight="10dp"
+        app:contentInsetStart="10dp"/>
+
+
+    <ListView
+        android:id="@+id/listview_movies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:dividerHeight="@dimen/tv_detail_list_divider_height"
+        android:listSelector="@drawable/listitem_selector_bg" />
+
+    <RelativeLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <GridView
+            android:id="@+id/gridview_movies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/margin_gap_10"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/margin_gap_10"
+            android:padding="@dimen/margin_gap_12"
+            android:clipToPadding="false"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/grid_footer_text_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"
+            android:gravity="center"
+            android:text="@string/loading_txt"
+            android:textAppearance="@style/TextAppearance.FontLight"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/textsize_14"
+            android:paddingBottom="@dimen/margin_gap_4"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_gap_16"
+        android:gravity="center"
+        android:text="@string/error_fetch_related_vodlist"
+        android:textAppearance="@style/TextAppearance.FontMedium"
+        android:textColor="@color/white_100"
+        android:textSize="@dimen/textsize_16"
+        android:visibility="gone"/>
+    <!--Below is the transparent layout positioned at startup -->
+    <RelativeLayout
+        android:id="@+id/prog_help_screen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#88666666">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/help_program_screen"
+            />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone"
+        android:background="@color/notification_background_color"
+        />
+</RelativeLayout>

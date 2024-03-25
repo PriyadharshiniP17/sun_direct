@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+
+    <!-- Settings, should always be in the overflow -->
+
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/actionbar_filter_icon_default"
+        android:title="Filter"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/media_route_menu_item"
+        android:title="@string/media_route_menu_title"
+
+        app:actionProviderClass="androidx.mediarouter.app.MediaRouteActionProvider"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/actionbar_search_icon"
+        android:title="Search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always"
+        android:visible="false"
+        />
+    <item
+        android:id="@+id/action_notify"
+        android:icon="@drawable/ic_notification"
+        android:title="Notification"
+        app:showAsAction="always"
+        />
+</menu>

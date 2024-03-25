@@ -1,0 +1,68 @@
+<resources>
+    <color name="colorPrimary">#2CD7F3</color>
+    <color name="app_theme_color">#000000</color>
+    <color name="theme_app_color">#FFBB3B</color>
+    <color name="app_bkg">#000000</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_30">#B6B8C7</color>
+    <color name="white_100">#FFFFFFFF</color>
+    <color name="genresdropdown">#181726</color>
+    <color name="red_highlight_color">#FFBB3B</color>
+    <color name="black">#000000</color>
+    <color name="details_page_background_color">#323232</color>
+    <color name="black_00">#00000000</color>
+    <color name="black_30">#30000000</color>
+    <color name="black_40">#40000000</color>
+    <color name="black_35">#59000000</color>
+    <color name="black_45">#801D1B27</color>
+    <color name="black_50">#1E1E2385</color>
+    <color name="black_70">#B3000000</color>
+    <color name="black_85">#D9000000</color>
+    <color name="black_90">#262630</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="sundirect_user_text_color">#FFB62D</color>
+    <color name="pack_subtext_color">#b7b7bd</color>
+    <color name="test">#67CCCCCC</color>
+    <color name="blue">#71afe5</color>
+    <color name="gray_border">#666666</color>
+    <color name="movies_title_section_border">#2F2F2F</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="white_65">#A6FFFFFF</color>
+    <color name="descript_color">#a2a2a2</color>
+    <color name="white_70">#B3FFFFFF</color>
+    <color name="white_75">#BFFFFFFF</color>
+    <color name="white_73">#BAFFFFFF</color>
+    <color name="light_grey">#a6a6a6</color>
+    <color name="white_40">#66FFFFFF</color>
+    <color name="white_35">#59FFFFFF</color>
+    <color name="white_20">#34FFFFFF</color>
+    <color name="catchup_dialog_background">#80111115</color>
+    <color name="player_gray_shadow">#502E2E3C</color>
+    <color name="view_line">#26FFFFFF</color>
+
+
+    <color name="gray_sony">#333333</color>
+    <color name="color_grey_444444">#444444</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_202020">#202020</color>
+    <color name="color_a632ad">#A632AD</color>
+    <color name="color_eros_now_brand_2EB6F0">#2EB6F0</color>
+    <color name="transparent">#00000000</color>
+    <color name="small_horizontal_item_background">#383844</color>
+    <color name="black_80">#CC000000</color>
+    <color name="color_e60000">#FFBB3B</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="color_fe001b">#FFBB3B</color>
+    <color name="color_dadada">#DADADA</color>
+    <color name="dim_gray">#696969</color>
+    <color name="gray">#d3d3d3</color>
+    <color name="color_cccccc">#CCCCCC</color>
+    <color name="color_eb1d24">#FFBB3B</color>
+    <color name="title_white">#EEEEEE</color>
+    <color name="read_more_less_color">@color/red_highlight_color</color>
+    <color name="card_bottom_bg">@color/app_bkg</color>
+    <color name="signin_edittext_colors">#A2A2A2</color>
+    <color name="color_pink">#C6C6C6</color>
+
+</resources>

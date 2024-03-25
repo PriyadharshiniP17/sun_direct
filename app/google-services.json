@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "596383267108",
+    "project_id": "sun-direct-db4db",
+    "storage_bucket": "sun-direct-db4db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596383267108:android:4af80841ae734a3c589bb1",
+        "android_client_info": {
+          "package_name": "com.sundirect.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596383267108-p9lgq12a77nmr8qb45tmq00cfvos7ojb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sundirect.android",
+            "certificate_hash": "72811c334bbf3e1098637cf8095a310b8ea36c91"
+          }
+        },
+        {
+          "client_id": "596383267108-8apqds1ut45k14p5r6tn910d1ck1v7oh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_4rx_okvPlyydS5qG0gY8xgiTLETyTQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596383267108-8apqds1ut45k14p5r6tn910d1ck1v7oh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

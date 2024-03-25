@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_bkg"
+            android:minHeight="?attr/actionBarSize"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CAST"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/margin_gap_16"
+            android:layout_marginTop="@dimen/margin_gap_16"
+            android:gravity="center"
+            style="@style/TextAppearance.FontBold"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cast_and_crew_recycler_view"
+            android:background="@color/app_bkg"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

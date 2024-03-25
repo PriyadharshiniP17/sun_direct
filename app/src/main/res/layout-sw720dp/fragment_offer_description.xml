@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red_highlight_color">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_gap_32"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_above="@+id/pack_offer_subscribe_btn">
+
+        <LinearLayout
+            android:id="@+id/descLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pack_offer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_gap_110"
+                android:layout_marginLeft="@dimen/margin_gap_75"
+                android:layout_marginRight="@dimen/margin_gap_150"
+                android:singleLine="false"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_40"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:visibility="invisible"
+                android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                />
+
+            <TextView
+                android:id="@+id/pack_offer_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_gap_75"
+                android:layout_marginRight="@dimen/margin_gap_150"
+                android:layout_marginTop="@dimen/margin_gap_40"
+                android:singleLine="false"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_26"
+                android:gravity="left"
+                android:visibility="invisible"
+                android:layout_gravity="center"
+                android:textAppearance="@style/TextAppearance.NormalFontRegular"/>
+
+
+            <TextView
+                android:id="@+id/app_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_gap_14"
+                android:layout_marginRight="@dimen/margin_gap_16"
+                android:layout_marginTop="@dimen/margin_gap_125"
+                android:singleLine="false"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsize_14"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                android:textAppearance="@style/TextAppearance.NormalFontRegular"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/pack_offer_subscribe_btn"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_70"
+        android:singleLine="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/continue_text"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.FontMedium"/>
+
+    <ProgressBar
+        android:id="@+id/card_loading_progres_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pack_offer_subscribe_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="46dp"
+        android:gravity="bottom"
+        android:visibility="invisible"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/progressbar_color"/>
+
+</RelativeLayout>

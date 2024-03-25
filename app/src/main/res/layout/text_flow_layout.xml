@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_gap_30"
+    android:layout_marginRight="@dimen/margin_gap_30"
+    android:layout_marginTop="@dimen/dimen_12_dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_genre_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18"
+        />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/channel_chip_group"
+        style="@style/Widget.MaterialComponents.Chip.Filter"
+        android:layout_below="@id/textview_genre_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_gap_20"
+        android:visibility="visible"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/channelItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+          />
+    </com.google.android.material.chip.ChipGroup>
+
+</RelativeLayout>

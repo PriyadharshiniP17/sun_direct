@@ -1,0 +1,34 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.myplex.downloads_manager" >
+5
+6    <uses-sdk
+7        android:minSdkVersion="19"
+7-->E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+8        android:targetSdkVersion="29" />
+8-->E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+9
+10    <application android:label="@string/app_name" >
+10-->E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:5:5-15:19
+10-->E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:6:9-41
+11        <service
+11-->E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:8:9-14:19
+12            android:name="com.myplex.downloads_manager.DemoDownloadService"
+12-->E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:8:18-81
+13            android:exported="false" >
+13-->E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:9:13-37
+14            <intent-filter>
+14-->E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:10:13-13:29
+15                <action android:name="com.google.android.exoplayer.downloadService.action.RESTART" />
+15-->E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:11:17-101
+15-->E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:11:25-99
+16
+17                <category android:name="android.intent.category.DEFAULT" />
+17-->E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:12:17-75
+17-->E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:12:27-73
+18            </intent-filter>
+19        </service>
+20    </application>
+21
+22</manifest>

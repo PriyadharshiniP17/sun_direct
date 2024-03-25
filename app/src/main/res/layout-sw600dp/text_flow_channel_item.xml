@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.google.android.material.chip.Chip
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/channel_chip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_65"
+        android:textSize="@dimen/textsize_13"
+        android:textAlignment="center"
+        app:chipCornerRadius="@dimen/margin_8"
+        app:chipSurfaceColor="@color/search_bg_new"
+        android:text="Sun TV"
+        android:paddingVertical="@dimen/_10sp"
+        android:paddingHorizontal="@dimen/_10sp"
+        android:textAppearance="@style/TextAppearance.FontBold"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        />
+

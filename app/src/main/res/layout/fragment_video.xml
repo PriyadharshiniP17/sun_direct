@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/epg_list_item_color"
+    android:orientation="vertical">
+
+    <com.myplex.myplex.ui.views.SyncScrollListView
+        android:visibility="visible"
+        android:id="@+id/epg_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:saveEnabled="true"
+        android:dividerHeight="0dp"
+        android:listSelector="@drawable/listitem_selector_bg"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/red_highlight_color"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/no_res_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/epg_channels_error_txt"
+        android:textColor="@color/white_100"
+        android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.FontMedium"
+        android:visibility="gone"/>
+
+</RelativeLayout>

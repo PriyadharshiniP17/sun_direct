@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.FontBold" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/Montserrat-Bold.ttf</item>
+    </style>
+    <style name="TextAppearance.FontLight" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/Montserrat-Light.ttf</item>
+    </style>
+    <style name="TextAppearance.FontMedium" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/Montserrat-Medium.ttf</item>
+    </style>
+    <style name="TextAppearance.FontRegular" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/Montserrat-Regular.ttf</item>
+    </style>
+
+    <style name="TextAppearance.BasicFontRegular" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/amazon_ember_cd_regular.ttf</item>
+    </style>
+
+    <style name="TextAppearance.FontHindi" parent="android:TextAppearance">
+        <item name="fontPath">fonts/hindi.ttf</item>
+    </style>
+
+
+</resources>

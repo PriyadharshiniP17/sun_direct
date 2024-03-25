@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "applicationId": "com.asksira.loopingviewpager",
+  "variantType": "LIBRARY",
+  "elements": [
+    {
+      "outputType": {
+        "type": "MERGED_MANIFESTS"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 104000,
+        "versionName": "1.4.0",
+        "outputFile": "loopingviewpager-debug.aar",
+        "fullName": "debug",
+        "baseName": "debug",
+        "dirName": ""
+      },
+      "path": "../../library_manifest/debug/AndroidManifest.xml",
+      "properties": {
+        "packageId": "com.asksira.loopingviewpager",
+        "split": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.myplex.myplex.ui.views.RoundedCornerImageView
+        android:id="@+id/thumbnail_movie"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/movie_thumbnail_placeholder" />
+
+    <TextView
+        android:id="@+id/movie_title_big_item"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thumbnail_movie"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textColor="@color/live_tv_sub_text_color"
+        android:text="NAME"
+        android:textAllCaps="true"
+        android:textSize="@dimen/textsize_14" />
+
+</RelativeLayout>

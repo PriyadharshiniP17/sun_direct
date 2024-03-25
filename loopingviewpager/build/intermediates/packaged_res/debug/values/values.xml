@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LoopingViewPager</string>
+    <declare-styleable name="CustomShapePagerIndicator">
+        <attr format="dimension" name="indicator_spacing"/>
+    </declare-styleable>
+    <declare-styleable name="LoopingViewPager">
+        <attr format="boolean" name="isInfinite"/>
+        <attr format="boolean" name="autoScroll"/>
+        <attr format="boolean" name="wrap_content"/>
+        <attr format="integer" name="scrollInterval"/>
+        <attr format="float" name="viewpagerAspectRatio"/>
+        <attr format="float" name="itemAspectRatio"/>
+    </declare-styleable>
+</resources>

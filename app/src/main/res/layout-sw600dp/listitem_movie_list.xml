@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/list_item_bkg"
+        android:padding="@dimen/margin_gap_4">
+
+        <RelativeLayout
+            android:id="@+id/layout_thumbnail"
+            android:layout_width="@dimen/margin_gap_165"
+            android:layout_height="@dimen/margin_gap_200"
+            android:background="@color/list_item_bkg"
+            android:padding="@dimen/margin_gap_4">
+
+            <ImageView
+                android:id="@+id/imageview_thumbnail"
+                android:layout_width="@dimen/margin_gap_165"
+                android:layout_height="@dimen/margin_gap_200"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/movie_thumbnail_placeholder" />
+
+            <!-- <ImageView
+                 android:id="@+id/thumbnail_rupee_icon"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentTop="true"
+                 android:layout_alignParentRight="true"
+                 android:layout_gravity="center"
+                 android:layout_margin="@dimen/margin_gap_4"
+                 android:scaleType="centerCrop"
+                 android:src="@drawable/thumbnail_pay_icon"
+                 android:visibility="gone" />
+ -->
+            <ImageView
+                android:id="@+id/thumbnail_movie_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_gap_4"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="@dimen/margin_gap_10"
+            android:layout_toRightOf="@id/layout_thumbnail"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/no_info_available"
+            android:textAppearance="@style/TextAppearance.FontMedium"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/textsize_16" />
+
+        <TextView
+            android:id="@+id/textview_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_title"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="@dimen/margin_gap_10"
+            android:layout_toRightOf="@id/layout_thumbnail"
+            android:text="@string/no_info_available"
+            android:textAppearance="@style/TextAppearance.FontLight"
+            android:textColor="@color/white_60"
+            android:textSize="@dimen/textsize_14" />
+
+        <TextView
+            android:id="@+id/textview_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_genre"
+            android:layout_marginBottom="@dimen/margin_gap_8"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="@dimen/margin_gap_10"
+            android:layout_toRightOf="@id/layout_thumbnail"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="@string/no_info_available"
+            android:textAppearance="@style/TextAppearance.FontLight"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/textsize_14" />
+
+    </RelativeLayout>
+</LinearLayout>

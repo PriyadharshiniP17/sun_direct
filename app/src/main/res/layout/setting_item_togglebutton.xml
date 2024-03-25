@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/settings_list_item_bg_color_70">
+
+    <RelativeLayout
+        android:id="@+id/view_item"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/settings_list_item_bg_color_70">
+
+        <Switch
+            android:id="@+id/settingitem_togglebutton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_gap_16"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.FontRegular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_14"
+            android:background="@color/settings_list_item_bg_color_70"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

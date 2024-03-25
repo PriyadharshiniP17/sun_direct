@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_666666">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_115"
+        android:orientation="vertical"
+        android:id="@+id/header_layout">
+
+        <ImageView
+            android:id="@+id/packs_heading_image"
+            android:layout_width="@dimen/margin_gap_48"
+            android:layout_height="@dimen/margin_gap_48"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_gap_24"
+            android:src="@drawable/subscribe_pop_up_overlay_icon"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/textsize_18" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/packs_heading_image"
+            android:text="Subscribe to get all premium content"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/textsize_16"
+            android:layout_marginBottom="@dimen/margin_gap_8"
+            android:layout_marginTop="@dimen/margin_gap_16"
+            android:layout_marginLeft="@dimen/margin_gap_12"
+            android:textAppearance="@style/TextAppearance.FontMedium"/>
+    </LinearLayout>
+<!--
+    <View
+        android:id="@+id/pack_messageheading_separator"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/header_layout"
+        android:background="#dbdbdb" />
+-->
+
+    <com.myplex.myplex.ui.views.ListViewMaxHeight
+        android:id="@+id/carddetail_list_packages"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header_layout"
+        android:layout_marginTop="@dimen/margin_gap_4"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/margin_gap_192"
+        android:scrollbars="none" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_36"
+        android:layout_below="@+id/carddetail_list_packages"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/feedback_cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pack_alert_button_rect_selector"
+            android:text="Close"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.FontRegular"
+            android:textColor="@color/white_100"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

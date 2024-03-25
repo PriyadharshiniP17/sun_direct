@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+
+    <entry>
+        <key>meta_subdomainn</key>
+        <value/>
+    </entry>
+    <entry>
+        <key>domain_playerevents</key>
+        <value/>
+    </entry>
+    <entry>
+        <key>domain_meta</key>
+        <value/>
+    </entry>
+
+    <entry>
+        <key>domain_media</key>
+        <value/>
+    </entry>
+
+
+</defaultsMap>

@@ -1,0 +1,47 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:1:1-19:12
+INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:1:1-19:12
+INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:1:1-19:12
+	package
+		ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:3:5-43
+		INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+		INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:2:5-51
+	xmlns:android
+		ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:1:11-69
+application
+ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:5:5-15:19
+	android:label
+		ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:6:9-41
+service#com.myplex.downloads_manager.DemoDownloadService
+ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:8:9-14:19
+	android:exported
+		ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:9:13-37
+	android:name
+		ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:8:18-81
+intent-filter#action:name:com.google.android.exoplayer.downloadService.action.RESTART+category:name:android.intent.category.DEFAULT
+ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:10:13-13:29
+action#com.google.android.exoplayer.downloadService.action.RESTART
+ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:11:17-101
+	android:name
+		ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:11:25-99
+category#android.intent.category.DEFAULT
+ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:12:17-75
+	android:name
+		ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml:12:27-73
+uses-sdk
+INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+		ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+		INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+		ADDED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml
+		INJECTED from E:\vengat\NEW\Android-App\downloads_manager\src\main\AndroidManifest.xml

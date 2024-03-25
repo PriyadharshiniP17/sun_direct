@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.myplex.myplex.ui.views.RoundedCornerImageView
+        android:id="@+id/slider_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/movies_slider_image_height"
+        android:src="@drawable/black"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
+
+    <com.myplex.myplex.ui.views.RoundedCornerImageView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/banner_bottom_gradient"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/banner_play_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner_play_icon"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/movies_slider_image_height"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:visibility="visible" />
+
+</RelativeLayout>

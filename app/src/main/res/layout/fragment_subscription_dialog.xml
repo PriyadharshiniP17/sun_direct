@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="@dimen/margin_237.17"
+    android:layout_height="@dimen/margin_322.2"
+    android:background="@drawable/bg_super_ellipse"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="@dimen/margin_103"
+            android:layout_height="@dimen/margin_95"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_35"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/add_to_cart"
+            android:visibility="visible" />
+
+        <com.myplex.myplex.utils.FontBoldTypeFace
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/margin_33"
+            android:layout_marginTop="@dimen/margin_33"
+            android:layout_marginEnd="@dimen/margin_33"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/subscription_text_popup"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_14">
+
+        </com.myplex.myplex.utils.FontBoldTypeFace>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_10sp"
+            android:background="@color/yellow_signin_tab"
+            android:layout_below="@id/title"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sp"
+            />
+
+        <com.myplex.myplex.utils.FontBoldTypeFace
+            android:id="@+id/weblink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/subscription_popup_weblink"
+            android:text="@string/subscription_weblink"
+            android:gravity="center"
+            android:textSize="@dimen/textsize_14"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_10sp"
+            android:layout_below="@id/title"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_done"
+            android:layout_width="@dimen/margin_103"
+            android:layout_height="@dimen/margin_35"
+            android:layout_below="@+id/weblink"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/rounded_corner_button_pink"
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:textColor="@color/white">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </RelativeLayout>

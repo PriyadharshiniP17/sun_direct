@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/login_page_logo" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_gap_12"
+            android:layout_marginEnd="@dimen/margin_gap_12"
+            android:elevation="@dimen/margin_gap_6"
+            app:cardBackgroundColor="@color/black_50"
+            app:cardCornerRadius="@dimen/margin_gap_4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.FontMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_gap_24"
+                    android:layout_marginBottom="@dimen/margin_gap_14"
+                    android:layout_marginStart="@dimen/margin_gap_4"
+                    android:layout_marginEnd="@dimen/margin_gap_4"
+                    android:gravity="center"
+                    android:text="@string/login_with_email_Password"
+                    android:textColor="@color/main_heading_text_color"
+                    android:textSize="@dimen/textsize_18" />
+
+                <EditText
+                    android:id="@+id/emailIDSignIn"
+                    style="@style/TextAppearance.FontMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="@dimen/margin_gap_18"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Email ID"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/margin_gap_12"
+                    android:textColor="@color/redirect_button_text_color"
+                    android:textColorHint="@color/redirect_button_text_color"
+                    android:textSize="@dimen/edit_text_text_size"
+                    android:visibility="visible" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pwdlayout"
+                    style="@style/TextAppearance.FontMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="@dimen/margin_gap_8"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/redirect_button_text_color"
+                    android:textColorHint="@color/redirect_button_text_color"
+                    android:visibility="visible"
+                    app:hintEnabled="false"
+                    app:passwordToggleEnabled="true">
+
+                    <EditText
+                        android:id="@+id/pwdSignIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_background"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:padding="@dimen/margin_gap_12"
+                        android:textColor="@color/redirect_button_text_color"
+                        android:textColorHint="@color/redirect_button_text_color"
+                        android:textSize="@dimen/edit_text_text_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/emailIdButtonSignIN"
+                    style="@style/TextAppearance.FontMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_gap_42"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="@dimen/margin_gap_10"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/margin_gap_14"
+                    android:background="@drawable/edged_button_grey"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/submit_button_text_color"
+                    android:textSize="@dimen/submit_button_text_size" />
+
+                <TextView
+                    android:id="@+id/textForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_gap_16"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="24dp"
+                    android:clickable="true"
+                    android:text="@string/forgot_password"
+                    android:textAllCaps="false"
+                    android:textColor="@color/forgot_password_text_color"
+                    android:textSize="@dimen/textsize_14" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            style="@style/TextAppearance.FontBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_gap_24"
+            android:layout_marginBottom="@dimen/margin_gap_24"
+            android:gravity="center"
+            android:text="OR"
+            android:textColor="@color/textSignIN"
+            android:textSize="@dimen/textsize_16" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_gap_12"
+            android:layout_marginEnd="@dimen/margin_gap_12"
+            android:elevation="@dimen/margin_gap_6"
+            app:cardBackgroundColor="@color/black_50"
+            app:cardCornerRadius="@dimen/margin_gap_12">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/signinwithphoneNumber"
+                    style="@style/TextAppearance.FontMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_gap_42"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="@dimen/margin_gap_16"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="@dimen/margin_gap_16"
+                    android:background="@drawable/edged_button_grey"
+                    android:text="Sign in with Phone Number"
+                    android:textAllCaps="false"
+                    android:textColor="@color/submit_button_text_color"
+                    android:textSize="@dimen/textsize_16" />
+
+                <include layout="@layout/social_login_layout" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_64sdp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/tabLL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/yellow_tab_bg"
+        android:visibility="gone"
+        >
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_height"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:animateLayoutChanges="true"
+            android:background="@color/yellow_tab_bg"
+            android:elevation="0dp"
+            android:layout_gravity="center"
+            app:layout_scrollFlags="enterAlways|scroll"
+            app:tabBackground="@color/yellow_tab_bg"
+            app:tabIndicatorColor="@color/transparent"
+            app:tabIndicatorHeight="0dp"
+            app:tabGravity="center"
+            app:tabMinWidth="0dp"
+            style="@style/TextAppearance.FontBold"
+            app:tabMode="scrollable"
+            app:tabPaddingEnd="@dimen/_10sdp"
+            app:tabPaddingStart="@dimen/_5sp"
+            app:tabSelectedTextColor="#FF6600"
+            app:tabTextAppearance="@style/LiveTitleTextAppearance"
+            app:tabTextColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/left_arrow"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:padding="@dimen/_3sdp"
+            android:visibility="gone"
+            android:src="@drawable/ic_left_arrow"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/right_arrow"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/_1sdp"
+            android:padding="@dimen/_3sdp"
+            android:visibility="gone"
+            android:src="@drawable/ic_right_arrow"
+            android:contentDescription="@string/app_name"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabLL">
+
+        <viewpagerindicator.CustomViewPager
+            android:id="@+id/viewpager_favourite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/no_data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/no_channels_available"
+            android:textColor="@color/white_70"
+            android:textSize="@dimen/_16sdp"
+            android:visibility="gone" />
+        <LinearLayout
+            android:id="@+id/no_favourites_found_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_46sdp"
+            >
+            <ImageView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/no_favourites_found_img"
+                android:contentDescription="@string/app_name" />
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_favourites_found"
+                android:layout_marginTop="@dimen/_10sp"
+                android:textSize="@dimen/textsize_18"
+                android:textColor="@color/white"
+                />
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/favourites_suggestion_text"
+                android:minLines="2"
+                android:lineSpacingExtra="@dimen/_4sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_14"
+                android:layout_marginTop="@dimen/_10sp"
+                />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/progressbar_color"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/grid_footer_text_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frame_ll"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:gravity="center"
+        android:paddingBottom="@dimen/margin_gap_4"
+        android:text="@string/loading_txt"
+        android:textAppearance="@style/TextAppearance.FontLight"
+        android:textColor="@color/white_100"
+        android:textSize="@dimen/textsize_14"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/content_searchview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:tag="content_searchview"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/smallProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        style="?android:attr/progressBarStyleSmall"
+        android:indeterminateTint="@color/progressbar_color"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/packs_title_div"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_1" />
+    <!--android:background="@color/movies_title_section_border"-->
+
+
+    <RelativeLayout
+        android:id="@+id/layout_carousel_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_gap_8"
+        android:layout_below="@+id/packs_title_div">
+
+        <RelativeLayout
+            android:id="@+id/layout_carousel_title_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/layout_view_all"
+            android:layout_toStartOf="@+id/layout_view_all">
+
+            <ImageView
+                android:id="@+id/toolbar_tv_channel_Img"
+                android:layout_width="@dimen/margin_gap_42"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_gap_2"
+                android:layout_marginTop="@dimen/margin_gap_2"
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true"
+                android:src="@drawable/toolbar_logo"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_toEndOf="@+id/toolbar_tv_channel_Img"
+                android:layout_toRightOf="@+id/toolbar_tv_channel_Img"
+                android:layout_marginLeft="@dimen/margin_gap_2"
+                android:layout_marginStart="@dimen/margin_gap_2"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textview_genre_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.FontBold"
+                    android:textColor="@color/carousel_heading_text_color"
+                    android:textSize="@dimen/carousel_title_text_size" />
+                <TextView
+                    android:id="@+id/textview_other_lang_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.FontHindi"
+                    android:textColor="@color/gray_text"
+                    android:textSize="@dimen/textsize_14"
+                    android:layout_marginTop="@dimen/margin_gap_4"
+                    android:visibility="visible"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_view_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_gap_8"
+            android:layout_marginRight="@dimen/margin_gap_8"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+                <ImageView
+                    android:id="@+id/arrow_view_all"
+                    android:layout_marginLeft="@dimen/dimen_15_dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/view_all_arrow"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/textview_view_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view_all"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/more_text_color"
+                    android:visibility="gone"
+                    android:textSize="@dimen/textsize_12" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/textview_view_all_other_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_gap_4"
+                android:text="@string/moreInHindi"
+                android:textAppearance="@style/TextAppearance.FontHindi"
+                android:textColor="@color/more_text_color"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/packs_description_div"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_2"
+        android:layout_below="@+id/layout_carousel_title" />
+
+    <!--android:background="@color/movies_title_section_border"-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/packs_description_div"
+        android:clipToPadding="false"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="@dimen/margin_gap_4"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textview_error_retry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/msg_tap_to_retry"
+        android:textAppearance="@style/TextAppearance.FontRegular"
+        android:textColor="@color/download_item_subtitle_text_color"
+        android:textSize="@dimen/textsize_12"
+        android:visibility="gone" />
+
+</RelativeLayout>

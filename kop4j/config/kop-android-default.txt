@@ -1,0 +1,49 @@
+# System-specific Kop rules.
+
+# Disable flattening on all classes
+-kop-flatten,disable class ** { *; }
+
+-kop-opacity-source,disable class ***
+-kop-opacity-source,enable class *** extends androidx.appcompat.app.AppCompatActivity
+-kop-opacity-source,enable class *** extends android.support.v7.app.AppCompatActivity
+-kop-opacity-source,enable class *** extends android.app.Activity
+
+# Disable reflection on reserved methods.
+-kop-accessthroughreflection,disable class Main { public static void main(...); }
+-kop-accessthroughreflection,disable class java.lang.Class { *** forName(...); }
+-kop-accessthroughreflection,disable class java.lang.Package { *** getPackage(...); }
+-kop-accessthroughreflection,disable class java.lang.Package { *** getPackages(...); }
+-kop-accessthroughreflection,disable class java.lang.Runtime { public void load(...); }
+-kop-accessthroughreflection,disable class java.lang.Runtime { public void loadLibrary(...); }
+-kop-accessthroughreflection,disable class java.lang.System { public static void load(...); }
+-kop-accessthroughreflection,disable class java.lang.System { public static void loadLibrary(...); }
+-kop-accessthroughreflection,disable class java.sql.DriverManager { *** getConnection(...); }
+-kop-accessthroughreflection,disable class java.sql.DriverManager { *** getDriver(...); }
+-kop-accessthroughreflection,disable class java.sql.DriverManager { *** getDrivers(...); }
+-kop-accessthroughreflection,disable class java.sql.DriverManager { *** deregisterDriver(...); }
+-kop-accessthroughreflection,disable class java.security.AccessController { *** doPrivileged*(...); }
+-kop-accessthroughreflection,disable class java.util.logging.Logger { *** getAnonymousLogger(...); }
+-kop-accessthroughreflection,disable class java.util.logging.Logger { *** getLogger(...); }
+-kop-accessthroughreflection,disable class java.util.ResourceBundle { *** getBundle(...); }
+
+# Mark the child classes of Activities and Application to get the Application context
+-kop-application-context-source class * extends android.app.Activity { void onCreate(...); }
+-kop-application-context-source class * extends android.app.Application { void onCreate(...); }
+
+# Members of Annotation class must be kept
+-keepclassmembers interface * implements java.lang.annotation.Annotation { *; }
+
+# Rename only the code inserted by KOP
+-kop-internal-renaming
+
+-kop-opacity-control,exclude:dynamic class *** { *; }
+-kop-opacity-control,exclude:dynamic interface *** { *; }
+-kop-opacity-control,exclude:dynamic enum *** { *; }
+
+# String masking is disabled by default on fields.
+-kop-mask-string,disable class ** { <fields>; }
+-kop-mask-string,disable interface ** { <fields>; }
+-kop-mask-string,disable enum ** { <fields>; }
+
+-kop-os-target,enable android
+

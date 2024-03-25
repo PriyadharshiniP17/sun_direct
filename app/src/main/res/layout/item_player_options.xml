@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_2sdp"
+    android:weightSum="2"
+    android:id="@+id/ll_root">
+    
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/_7sp"
+        android:layout_height="match_parent"
+        android:text="Malayalam"
+        android:textColor="@color/white_60"
+        android:textSize="@dimen/textsize_14"
+        android:gravity="start"
+        android:layout_weight="1"
+        />
+
+    <ImageView
+        android:id="@+id/iv_selected"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:paddingVertical="@dimen/_3sdp"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_tick"
+        app:tint="@color/subtitle_audio_tick_color"
+        android:contentDescription="@string/app_name" />
+
+</LinearLayout>

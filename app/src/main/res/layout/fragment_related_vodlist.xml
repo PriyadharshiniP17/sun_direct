@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_theme_color"
+    android:clickable="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_theme_color"
+        android:minHeight="?attr/actionBarSize"
+        android:contentInsetLeft="10dp"
+        android:contentInsetRight="10dp"
+        android:contentInsetStart="10dp"
+        app:contentInsetLeft="10dp"
+        app:contentInsetRight="10dp"
+        app:contentInsetStart="10dp"></androidx.appcompat.widget.Toolbar>
+    <View
+        android:background="@color/red_highlight_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/divider_view"
+        android:visibility="gone"
+        />
+    <RelativeLayout
+        android:id="@+id/layout_season_drop_down"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tv_detail_sub_header_height"
+        android:layout_below="@+id/divider_view"
+        android:background="@color/app_theme_color"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/header_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="@string/loading_txt"
+            android:textAppearance="@style/TextAppearance.NormalFontRegular"
+            android:textColor="@drawable/button_text_white_red_color"
+            android:textSize="@dimen/textsize_14"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/drop_down_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:background="@drawable/button_selector"
+            android:src="@drawable/drop_down_icon" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview_related_vods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_season_drop_down"
+        android:dividerHeight="@dimen/tv_detail_list_divider_height"
+        android:listSelector="@drawable/listitem_selector_bg" />
+
+    <ProgressBar
+        android:id="@+id/card_loading_progres_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/margin_gap_48"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="gone"
+        android:indeterminateTint="@color/progressbar_color" />
+
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_gap_16"
+        android:gravity="center"
+        android:text="@string/error_fetch_tvshows"
+        android:textAppearance="@style/TextAppearance.FontMedium"
+        android:textColor="@color/white_100"
+        android:textSize="@dimen/textsize_16"
+        android:visibility="gone"/>
+
+</RelativeLayout>

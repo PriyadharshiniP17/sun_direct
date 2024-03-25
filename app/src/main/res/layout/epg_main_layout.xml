@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_64sdp"
+    android:background="@color/app_bkg"
+    android:orientation="vertical">
+    <com.myplex.myplex.ui.views.ObservableScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_bkg"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/epg_date_tab_divider_color"
+                android:visibility="gone" />
+            <!--                     android:drawableRight="@drawable/down_arrow_black"
+            -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categories_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/transparent"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/cardview_dark_background"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/categoriesTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_bg"
+                    android:drawableRight="@drawable/ic_accordion_arrow_down"
+                    android:drawableTint="@color/pack_subtext_color"
+
+                    android:gravity="center"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:text="Category"
+                    android:textColor="@color/pack_subtext_color"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/selectedDateTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_bg"
+                    android:drawableRight="@drawable/ic_accordion_arrow_down"
+                    android:drawableTint="@color/pack_subtext_color"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:text="Today"
+                    android:textColor="@color/pack_subtext_color"
+                    android:textSize="@dimen/_15sp"
+                    android:visibility="visible" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_bg"
+                    android:visibility="gone">
+                    <!-- android:popupTheme="@style/customDialog"-->
+                    <Spinner
+                        android:id="@+id/dateSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/new_spinner_bg"
+                        android:spinnerMode="dialog"
+                        android:text="Today"
+                        android:visibility="gone" />
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/tabLL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/yellow_tab_bg">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_37sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:animateLayoutChanges="true"
+                    android:background="@color/yellow_tab_bg"
+                    android:elevation="0dp"
+                    app:layout_scrollFlags="enterAlways|scroll"
+                    app:tabBackground="@color/yellow_tab_bg"
+                    app:tabIndicatorColor="@color/transparent"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMinWidth="90dp"
+                    app:tabMode="scrollable"
+                    app:tabPaddingEnd="8dp"
+                    app:tabPaddingStart="8dp"
+                    app:tabSelectedTextColor="#FF6600"
+                    app:tabTextAppearance="@style/LiveTitleTextAppearance"
+                    app:tabTextColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/left_arrow"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_1sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_left_arrow" />
+                <com.myplex.myplex.utils.FontRegularTypeface
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="( Catch Up )"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_9"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_10sp"
+                    android:layout_marginLeft="@dimen/_30sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/right_arrow"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="@dimen/_1sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_right_arrow" />
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/epg_date_tab_divider_color"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tabLL"
+                android:background="@color/epg_background"
+                android:layout_marginBottom="@dimen/action_bar_height"
+                android:visibility="visible">
+
+
+                <com.myplex.myplex.ui.fragment.epg.EPGView
+                    android:id="@+id/epg"
+                    android:layout_width="fill_parent"
+                    android:layout_marginBottom="@dimen/action_bar_height"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:id="@+id/progresslayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:visibility="visible">
+
+                        <include
+                            layout="@layout/fragment_error_dialog"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:visibility="gone" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:indeterminate="false"
+                            android:indeterminateDrawable="@drawable/custom_progress_horizontal"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+                </com.myplex.myplex.ui.fragment.epg.EPGView>
+
+                <com.myplex.myplex.utils.FontBoldTypeFace
+                    android:id="@+id/channelName"
+                    android:layout_width="@dimen/epg_channel_layout_width"
+                    android:layout_height="@dimen/epg_time_bar_height"
+                    android:background="@color/epg_timebar_background"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/epg_event_layout_text"
+                    android:textSize="@dimen/textsize_13" />
+
+                <RelativeLayout
+                    android:id="@+id/sidearrows_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_margin="@dimen/epg_arrow_margin"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_left_arrow"
+                        app:tint="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="@dimen/epg_arrow_margin"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_right_arrow"
+                        app:tint="@color/white" />
+                </RelativeLayout>
+
+
+                <!--                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/dummytextview"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/epg_golive_button_margin_left"
+                                        android:layout_marginTop="@dimen/epg_golive_button_margin" />
+
+                                    <View
+                                        android:id="@+id/dummyChannelView"
+                                        android:layout_width="@dimen/epg_channel_layout_dummyview_width"
+                                        android:layout_height="@dimen/epg_channel_layout_dummyview_height"
+                                        android:layout_below="@+id/dummytextview" />
+                                </RelativeLayout>-->
+
+                <RelativeLayout
+                    android:id="@+id/noepglayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/imageView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:fontFamily="@font/indulekha"
+                            android:gravity="center"
+                            android:lineSpacingExtra="@dimen/_6sp"
+                            android:text="content_not_found"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_24sp"
+
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/noRecordingsImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/noRecordingsImageView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:gravity="center_horizontal"
+                            android:lineSpacingExtra="@dimen/_2sp"
+                            android:textColor="@color/white_70"
+                            android:textSize="@dimen/_16sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+            <ProgressBar
+                android:id="@+id/epgProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/progressbar_color"
+                android:indeterminateTintMode="src_atop"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </com.myplex.myplex.ui.views.ObservableScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

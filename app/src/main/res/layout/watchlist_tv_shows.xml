@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/imageview_thumbnail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_gap_4"
+        android:background="@drawable/rounded_corners_bg">
+
+        <RelativeLayout
+            android:layout_width="164dp"
+            android:layout_height="@dimen/tv_detail_list_item_height">
+
+            <ImageView
+                android:id="@+id/thumbnail_movie"
+                android:layout_width="164dp"
+                android:layout_height="@dimen/tv_detail_list_item_height"
+                android:layout_gravity="left"
+                android:scaleType="centerCrop"
+                android:src="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/thumbnail_movie_delete_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_gap_4"
+                android:scaleType="centerCrop"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/thumbnail_movie_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_gap_4"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+            <ProgressBar
+                android:id="@+id/continue_watching_progress"
+                style="@style/EpgCustomProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_gap_3"
+                android:layout_alignParentBottom="true"
+                android:baselineAligned="false"
+                android:progress="30"
+                android:visibility="gone"
+                />
+            <!--
+                        <ImageView
+                            android:id="@+id/thumbnail_rupee_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin_gap_4"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/thumbnail_pay_icon"
+                            android:visibility="gone" />-->
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/channelImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="@dimen/margin_gap_6"
+                android:layout_marginLeft="@dimen/margin_gap_8"
+                android:src="@drawable/black"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/textview_movies_title"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="@dimen/margin_gap_6"
+                android:layout_toEndOf="@id/channelImage"
+                android:maxLines="1"
+                android:text="@string/no_info_available"
+                android:textAppearance="@style/TextAppearance.FontMedium"
+                android:textColor="@color/white_100"
+                android:textSize="@dimen/item_status_title_size"
+                />
+
+            <TextView
+                android:id="@+id/vod_info1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/no_info_available"
+                android:textAppearance="@style/TextAppearance.FontLight"
+                android:textColor="@color/white_50"
+                android:textSize="@dimen/item_status_title_size"
+                android:layout_toRightOf="@id/channelImage"
+                android:layout_below="@id/textview_title_show"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/vod_info2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:ellipsize="end"
+                android:maxLength="25"
+                android:singleLine="true"
+                android:text="@string/no_info_available"
+                android:textAppearance="@style/TextAppearance.FontLight"
+                android:textColor="@color/white_100"
+                android:textSize="@dimen/item_status_title_size"
+                android:layout_toEndOf="@id/channelImage"
+                android:layout_below="@id/vod_info1"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

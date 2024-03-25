@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/feedback_bg"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+    <RelativeLayout
+        android:id="@+id/ok_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_gap_4">
+
+        <TextView
+            android:id="@+id/about_ok_txt"
+            android:layout_width="@dimen/margin_gap_54"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="ok"
+            android:gravity="center"
+            android:background="@drawable/feedback_button_bg"
+            android:textAppearance="@style/TextAppearance.FontRegular"
+            android:textSize="20sp"
+            android:textColor="@color/about_dialog_ok_text_colour"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/about_titlelayout">
+
+        <ImageView
+            android:id="@+id/about_logo"
+            android:layout_width="@dimen/margin_gap_32"
+            android:layout_height="@dimen/margin_gap_32"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/margin_gap_16"
+            android:gravity="start"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@drawable/toolbar_logo"/>
+
+
+        <TextView
+            android:id="@+id/about_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/about_logo"
+            android:gravity="start"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.FontRegular"
+            android:textColor="@color/progress_bar_loading_text_color"
+            android:maxLines="2"
+            android:minLines="1"
+            />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/title_div"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_2"
+        android:background="@color/about_dialog_divider_border_colour"
+        android:layout_below="@+id/about_titlelayout"
+        android:layout_marginTop="20dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ok_layout"
+        android:layout_below="@+id/title_div"
+        android:background="@color/app_theme_color"
+        android:scrollbars="none"
+        android:visibility="visible"
+        >
+        <ProgressBar
+            android:id="@+id/customactionbar_progressBar"
+            style="@style/CustomProgressBar"
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:indeterminate="true"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/myplex_progress_bar_horizontal"
+            android:layout_below="@+id/toolbar"/>
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/app_theme_color"
+            android:layout_below="@+id/customactionbar_progressBar"/>
+        <TextView
+            android:id="@+id/textview_network_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/network_error"
+            android:textColor="@color/progress_bar_loading_text_color"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ok_layout"
+        android:layout_marginTop="@dimen/margin_gap_12"
+        android:layout_below="@+id/title_div"
+        android:padding="5dp"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_gap_16"
+                android:gravity="start"
+                android:text="@string/hello"
+                android:textAppearance="@style/TextAppearance.FontRegular"
+                android:textColor="@color/white_100"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

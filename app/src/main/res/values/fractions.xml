@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    <fraction name="roller_poster_aspect_ratio">69.5946%</fraction>
+    <fraction name="pinup_poster_aspect_ratio">177.99988%</fraction>
+    <fraction name="band_poster_aspect_ratio">178.1609%</fraction>
+    <fraction name="content_poster_aspect_ratio">133.3333%</fraction>
+    <fraction name="sheet_poster_aspect_ratio">177.99988%</fraction>
+    <fraction name="sheet_poster_list_aspect_ratio">177.99988%</fraction>
+    <fraction name="info_poster_aspect_ratio">177.99988%</fraction>
+    <fraction name="search_poster_aspect_ratio">178.1609%</fraction>
+    <fraction name="intro_page_aspect_ratio">203.15789%</fraction>
+    <fraction name="banner_aspect_ratio">200%</fraction>
+    <fraction name="info_banner_aspect_ratio">177.7777%</fraction>
+    <fraction name="live_viewall_aspect_ratio">218.3948%</fraction>-->
+
+
+    <fraction name="medium_horizontal_item">177.780784844%</fraction>
+    <fraction name="continue_watching_item">177.776361086%</fraction>
+    <fraction name="partner_horizontal_item">101.40845070422%</fraction>
+    <fraction name="big_horizontal_item">66.6666666%</fraction>
+    <fraction name="small_horizontal_item">177.77777777%</fraction>
+    <fraction name="extra_small_horizontal_item">177.7768105895%</fraction>
+    <fraction name="long_big_horizontal_item">66.6666666666%</fraction>
+    <fraction name="catchup_program_item">172.3214285714286%</fraction>
+    <fraction name="big_weekly_trending_adapter_new">177.92421%</fraction>
+    <fraction name="big_weekly_trending_adapter_new_tab">177.5577557755776%</fraction>
+    <fraction name="big_weekly_trending_adapter_new_tab_land">184.5394736842105%</fraction>
+
+
+</resources>

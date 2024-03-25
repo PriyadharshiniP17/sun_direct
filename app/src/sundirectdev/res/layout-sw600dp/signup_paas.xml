@@ -1,0 +1,622 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/back_nav_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/action_bar_height"
+            android:foregroundGravity="center_horizontal"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back_navigation"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/back_arrow_icon" />
+
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/signUptitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:paddingRight="@dimen/_45sdp"
+                android:text="@string/register_text"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textsize_26" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_space_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:layout_below="@id/back_nav_icon"
+            >
+
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/suggestion_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:maxLines="2"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_14" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/otp_reset_suggestion_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:maxLines="2"
+                android:text="@string/Otp_received_suggestion"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_14"
+                android:visibility="gone" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:maxLines="2"
+                android:text="@string/enter_otp_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_14"
+                android:visibility="gone" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/mobile_number_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/suggestion_text"
+                android:layout_marginTop="@dimen/_70sdp"
+                android:gravity="start"
+                android:text="@string/otp_stp1_heading3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_13" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mobileNumberSignUp"
+                style="@style/SignInEditTextChanges"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_below="@id/mobile_number_text"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/signin_rounded_corner"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingStart="@dimen/_25sdp"
+                android:textColor="@color/new_user_edittext_color"
+                android:textSize="@dimen/textsize_13" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/mobileNumber_valid"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/mobileNumberSignUp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/validate_background_corner"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="@string/mobile_invalid_message"
+                android:textColor="@color/gray_border"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="gone" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/new_mobile_number_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobileNumberSignUp"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:gravity="start"
+                android:visibility="gone"
+                android:text="Change Phone Number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_13" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/new_mobileNumberSignUp"
+                style="@style/SignInEditTextChanges"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_below="@id/new_mobile_number_text"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/signin_rounded_corner"
+                android:inputType="number"
+                android:maxLength="10"
+                android:visibility="gone"
+                android:paddingStart="@dimen/_25sdp"
+                android:textColor="@color/new_user_edittext_color"
+                android:textSize="@dimen/textsize_13" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/new_mobileNumber_valid"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/new_mobileNumberSignUp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/validate_background_corner"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="@string/mobile_invalid_message"
+                android:textColor="@color/gray_border"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="gone" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/subscriber_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_mobileNumberSignUp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/name_hint"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_13"
+                android:visibility="gone" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/subscriberName"
+                style="@style/SignInEditTextChanges"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_below="@+id/new_mobileNumber_valid"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/signin_rounded_corner"
+                android:inputType="text"
+                android:paddingStart="@dimen/_25sdp"
+                android:textColor="@color/new_user_edittext_color"
+                android:textSize="@dimen/textsize_13"
+                android:visibility="gone" />
+            <!-- <EditText
+                 android:id="@+id/nameSignUp"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:padding="5dp"
+                 android:paddingStart="15dp"
+                 android:layout_marginLeft="24dp"
+                 android:layout_marginRight="24dp"
+                 android:layout_marginTop="24dp"
+                 android:layout_marginBottom="12dp"
+                 android:layout_below="@+id/signUptitle"
+                 android:textSize="14sp"
+                 android:textColorHint="@color/hintColor"
+                 android:textColor="@color/edittextColor"
+                 android:inputType="text"
+                 android:maxLines="1"
+                 android:hint="Enter name"
+                 android:visibility="gone"
+                 android:background="@drawable/rounded_corner" />-->
+
+            <!-- <EditText
+                 android:id="@+id/emailIDSignUp"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:padding="5dp"
+                 android:paddingStart="15dp"
+                 android:layout_marginLeft="24dp"
+                 android:layout_marginRight="24dp"
+                 android:layout_marginTop="12dp"
+                 android:layout_marginBottom="12dp"
+                 android:layout_below="@+id/nameSignUp"
+                 android:hint="Enter email ID"
+                 android:inputType="textEmailAddress"
+                 android:maxLines="1"
+                 android:visibility="gone"
+                 android:textSize="14sp"
+                 android:textColorHint="@color/hintColor"
+                 android:textColor="@color/edittextColor"
+                 android:background="@drawable/rounded_corner" />
+         -->
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/subscriber_valid"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/subscriberName"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/validate_background_corner"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="@string/otp_msg_subscriber_name"
+                android:textColor="@color/gray_border"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="gone" />
+            <!--<RelativeLayout
+                android:id="@+id/mobileSignUpLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subscriber_valid"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_20sp"
+                android:layout_marginEnd="@dimen/_20sp"
+                android:visibility="visible">-->
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/smart_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subscriber_valid"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/smart_card_numbers"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_13"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/smc_feild_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subscriber_valid"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/smc_feild"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/signin_rounded_corner"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/smc_spinner_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/margin_gap_10"
+                        android:src="@drawable/ic_down"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/smartCardNumber"
+                        style="@style/SignInEditTextChanges"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/_10sp"
+                        android:layout_toStartOf="@id/smc_spinner_img"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:paddingStart="@dimen/_25sdp"
+                        android:textColor="@color/new_user_edittext_color"
+                        android:textSize="@dimen/textsize_13" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/smc_cards_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smc_feild"
+                    android:layout_marginTop="@dimen/margin_gap_4"
+                    android:background="@drawable/signin_rounded_corner"
+                    />
+            </RelativeLayout>
+
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/smart_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/smc_feild_layout"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/validate_background_corner"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="@string/otp_msg_smart_card"
+                android:textColor="@color/gray_border"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="gone" />
+
+
+            <EditText
+                android:id="@+id/mobileSignUp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/rounded_corner"
+                android:hint="@string/enter_mobile_no"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:paddingStart="@dimen/_15sdp"
+                android:textColor="@color/edittextColor"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/textsize_14"
+                android:visibility="gone" />
+
+            <!-- </RelativeLayout>-->
+
+
+            <Spinner
+                android:id="@+id/countrySignUp"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_corner"
+                android:dropDownSelector="@android:drawable/btn_dropdown"
+                android:padding="@dimen/_5sdp"
+                android:paddingStart="@dimen/_15sdp"
+                android:popupBackground="@color/white"
+                android:textColor="@color/edittextColor"
+                android:textSize="@dimen/textsize_14"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/genderSignUp"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/countrySignUp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/rounded_corner"
+                android:dropDownSelector="@android:drawable/btn_dropdown"
+                android:padding="@dimen/_5sdp"
+                android:paddingStart="@dimen/_15sdp"
+                android:popupBackground="@color/white"
+                android:textColor="@color/edittextColor"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/textsize_14"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/ageSignUp"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/genderSignUp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/rounded_corner"
+                android:dropDownSelector="@android:drawable/btn_dropdown"
+                android:padding="@dimen/_5sdp"
+                android:paddingStart="@dimen/_15sdp"
+                android:popupBackground="@color/white"
+                android:textColor="@color/edittextColor"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/textsize_14"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/pwdSignUp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ageSignUp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Enter password(min 6 characters)"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/edittextColor"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/textsize_14"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/cnfpwdSignUp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pwdSignUp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Confirm password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/edittextColor"
+                android:textColorHint="@color/hintColor"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/registerSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/smart_card"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:background="@drawable/rounded_corner_button_orange"
+                android:fontFamily="@font/amazon_ember_cd_bold"
+                android:text="@string/get_otp"
+                android:textAllCaps="false"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/textsize_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bottomText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/registerSignUp"
+                android:layout_marginTop="@dimen/margin_gap_30"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:text=""
+                android:textColor="@color/textSignIN"
+                android:textSize="@dimen/textsize_14"
+                android:visibility="visible" />
+            <!-- <Button
+                 android:id="@+id/sign_in_button1"
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:layout_centerHorizontal="true"
+                 android:visibility="gone"
+                 android:layout_above="@+id/signInText"
+                 android:background="@drawable/google" />-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/signInText"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/sign_in_button1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/bottomText"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/google"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/facebook_icon_sign_up_social"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/facebook"
+                    android:visibility="gone" />
+
+                <!--  <com.facebook.login.widget.LoginButton
+                      android:id="@+id/login_button"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:visibility="gone" />-->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/signInText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bottomText"
+                android:layout_marginBottom="100dp"
+                android:gravity="center"
+                android:text="Already a member. Click here for sign in"
+                android:textColor="@color/textSignIN"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/otp_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/otp_reset_suggestion_text"
+                android:layout_marginTop="@dimen/_140sdp"
+                android:gravity="start"
+                android:text="@string/enter_otp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textsize_13"
+                android:visibility="gone" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otp_edittext"
+                style="@style/SignInEditTextChanges"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_below="@id/otp_text"
+                android:layout_marginTop="@dimen/_5sp"
+                android:background="@drawable/signin_rounded_corner"
+                android:inputType="number"
+                android:paddingStart="@dimen/_25sdp"
+                android:textColor="@color/new_user_edittext_color"
+                android:textSize="@dimen/textsize_13"
+                android:visibility="gone" />
+
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/otp_validation_alert"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/otp_edittext"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/validate_background_corner"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="@string/Invalid_OTP"
+                android:textColor="@color/gray_border"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/proceed_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/otp_validation_alert"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@drawable/rounded_corner_button_orange"
+                android:fontFamily="@font/amazon_ember_cd_bold"
+                android:text="@string/proceed"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/textsize_16"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <com.myplex.myplex.utils.FontBoldTypeFace
+                android:id="@+id/resend_otp_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/proceed_btn"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_30sp"
+                android:background="@drawable/resend_otp_background"
+                android:gravity="center"
+                android:text="@string/resend_otp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_16"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

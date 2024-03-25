@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.myplex.myplex.utils.CustomSwipeToRefresh
+        android:id="@+id/swipe_to_refresh_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <RelativeLayout
+                    android:id="@+id/profile_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_gap_30"
+                    android:layout_marginTop="@dimen/margin_gap_20"
+                    android:layout_marginRight="@dimen/margin_gap_30">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_iv"
+                        android:layout_width="@dimen/margin_44"
+                        android:layout_height="@dimen/margin_gap_75"
+                        android:src="@drawable/nav_drawer_profile_thumbnail"
+                        app:civ_border_color="@color/continue_button_color"
+                        app:civ_border_width="0.8dp" />
+
+                    <com.myplex.myplex.utils.FontBoldTypeFace
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/margin_gap_12"
+                        android:layout_toRightOf="@id/profile_iv"
+                        android:gravity="center"
+                        android:text="Hello Sundirect User"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_18" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/editTextLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_details"
+                    android:layout_marginLeft="@dimen/margin_gap_30"
+                    android:layout_marginTop="@dimen/margin_gap_70"
+                    android:layout_marginRight="@dimen/margin_gap_30">
+
+                    <com.myplex.myplex.utils.FontBoldTypeFace
+                        android:id="@+id/hint_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sp"
+                        android:text="@string/search_suggestion_text"
+                        android:textColor="@color/white_73"
+                        android:textSize="@dimen/textsize_14" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_below="@+id/hint_text"
+                        android:layout_marginTop="@dimen/margin_gap_10"
+                        android:background="@drawable/edittext_rectangular_black_border"
+                        android:elevation="@dimen/_5sdp"
+                        android:padding="@dimen/margin_gap_5">
+
+                        <ImageView
+                            android:id="@+id/backIcon"
+                            android:layout_width="@dimen/margin_gap_24"
+                            android:layout_height="@dimen/margin_gap_24"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/back_icon"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/search_img"
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dimen_12_dp"
+                            android:layout_toEndOf="@+id/backIcon"
+                            android:alpha="0.61"
+                            android:src="@drawable/search_icon"
+                            app:tint="@color/voice_search_icon_tint" />
+
+                        <EditText
+                            android:id="@+id/searchTextBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_8sp"
+                            android:layout_marginEnd="@dimen/_30sdp"
+                            android:layout_toLeftOf="@+id/closeIcon"
+                            android:layout_toRightOf="@+id/search_img"
+                            android:background="@null"
+                            android:hint="@string/search_edit_text"
+                            android:imeOptions="actionDone"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/margin_gap_10"
+                            android:paddingVertical="@dimen/margin_gap_5"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/white_35"
+                            android:textSize="@dimen/textsize_12"
+                            android:theme="@style/CusrsorBubbleTheme" />
+
+                        <ImageView
+                            android:id="@+id/closeIcon"
+                            android:layout_width="@dimen/margin_gap_20"
+                            android:layout_height="@dimen/margin_gap_20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_30sdp"
+                            android:src="@drawable/ic_dialog_close_dark"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/voice_search"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/margin_gap_10"
+                            android:alpha="0.61"
+                            android:src="@drawable/search_mike"
+                            android:visibility="visible"
+                            app:tint="@color/voice_search_icon_tint" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextLayout">
+
+                    <RelativeLayout
+                        android:id="@+id/header_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_gap_16"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/toolbar_filter_icon"
+                            android:layout_width="22dp"
+                            android:layout_height="@dimen/margin_gap_28"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/actionbar_filter_icon_default"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvFilterItems"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/header_layout"
+                        android:layout_marginLeft="@dimen/margin_gap_16"
+                        android:layout_marginRight="@dimen/margin_gap_16"
+                        android:layout_marginBottom="@dimen/margin_gap_8"
+                        android:background="@color/app_bkg"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/errorText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/margin_gap_40"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/margin_gap_30"
+                        android:textAppearance="@style/TextAppearance.FontRegular"
+                        android:textColor="@color/search_error_text_color"
+                        android:textSize="@dimen/margin_gap_12" />
+                </RelativeLayout>
+
+                <com.myplex.myplex.utils.FontBoldTypeFace
+                    android:id="@+id/search_results_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header"
+                    android:layout_marginStart="@dimen/margin_gap_20"
+                    android:layout_marginTop="@dimen/margin_gap_16"
+                    android:layout_marginBottom="@dimen/margin_gap_8"
+                    android:text="Search Results"
+                    android:textAppearance="@style/TextAppearance.FontBold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_14"
+                    android:visibility="gone" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/search_results_text"
+                    android:layout_marginBottom="@dimen/_64sdp"
+                    android:background="@color/app_bkg"
+                    android:clickable="true">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/suggestions_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/trendingSearchRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_gap_30"
+                        android:visibility="visible">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/searchResultCarousel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/margin_gap_64"
+                        android:visibility="gone">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <ListView
+                        android:id="@+id/suggestionlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/trendingSearchRecycler"
+                        android:layout_marginTop="@dimen/margin_gap_4"
+                        android:divider="@color/app_bkg"
+                        android:dividerHeight="@dimen/tv_detail_list_divider_height"
+                        android:nestedScrollingEnabled="false" />
+
+
+                    <ProgressBar
+                        android:id="@+id/searchProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="@dimen/margin_gap_48"
+                        android:gravity="bottom"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/progressbar_color"
+                        android:indeterminateTintMode="src_atop"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/retry_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageview_error_retry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/reload_image" />
+
+                        <TextView
+                            android:id="@+id/textview_error_retry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageview_error_retry"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/msg_tap_to_retry"
+                            android:textAppearance="@style/TextAppearance.FontRegular"
+                            android:textColor="@color/download_item_subtitle_text_color"
+                            android:textSize="@dimen/textsize_12"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </com.myplex.myplex.utils.CustomSwipeToRefresh>
+</RelativeLayout>

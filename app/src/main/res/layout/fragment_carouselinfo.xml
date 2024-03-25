@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bkg"
+    android:orientation="vertical">
+
+    <com.myplex.myplex.utils.CustomSwipeToRefresh
+        android:id="@+id/swipe_to_refresh_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:animateLayoutChanges="false" />
+    </com.myplex.myplex.utils.CustomSwipeToRefresh>
+
+    <LinearLayout
+        android:id="@+id/tabs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/nested_carousels_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                app:tabIndicatorColor="@color/apps_tab_indicator_color"
+                app:tabSelectedTextColor="@color/title_text_color"
+                app:tabTextColor="@color/title_text_color"
+                app:tabGravity="fill"
+                app:tabMaxWidth="-1dp"
+                android:layout_centerVertical="true"
+                app:tabMode="scrollable"
+                app:tabIndicatorFullWidth="false"
+                app:tabTextAppearance="@style/PartnerTitleTextAppearance"
+                android:background="@color/app_bkg"
+                android:layout_marginStart="@dimen/_12sdp_negative"
+                android:layout_toEndOf="@+id/vw_bg"
+                android:paddingHorizontal="@dimen/_15sdp"/>
+                <FrameLayout
+                    android:id="@+id/vw_bg"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/triple_layer_shape"
+                    android:visibility="gone">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/logo_icon"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    app:shapeAppearanceOverlay="@style/circle"
+                    android:visibility="gone"
+                    app:strokeColor="@color/yellow"
+                    app:strokeWidth="@dimen/_2sdp"
+                    android:padding="@dimen/_3sdp"
+                    app:civ_border_width="2dp"/>
+                </FrameLayout>
+                <ImageView
+                    android:id="@+id/left_arrow"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_left_arrow"
+                    android:contentDescription="@string/app_name" />
+                <ImageView
+                    android:id="@+id/right_arrow"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_1sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_right_arrow"
+                    android:contentDescription="@string/app_name"/>
+                <!--            </RelativeLayout>-->
+            </RelativeLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/nested_carousels_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/retry_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageview_error_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/reload_image" />
+
+        <TextView
+            android:id="@+id/textview_error_retry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageview_error_retry"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/msg_tap_to_retry"
+            android:textAppearance="@style/TextAppearance.FontRegular"
+            android:textColor="@color/download_item_subtitle_text_color"
+            android:textSize="@dimen/textsize_12"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/progressbar_color"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="gone" />
+
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:id="@+id/no_data_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/no_content"
+        android:textAppearance="@style/TextAppearance.FontRegular"
+        android:textColor="@color/download_item_subtitle_text_color"
+        android:textSize="@dimen/textsize_20"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_bg_colour"
+        android:contentInsetStart="10dp"
+        android:contentInsetLeft="10dp"
+        android:contentInsetRight="10dp"
+        android:visibility="gone"
+        app:contentInsetLeft="10dp"
+        app:contentInsetRight="10dp"
+        app:contentInsetStart="10dp">
+
+        <include layout="@layout/custom_toolbar_carousel_info" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/fab_top_scroll"
+        android:layout_width="@dimen/_26sp"
+        android:layout_height="@dimen/_26sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_140sdp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/up_arrow_new"
+        android:visibility="gone"
+        app:civ_border_color="@color/white80"
+        app:civ_border_width="1.5dp" />
+
+</RelativeLayout>

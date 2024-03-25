@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/layout_carousel_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/layout_carousel_title_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:id="@+id/toolbar_tv_channel_Img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_gap_2"
+                android:layout_marginLeft="@dimen/margin_gap_8"
+                android:layout_marginTop="@dimen/margin_gap_2"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/toolbar_tv_channel_Img"
+                android:layout_toRightOf="@+id/toolbar_tv_channel_Img"
+                android:layout_marginLeft="@dimen/margin_gap_8"
+                android:layout_marginStart="@dimen/margin_gap_8"
+                android:layout_marginBottom="@dimen/margin_gap_12"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textview_genre_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.FontBold"
+                    android:textColor="@color/carousel_heading_text_color"
+                    android:textSize="@dimen/carousel_title_text_size" />
+                <TextView
+                    android:id="@+id/textview_other_lang_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.FontHindi"
+                    android:textColor="@color/other_lang_title_text_color"
+                    android:textSize="@dimen/textsize_14"
+                    android:layout_marginTop="@dimen/margin_gap_4"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_view_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_gap_5"
+            android:layout_marginRight="@dimen/margin_gap_8"
+            android:layout_centerVertical="true"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview_view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_all"
+                android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                android:textColor="@color/more_text_color"
+                android:visibility="gone"
+                android:textSize="@dimen/textsize_12" />
+
+
+            <TextView
+                android:id="@+id/textview_view_all_other_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/moreInHindi"
+                android:textAppearance="@style/TextAppearance.FontHindi"
+                android:textColor="@color/more_text_color"
+                android:layout_marginTop="@dimen/margin_gap_4"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/arrow_view_all"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="@dimen/margin_gap_2"
+                android:src="@drawable/view_all_arrow"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <autoscroll.AutoScrollRecyclerView
+        android:id="@+id/animation_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_gap_4"
+        android:layout_below="@+id/layout_carousel_title"
+        android:visibility="visible"/>
+
+
+
+    <com.myplex.myplex.ui.views.circleindicator.DotsIndicator
+        android:id="@+id/dots_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:dotsColor="@color/subtitle_text_color"
+        app:selectedDotColor="@color/colorPrimary"
+        app:dotsStrokeColor="@color/subtitle_text_color"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="8dp"
+        app:dotsSpacing="2dp"
+        app:dotsWidthFactor="2.5"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:layout_marginBottom="@dimen/margin_gap_12"
+        />
+
+    <com.rd.PageIndicatorView
+        android:id="@+id/pageIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:piv_animationType="worm"
+        app:piv_dynamicCount="true"
+        app:piv_animationDuration="2000"
+        app:piv_interactiveAnimation="false"
+        app:piv_selectedColor="@color/colorPrimary"
+        android:layout_below="@+id/animation_recyclerview"
+        app:piv_unselectedColor="@color/subtitle_text_color"
+        android:layout_marginTop="@dimen/margin_gap_8"
+        android:layout_marginBottom="@dimen/margin_gap_12"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:piv_strokeWidth="4dp"
+        app:piv_padding="6dp"
+        app:piv_radius="4dp"
+        />
+
+
+
+</RelativeLayout>

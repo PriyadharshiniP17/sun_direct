@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Shelf Life Check - KOP for Java</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="js/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Shelf Life Check";
+    var mkdocs_page_input_path = "SF-CheckShelfLife.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="js/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> KOP for Java </a> <img src="./images/IconeKOP4JWhite2.png"> </a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Concepts.html">General concept</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_java.html">Java applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_android.html">Android applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Commands.html">Commands</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="CodeShrinking.html">Code shrinking and optimization</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security features</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="SF-00-FeatureList.html">Feature list</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Renaming.html">Renaming</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Flattening.html">Flattening</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-StringMasking.html">String Masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-OpaquePredicate.html">Opaque Predicate</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CallMasking.html">Call masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckCertificate.html">Certificate Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckInstallers.html">Installers Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckManifest.html">Manifest Check</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="SF-CheckShelfLife.html">Shelf Life Check</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general-description">General description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#security-note">Security note</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#protection-configuration">Protection Configuration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#without-reaction-selection">Without reaction selection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#with-reaction-selection">With reaction selection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#with-securetimefield-option-for-shelf-life-check">With secureTimeField option for Shelf Life check</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#error-messages">Error messages</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexIntegrity.html">DEX integrity Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexSignature.html">DEX signature Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckContext.html">Execution Context Checks</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Odca.html">On Demand Code Activation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-DelayedReaction.html">Delayed Reaction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-InAppMonitoring.html">In-app Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-AnNaNaS.html">Android Nagra Native Secure Lib</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Protection-file.html">How to design the protection file</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Limitations.html">Limitations</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="compatibility.html">Compatibility</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="99.99-license.html">License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">KOP for Java</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Security features &raquo;</li>
+      <li>Shelf Life Check</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="shelf-life-checks">Shelf life Checks</h1>
+<h2 id="general-description">General description</h2>
+<p>KOP4J gives the opportunity to inject different checks on the Android java environment.<br />
+Those checks are positioned in the code at the choice of the user.</p>
+<p><strong>The Shelf life check</strong> : consists to check the application expiration date</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These checks must be inserted in classes that are direct or indirect subclasses of the class Context
+(e.g. Activity, ActivityGroup, Application, ContextWrapper...)</p>
+</div>
+<h2 id="security-note">Security note</h2>
+<div class="admonition danger">
+<p class="admonition-title">Security</p>
+<p>Shelf life checks could impact a bit the performance.
+It is important to  <strong>apply those checks at the start-up of the app </strong>, but not only. <br />
+An hacker could try to by pass the check!    <br />
+Then it could be smart to <strong>execute some checks during the runtime of the app or before some critical operation</strong>.</p>
+</div>
+<hr />
+<h2 id="protection-configuration">Protection Configuration</h2>
+<h3 id="without-reaction-selection">Without reaction selection</h3>
+<p>To inject a check in a method, the operator will set in the .pro file the check command followed by the method designator</p>
+<p><strong>Shelf life</strong> : <code>-kop-shelf-life-check,expiration date:YYYY-MM-DD &lt;classic method designator &gt;</code>  </p>
+<p><strong> Example </strong> : <code>-kop-shelf-life-check,date:2021-11-16 public class package.name.Main {public static void main(...);}</code></p>
+<p>will inject a check  that the date didn't passed the 16 november 2021</p>
+<h3 id="with-reaction-selection">With reaction selection</h3>
+<p>KOP provides 4 reactions:  </p>
+<ul>
+<li>
+<p><strong><em>Immediate</em></strong>: if an anomaly is detected, the app fails immediately. <br />
+<code>-kop-shelf-life-check,immediate &lt;classic method designator &gt;</code> <br />
+    </br>  </p>
+</li>
+<li>
+<p><strong><em>Delayed-Strong</em></strong>: if an anomaly is detected, the app fails with a certain delay. This mechanism is described in <a href="SF-DelayedReaction.html"><strong><em> Delayed Reaction chapter </em></strong></a> <br />
+<code>-kop-shelf-life-check,delayed-strong &lt;classic method designator &gt;</code> <br />
+    </br>  </p>
+</li>
+<li>
+<p><strong><em>Delayed</em></strong>: Same protection as the previous one, but less restrictive. This mechanism is described in <a href="SF-DelayedReaction.html"><strong><em> Delayed Reaction chapter </em></strong></a> <br />
+<code>-kop-shelf-life-check,delayed &lt;classic method designator &gt;</code> <br />
+    </br>  </p>
+</li>
+<li>
+<p><strong><em>NoReaction</em></strong>: if an anomaly is detected, the app continues to run. <br />
+<code>-kop-shelf-life-check,no-reaction &lt;classic method designator &gt;</code>  <br />
+    </br>  </p>
+</li>
+</ul>
+<p>If the reaction is not specified, KOP applies the immediate reaction.</p>
+<p><strong> Example </strong> : <code>-kop-shelf-life-check,immediate,date:2021-11-16 public class package.name.Main {public static void main(...);}</code><br />
+will inject a check  that the date didn't passed the 16 november 2021 and fail instantly if an anomaly is detected.<br />
+Note that it is equivalent to the first example as the default reaction is the immediate reaction.</p>
+<h3 id="with-securetimefield-option-for-shelf-life-check">With secureTimeField option for Shelf Life check</h3>
+<p>Shelf life check commands support a secureTimeField option that allows the user to provide a secureTime (from a server for example).</p>
+<p>This field must :</p>
+<ul>
+<li>exist in classes provided to kop.</li>
+<li>be <strong>static</strong> and of primitive type <strong>long</strong>.</li>
+</ul>
+<p>The field should be filled with</p>
+<ul>
+<li><strong>-1</strong> : when the application has no secureTime to provide to kop (when the device is offline for example).</li>
+<li><strong>time_in_ms</strong> : when the application has a valid secureTime to provide. Time must be a number of milliseconds since Unix epoch January 1 1970)</li>
+</ul>
+<h4 id="example">Example</h4>
+<p><code>-kop-shelf-life-check,immediate,date:2020-06-06,secureTimeField:com.nagra.kop.demo.ui.login.LoginResult.securetimefield public class package.name.Main {public static void main(...);}</code></p>
+<p>will inject :</p>
+<ul>
+<li><strong>on date</strong> :  a verification between the secureTime provided by the app and the device system time, if the user sets a valid value (i.e different from -1) in the field com.nagra.kop.demo.ui.login.LoginResult.securetimefield a verification . There is a grace-period of 2 days in order to handle a jet lag or a Daylight savings time </li>
+</ul>
+<p>These fields must exist in appropriate class :  </p>
+<pre><code class="language-java">package com.nagra.kop.demo.ui.login;
+
+public class LoginResult {
+
+  public static long securetimefield = 1622130349968L;
+
+  // ...
+}
+</code></pre>
+<h3 id="error-messages">Error messages</h3>
+<p><strong>K5 </strong> : The date for shelf life is not coherent.<br />
+<strong>K6 </strong> : The expiration Date could not be checked due to wrong package name.  </p>
+<h4 id="how-to-analyze-the-shelf-life-check-crash-message">How to analyze the shelf life check crash message</h4>
+<ul>
+<li>Crash message format:</li>
+</ul>
+<p>"K5 :   <br />
+Current date in days since 1970, based on the device system time.<br />
+Expiration date in days since 1970.<br />
+Value”.  </p>
+<ul>
+<li>How to read it :</li>
+</ul>
+<p><img alt="image1" src="images/TimelineShelfLife.png" style="width:800px" /> </p>
+<p>XOR the Expired value with the Info1 value : <strong>Expiration date ^ Value = bitmap value</strong> </p>
+<p>Then </p>
+<table>
+<thead>
+<tr>
+<th align="center">Bit position</th>
+<th align="left">Bit mask</th>
+<th align="left">Mask Hexa</th>
+<th align="left">Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="left"><strong>00000001b</strong></td>
+<td align="left"><strong>0x01</strong></td>
+<td align="left">Expiration Date &lt; Current Date</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="left"><strong>00000010b</strong></td>
+<td align="left"><strong>0x02</strong></td>
+<td align="left">Expiration Date &lt; First installation Date</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left"><strong>00000100b</strong></td>
+<td align="left"><strong>0x04</strong></td>
+<td align="left">Expiration Date &lt; Last update Date</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left"><strong>00001000b</strong></td>
+<td align="left"><strong>0x08</strong></td>
+<td align="left">Current Date &lt; First installation Date</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left"><strong>00010000b</strong></td>
+<td align="left"><strong>0x10</strong></td>
+<td align="left">Current Date &lt; Last Update Date</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left"><strong>00100000b</strong></td>
+<td align="left"><strong>0x20</strong></td>
+<td align="left">Current Date + 2 &lt; SecureDate, If Secure Date is injected</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="SF-CheckManifest.html" class="btn btn-neutral float-left" title="Manifest Check"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="SF-CheckDexIntegrity.html" class="btn btn-neutral float-right" title="DEX integrity Check">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="SF-CheckManifest.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="SF-CheckDexIntegrity.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

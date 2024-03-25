@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:paddingTop="@dimen/margin_gap_16">
+
+
+    <LinearLayout
+        android:id="@+id/LLmovietitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/LLratingStars"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/margin_gap_16"
+        android:layout_toStartOf="@+id/LLratingStars"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/title_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/carddetailbreifdescription_movename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.FontBold"
+                android:textColor="@color/bd_title_dark_theme_color"
+                android:textSize="@dimen/textsize_18" />
+
+            <LinearLayout
+                android:id="@+id/tv_show_data_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/margin_gap_8"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_show_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_gap_4"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/bd_duration_dark_theme_color"
+                    android:textSize="@dimen/textsize_12" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/margin_gap_8"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="@dimen/margin_gap_3"
+                    android:layout_height="@dimen/margin_gap_3"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_gap_4"
+                    android:background="@drawable/black_radius_solid"
+                    android:orientation="horizontal"
+                    android:visibility="gone" />
+
+                <com.myplex.myplex.utils.FontRegularTypeface
+                    android:id="@+id/carddetailbriefdescription_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_gap_4"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/bd_duration_dark_theme_color"
+                    android:textSize="@dimen/textsize_12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/margin_gap_8"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/carddetailbriefdescription_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_gap_4"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/bd_language_dark_theme_color"
+                    android:textSize="@dimen/textsize_12"
+                    tools:text="" />
+
+                <TextView
+                    android:id="@+id/lang_genre_seperator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_gap_4"
+                    android:orientation="horizontal"
+                    android:text=":"
+                    android:textColor="@color/bd_language_dark_theme_color"
+                    android:textSize="@dimen/textsize_8"
+                    android:visibility="visible" />
+
+
+                <View
+                    android:id="@+id/year_duration_seperator"
+                    android:layout_width="@dimen/margin_gap_1"
+                    android:layout_height="@dimen/margin_gap_16"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_gap_4"
+                    android:background="@color/player_divider_color"
+                    android:orientation="horizontal"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <!--<Button
+                android:id="@+id/buy_btn"
+                android:layout_width="@dimen/margin_gap_150"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12sp"
+                android:minHeight="@dimen/textsize_35"
+                android:background="@drawable/buy_btn_bg_bcn"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/margin_gap_4"
+                android:paddingTop="@dimen/margin_gap_5"
+                android:paddingBottom="@dimen/margin_gap_5"
+                android:singleLine="true"
+                android:text="Buy"
+                android:textAllCaps="false"
+                android:minWidth="@dimen/margin_gap_50"
+                android:textAppearance="@style/TextAppearance.FontRegular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_14"
+                android:textStyle="bold"
+                android:visibility="gone"
+
+                />-->
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/thumbnail_movie_layout"
+            android:layout_width="@dimen/margin_gap_90"
+            android:layout_height="@dimen/margin_gap_120"
+            android:layout_marginRight="@dimen/margin_gap_10"
+            android:visibility="gone">
+
+            <com.myplex.myplex.ui.views.RoundedCornerImageView
+                android:id="@+id/imageviewsideicon"
+                android:layout_width="@dimen/margin_gap_100"
+                android:layout_height="@dimen/margin_gap_132"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="start"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/movie_thumbnail_placeholder" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/carddetailbreifdescription_program_thumbnail_container"
+            android:layout_width="@dimen/margin_gap_64"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_gap_16"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/live_channel_thumbnail_icon"
+                android:layout_width="@dimen/margin_gap_48"
+                android:layout_height="@dimen/margin_gap_48"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/black"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/live_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_gap_4"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <!--<View
+                    android:layout_width="@dimen/margin_gap_6"
+                    android:layout_height="@dimen/margin_gap_6"
+                    android:layout_gravity="center"
+                    android:background="@drawable/black_radius_solid_red"
+                    android:orientation="horizontal" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_gap_8"
+                    android:text="LIVE"
+                    android:textAppearance="@style/TextAppearance.FontLight"
+                    android:textColor="@color/red_highlight_color"
+                    android:textSize="@dimen/textsize_14" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pack_expiry_ll"
+        android:paddingStart="@dimen/margin_gap_14"
+        android:paddingEnd="@dimen/margin_gap_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_details_layout"
+        android:layout_marginStart="@dimen/margin_gap_6"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_10sp">
+
+        <TextView
+            android:id="@+id/pack_expiry_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/textsize_12"/>
+        <TextView
+            android:id="@+id/pack_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_gap_3"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/textsize_12"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content_details_layout"
+        android:paddingStart="@dimen/margin_gap_10"
+        android:paddingEnd="@dimen/margin_gap_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LLmovietitle"
+        android:layout_marginTop="@dimen/_10sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/carddetailbriefdescription_releasedate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_gap_6"
+            android:layout_weight="1.0"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="3"
+            android:textAppearance="@style/TextAppearance.FontLight"
+            android:textColor="@color/white"
+            android:lineSpacingExtra="4dp"
+            android:textSize="@dimen/textsize_14" />
+
+        <com.myplex.myplex.utils.FontBoldTypeFace
+            android:id="@+id/content_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_12"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/content_details_layout"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/player_divider_color" />
+
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:id="@+id/carddetailbriefdescription_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LLmovietitle"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/margin_gap_20"
+        android:layout_marginRight="@dimen/margin_gap_10"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="1"
+        android:paddingStart="@dimen/margin_gap_14"
+        android:paddingEnd="@dimen/margin_gap_8"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/textsize_13"
+        tools:text="Hello" />
+
+    <LinearLayout
+        android:id="@+id/LLratingStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="@dimen/margin_gap_16"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="@dimen/margin_gap_16"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingStart="@dimen/margin_gap_14"
+        android:paddingEnd="@dimen/margin_gap_8"
+        >
+
+        <RatingBar
+            android:id="@+id/watchNowRating"
+            style="@style/CustomRatingBarDetailWatchNow"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_gap_10"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="4.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_gap_14"
+        android:paddingEnd="@dimen/margin_gap_8"
+        android:layout_below="@+id/LLratingStars"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="@dimen/margin_gap_16"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="@dimen/margin_gap_16"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:id="@+id/download_btn_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/downloading_gif_anim"
+                android:layout_width="@dimen/margin_gap_24"
+                android:layout_height="@dimen/margin_gap_24"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/download_btn_status_percent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingTop="@dimen/margin_gap_1"
+                android:singleLine="true"
+                android:text="Download"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                android:textColor="@color/download_percent_text_colour"
+                android:textSize="@dimen/textsize_9"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_gap_8"
+            android:src="@drawable/description_download_icon_default"
+            android:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/carddetailbriefdescription_lang_conversion_button"
+            android:layout_width="@dimen/margin_gap_30"
+            android:layout_height="@dimen/margin_gap_30"
+            android:layout_marginLeft="@dimen/margin_gap_16"
+            android:src="@drawable/translation_icon"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

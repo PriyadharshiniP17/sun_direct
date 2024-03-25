@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    android:layout_marginLeft="@dimen/margin_gap_4"
+    android:layout_marginRight="@dimen/margin_gap_4">
+    <GridView
+        android:id="@+id/gridview_apps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="@dimen/tv_detail_list_divider_height"
+        android:numColumns="2"
+        android:horizontalSpacing="8dp"
+        android:verticalSpacing="8dp"
+        android:listSelector="@drawable/listitem_selector_bg"
+        android:visibility="visible"/>
+</LinearLayout>

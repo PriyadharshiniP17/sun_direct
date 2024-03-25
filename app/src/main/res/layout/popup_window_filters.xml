@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_bkg"
+    android:orientation="vertical"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/app_bkg" />
+
+    <LinearLayout
+        android:id="@+id/apply_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ivBg"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_gap_2"
+        android:background="@color/app_bkg"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/toolbar_bg_colour"
+            android:elevation="6dp"
+            app:tabTextColor="@color/filter_tab_text_color"
+            app:tabMaxWidth="0dp"
+            app:tabSelectedTextColor="@color/filter_tab_selected_text_color"
+            app:tabIndicatorColor="@color/filter_tab_selected_indicator_color"
+            app:tabTextAppearance="@style/TextAppearance.NormalFontRegular"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tab_layout"
+            android:background="@color/app_bkg" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/ivBg"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_bkg" />
+
+    <Button
+        android:id="@+id/btApply"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_gap_48"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ivBg"
+        android:layout_marginTop="@dimen/margin_gap_5"
+        android:backgroundTint="@color/filter_apply_button_color"
+        android:text="@string/apply"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_16" />
+
+    <TextView
+        android:id="@+id/tvReset"
+        android:layout_width="wrap_content"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btApply"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_gap_16"
+        android:paddingRight="@dimen/margin_gap_16"
+        android:text="@string/reset"
+        android:textColor="@color/filter_reset_button_color"
+        android:textSize="@dimen/textsize_16" />
+
+    <TextView
+        android:id="@+id/filter_loading_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:text="Loading.."
+        android:textAppearance="@style/TextAppearance.FontBold"
+        android:textColor="@color/white_100"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rowItem"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/actionBarSize">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_languages"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_tint"
+        android:background="@color/color_000000"
+        android:alpha="0.5"
+        />
+    <ImageView
+        android:id="@+id/ivFilterItem"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_gap_16"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/filter_tick_selection_default_icon" />
+
+    <TextView
+        android:id="@+id/tvFilterItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/margin_gap_16"
+        android:layout_toLeftOf="@+id/ivFilterItem"
+        android:layout_alignParentLeft="true"
+        android:text="@string/Languages_saved_key"
+        android:textSize="@dimen/margin_20"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/white_100"
+         />
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_bkg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_bkg"
+        android:minHeight="?attr/actionBarSize"
+        android:contentInsetLeft="10dp"
+        android:contentInsetRight="10dp"
+        android:contentInsetStart="10dp"
+        app:contentInsetLeft="10dp"
+        app:contentInsetRight="10dp"
+        app:contentInsetStart="10dp"></androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/tv_guide_layout_today_epg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tv_detail_sub_header_height"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/app_bkg"
+        android:gravity="center_vertical">
+
+        <TextView
+
+            android:id="@+id/tv_guide_today_epg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="Today"
+            android:textAppearance="@style/TextAppearance.FontMedium"
+            android:textColor="@drawable/button_text_white_red_color"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/drop_down_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:padding="5dp"
+            android:background="@drawable/button_selector"
+            android:src="@drawable/drop_down_icon" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/tv_guide_channel_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_guide_layout_today_epg"
+        android:dividerHeight="@dimen/tv_detail_list_divider_height"
+        android:listSelector="@drawable/listitem_selector_bg" />
+
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_gap_16"
+        android:gravity="center"
+        android:text="@string/programguide_data_fetch_error"
+        android:textAppearance="@style/TextAppearance.FontMedium"
+        android:textColor="@color/white_100"
+        android:textSize="@dimen/textsize_16"
+        android:visibility="gone"/>
+    <!--Below is the transparent layout positioned at startup -->
+    <RelativeLayout
+        android:id="@+id/prog_help_screen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#88666666">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/help_program_screen"
+
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

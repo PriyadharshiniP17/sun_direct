@@ -1,0 +1,435 @@
+<resources>
+    <string name="hello_world">hello_world</string>
+    <string name="next_prog_txt">Next: %1$s</string>
+    <string name="genre_txt">Genres</string>
+    <string name="languages_txt">Languages</string>
+    <string name="notification_tags">notification_tags</string>
+    <string name="notification_video_url">videoUrl</string>
+    <string name="Languages_saved_key">saved_languages</string>
+    <string name="share_message">I am Watching #CONTENT_NAME on Shreyas ET and thought you should get on it too! Here is a link to download the app from Playstore and watch great movies on any device of your choice.</string>
+    <string name="msg_fav_failed_update">Failed to update favourites data</string>
+    <string name="msg_show_less_description">...</string>
+    <string name="msg_read_more_description">...</string>
+    <string name="navigation_my_downloads">My Downloads</string>
+    <string name="download_text">Your video was downloaded successfully go to downloads to watch and other options </string>
+    <string name="no_download_text">Your download is in progress</string>
+    <string name="navigation_app_settings">App Settings</string>
+    <string name="navigation_about">About</string>
+    <string name="navigation_help">Help</string>
+    <string name="navigation_my_watchlist">My Watchlist</string>
+
+
+    <string name="notification_download_complete_info">To access the downloaded content, please go to Profile->Downloads.</string>
+    <string name="download_error_while_download">Some error occurred during downloading</string>
+    <string name="download_started_info">Downloading</string>
+
+
+    <!-- HELP SECTION STRINGS -->
+    <string name="faq">FAQs</string>
+    <string name="share_app">Share app</string>
+    <string name="rate_app">Rate this app</string>
+    <string name="feedback">Feedback</string>
+    <string name="cancel_subscription">Subscriptions</string>
+    <string name="empty_subscription">No packs subscribed</string>
+    <string name="subscribed_packs">Subscribed Pack</string>
+    <string name="refund_policy">Refund Policy</string>
+
+    <!-- ABOUT SECTION STRINGS -->
+    <string name="account">Account</string>
+    <string name="tnc">Terms and Conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <!-- APP SETTINGS SECTION STRINGS -->
+    <string name="video_quality">Video Quality</string>
+    <string name="auto">Auto</string>
+    <string name="high_def">High Definition (HD)</string>
+    <string name="standard_def">Standard Definition (SD)</string>
+    <string name="low_def">Low Definition</string>
+    <string name="notification">Notifications</string>
+    <string name="auto_play">Autoplay</string>
+    <string name="download_on_wifi">Download on wifi only</string>
+    <string name="download_location">Download Location</string>
+    <string name="download_option_text">1 hour of video around 1 GB of data and storage is used</string>
+    <string name="download_option_text_data_saver">For 2.5  Hours of Video around 300 MB of Data and Storage is used</string>
+    <string name="download_option_text_good">For 2.5  Hours of Video around 600 MB of Data and Storage is used</string>
+    <string name="download_option_text_best">For 2.5  Hours of Video around 1 GB of Data and Storage is used</string>
+    <string name="download_option_text_hd">For 2.5  Hours of Video around 3.5 GB of ata and Storage is used</string>
+    <string name="vf_txt_download_deleted">Your download has been deleted</string>
+    <string name="vf_txt_delete_download">Are you sure do you want to delete this </string>
+
+    <string name="download_status_extracting">Finishing Download...</string>
+
+    <string name="download_status_not_enough_space">Please clear some space to resume download...</string>
+    <string name="download_status_failed_acquiring_drm_license">Please relaunch the App to finish download...</string>
+
+    <string name="download_state_failed_generic_text">Oops, something went wrong. Please try again later!</string>
+    <string name="download_state_rare_download">A rare error! Do write to us at support</string>
+
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_ok">OK</string>
+    <string name="txt_download_settings">Downloading</string>
+    <string name="downloading">Downloading...</string>
+    <string name="player_msg_optimizing_playback">Optimising for best viewing experience, just a second!</string>
+    <string name="media_player_error_no_network_drm_session">Sorry, We\'re unable to play content in offline, Please enable the internet and try again</string>
+    <string name="vf_download_init_download_message">Initiating download. Please wait.</string>
+    <string name="apply">Apply</string>
+    <string name="reset">Reset Password</string>
+
+    <string name="is_login_true_text">&amp;loginRequired=true</string>
+    <string name="is_login_false_text">&amp;loginRequired=false</string>
+    <string name="download_state_failed_text">Failed</string>
+
+    <string name="position">contentposition</string>
+
+
+    <string name="playhint">play</string>"\\u20B9"
+    <string name="trailerhint">play trailer</string>
+    <string name="txt_tnc_on_otp">By continuing you indicate that you have read and agree to the Terms \\u0026 Conditions</string>
+    <string name="error_network_not_available">network is not available</string>
+    <string name="subscription_required">Subscription Required</string>
+
+    <string name="canot_fetch_url">We’re unable to connect to the TV Channel’s server right now. Please try again a little later.</string>
+    <string name="canot_fetch_url_videos">We’re unable to connect to the Video’s server right now. Please try again a little later.</string>
+
+    <string name="reminder_message">Would you like to set a reminder for</string>
+    <string name="reminder">Reminder</string>
+    <string name="reminder_message_part_press_confirm">\? Press confirm and look out for the
+        reminder in your notification bar.</string>
+    <string name="reminder_message_already_available_same_program">A reminder is already available for this program </string>
+    <string name="reminder_message_already_available">A reminder is already available at this
+        time for program </string>
+    <string name="reminder_title">Set Reminder</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm_download_app">Install</string>
+    <string name="confirm">Confirm</string>
+    <string name="save">Save</string>
+    <string name="start">Start</string>
+    <string name="videoquality">Video Quality</string>
+    <string name="language">Language</string>
+    <string name="catch_up">Catch-Up</string>
+    <string name="episodes">Episodes</string>
+    <string name="go_back">Go Back</string>
+    <string name="un_subscribe">Unsubscribe</string>
+
+    <string name="progress_message">loading &#8230;</string>
+
+    <string name="notification_livetv_message">Watch Now</string>
+
+    <string name="data_fetch_error">Failed to load data</string>
+
+    <string name="carddetailcommentsection_editcomment">add a comment</string>
+    <string name="carddetailsectionheader_loadmore">load more</string>
+    <string name="comment_ok_adding">adding..</string>
+    <string name="comment_success">Comment has been posted successfully.</string>
+    <string name="comment_post_fail">Unable to post your comment.</string>
+    <string name="programguide_data_fetch_error">Sorry! The TV Channel you are trying to view is
+        unable to send their programme schedule right now</string>
+
+    <string name="otp_submit">Submit</string>
+    <string name="use_only_sundirect_network_message">Please use sundirect Mobile data to use </string>
+
+
+    <string name="feedbackheading">Rate sundirect TV</string>
+    <string name="feedbackmessageheading">share your experience </string>
+    <string name="feedbackmessagehint">feedback on sundirect TV</string>
+    <string name="dev_auth_failed_message">We are unable to authenticate your device. Please relaunch the app </string>
+    <string name="termsandconditions">Terms \u0026 Conditions</string>
+
+    <string name="hello">Hello!</string>
+    <string name="msg_for_non_sundirect_user_wifi">
+         We`ve detected a WiFi connection.\n
+        \nPlease open sundirect Play for the first time on your sundirect
+internet connection to start your exciting offer.
+        \nYou can later enjoy sundirect Play on WiFi or your sundirect internet connection.
+    </string>
+
+    <string name="hint_for_non_sundirect_user">*Don\'t worry, sundirect Play works on both wifi
+        \u0026 data connection
+    </string>
+
+    <string name="exit_text">EXIT</string>
+    <string name="continue_text">Start Offer Now!</string>
+    <string name="epg_channels_error_txt">Sorry! We are unable to fetch the TV stream right now. Please try again later.</string>
+    <string name="search_res_not_found">Searched results not found</string>
+
+    <string name="error_fetch_tvshows">Sorry! We are unable to fetch the TV Shows right now.
+        Please try again later.</string>
+    <string name="error_fetch_related_vodlist">Sorry! We are unable to fetch the videos list right
+        now.
+        Please try again later.</string>
+    <string name="no_info_available">No information available</string>
+    <string name="no_favourite_available">No favourites available</string>
+    <string name="no_channels_available">No channels available</string>
+    <string name="no_favourites_found">No Favourites Found</string>
+    <string name="favourites_suggestion_text">Add few channels to favourites for easier \n and  quicker access</string>
+    <string name="search_suggestion_text">Let\'s find your favourite programs</string>
+    <string name="second_time_smc_registration_suggestion">Entered mobile number is already registered with\n SMC Numbers. But have 5 unmapped SMC\n Number which is registered on this Mobile Number.\n Would you like to Create new  account for this ? </string>
+    <string name="pending_smc_numbers_in_settingspage">You will be logged out to proceed to Register With Us \n to create new account for your unmapped smc</string>
+    <string name="move_to_register_button">Move to Register with us</string>
+    <string name="download_not_available">sorry, We are unable to download this video</string>
+    <string name="download_video_already_downloaded">This video file is already available in downloads</string>
+    <string name="notification_download_complete">Download Completed</string>
+    <string name="notification_download_failed">Download Failed</string>
+    <string name="vf_download_error_while_download">Sorry! We are unable to fetch the videos list right now. Please try again later.</string>
+    <string name="download_started">Your download has been started</string>
+    <string name="download_error_network_failure">Download Request has failed, Please check your
+        WIFI is
+        turned on.</string>
+    <string name="download_error_invalid_link">Can only download HTTP/HTTPS links, please try again</string>
+
+    <string name="view_all">See all</string>
+    <string name="forgot_password">Forgot?</string>
+    <string name="otp_info_abt_security">Note: These details will be shared with our partners so that you can enjoy content on multiple devices like Laptop, TV, etc.</string>
+    <string name="otp_msg_hint_mobile_no">eg: 90000 00000</string>
+    <string name="otp_msg_hint_email">abcdefgh@gmail.com</string>
+    <string name="otp_mobileno_continue">Continue</string>
+    <string name="otp_resend">Resend OTP</string>
+    <string name="otp_skip_text"><u>Skip</u>\u0020</string>
+    <string name="otp_change_numer"><u>Change Number</u>\u0020</string>
+    <string name="forgot_password_text"><u>Reset password link will be sent to below email id</u>\u0020</string>
+
+    <string name="otp_stp1_heading1">Hello!</string>
+    <string name="otp_stp1_heading2">Let\'s get started</string>
+    <string name="otp_stp1_heading3">Enter  Your  Mobile  Number</string>
+
+    <string name="otp_stp2_heading1">Awesome!</string>
+    <string name="otp_stp2_heading2">An OTP has been sent to your  number.</string>
+    <string name="otp_stp2_heading3">Please wait while we detect it.</string>
+    <string name="otp_stp2_heading4">Please change your mobile number for continue.</string>
+
+    <string name="empty_otp_text">Please enter otp!</string>
+    <string name="otp_length_error">Please enter 6 digit otp</string>
+
+    <string name="otp_stp3_heading1">Enter OTP!</string>
+    <string name="otp_stp3_heading3">Oops we couldn’t detect the OTP, please enter it below.</string>
+    <string name="otp_waiting">Waiting...</string>
+    <string name="otp_go">Go</string>
+    <string name="smart_card_alert">Please check the number and try again</string>
+    <string name="otp_msg_invalid_email_id">Please enter a valid email id</string>
+    <string name="otp_msg_invalid_mobile_no">Please enter valid Mobile number</string>
+    <string name="otp_msg_invalid_mobile_nos">Please enter Mobile number</string>
+    <string name="otp_msg_new_password">Password should be minimum six characters</string>
+    <string name="otp_msg_invalid_country_code">Please select valid country code</string>
+    <string name="otp_msg_subscriber_name">Please enter valid subscriber name</string>
+    <string name="otp_msg_smart_card">Please select valid smart card number</string>
+    <string name="otp_msg_invalid_otp">Please enter valid OTP</string>
+    <string name="otp_otp_hint">6-digit OTP</string>
+    <string name="otp_enter_otp_hint">Enter 6-digit OTP</string>
+    <string name="otp_msg_otp_not_recieved">otp not recieved</string>
+    <string name="msg_login_with_email">Please login with your email id to play</string>
+    <string name="otp_enter_email">Please enter your email ID</string>
+    <string name="txt_watch_trailer">Watch Trailer</string>
+
+    <string name="player_logs">Player Logs</string>
+    <string name="vf_txt_episodes">Episodes</string>
+    <string name="send_to">share via</string>
+    <string name="media_route_menu_title">Play on&#8230;</string>
+    <string name="msg_search_hint_generic_placeholder">Enter name of %1$s</string>
+    <string name="msg_search_hint_generic">Enter name of Word</string>
+    <string name="hint_subscription_packs">These packages are auto renewed however you may cancel at any point.</string>
+    <string name="rupee_unicode">\u20B9</string>
+    <string name="carddetaila_similar_programs_section_title">Currently Playing on Other Channels</string>
+    <string name="error_unable_to_fetch_packages">Sorry, We are unable to load packages right now. Please try again later.</string>
+    <string name="upcoming_programs_text">Upcoming Programs</string>
+    <string name="msg_loading_sports">Please wait while we redirect</string>
+    <string name="cancel_subscription_alert">Are you sure you want to unsubscribe? You will need to subscribe again to enjoy your favourite content.</string>
+
+    <string name="txt_adult_warning">Please confirm that you are above 18 years of age.</string>
+
+
+    <string name="vf_start_download">Download</string>
+    <string name="vf_download_error_wifi_conn_pref">Sorry can\'t download as you are not on WiFi, and your network preference is WiFi</string>
+    <string name="text_logging_in">Logging In...</string>
+    <string name="text_parental_text">Parental Control</string>
+    <string name="text_parental_change_setting">Change Setting</string>
+    <string name="text_parental_change_setting_message">Enter 4-Digit PIN to change this setting</string>
+    <string name="text_parental_change_setting_message_reset_pin_note">Enter 4-digit PIN to change the settings. Turning parental control off will need you to create a new PIN again, next time.</string>
+    <string name="parental_text_off">Off</string>
+    <string name="text_okay">Okay</string>
+    <string name="text_activate">Activate</string>
+    <string name="parental_text_all_content">All Content (PIN required for all content)</string>
+    <string name="parental_text_set_pin">Set PIN</string>
+    <string name="parental_text_confirm_pin">Confirm PIN</string>
+    <string name="parental_text_activate_message">Enter 4-Digit PIN to activate Parental Control.</string>
+    <string name="parental_text_confirm_pin_message">Please confirm 4-Digit PIN again.</string>
+    <string name="parental_text_adult_content">Adult Only (PIN required for 18+ content)</string>
+    <string name="parental_text_reenter_wrong_pin">The PIN you entered doesn\'t match.\n Please check the PIN and try again.</string>
+    <string name="parental_text_enter_pin_to_watch">Enter 4-Digit PIN to watch this content.</string>
+    <string name="parental_text_wrong_pin_to_watch">Wrong PIN! Please enter correct PIN to watch this content.</string>
+    <string name="parental_text_wrong_pin_four_digits">Make sure you’ve entered 4-Digit PIN and try again.</string>
+    <string name="parental_text_wrong_pin_to_change">Wrong PIN! Please enter correct PIN to change this setting.</string>
+    <string name="parental_text_forgot_pin">Forgot PIN ? Get a hint!</string>
+    <string name="parental_text_not_logged_in">Please register to use this feature.</string>
+    <string name="text_subtitle_title">Subtitles</string>
+    <string name="subtitle_opt_none">None</string>
+    <string name="decline">Decline</string>
+    <string name="accept">Accept</string>
+
+    <string name="download_state_paused_text">Paused</string>
+
+    <string name="play_msg_err">Sorry! We seem to be facing some technical issue right now.</string>
+    <string name="play_retry_lower_bitrate">Retrying with lower bitrate</string>
+    <string name="play_msg_err_retrying">Retrying in 10 sec</string>
+
+    <string name="play_download_insufficent_memory_while_unzip">Download suspended due to insufficient memory, please free space up to %1$d Mb to resume download</string>
+
+    <string name="play_download_insufficent_memory_hd"> Download failed due to insufficent memory, please free space up to %1$s to start download</string>
+    <string name="play_download_insufficent_memory_vod"> Download failed due to insufficent memory, please free space up to %1$s to start download</string>
+
+    <string name="more">About Us</string>
+    <string name="others">Others</string>
+    <string name="permission_warning_text">These permissions are mandatory to open the application</string>
+    <string name="permission_text">Mandatory Permissions</string>
+    <string name="permission_warning_settings">These permissions are mandatory to open the application\n- Storage\n- Telephone\nPlease allow them from settings</string>
+    <string name="accept_from_settings">Accept from settings</string>
+    <string name="file_provider_authority">com.sundirect.sundirectplay.provider</string>
+    <string name="select_languages">Select Languages</string>
+    <string name="about">About</string>
+    <string name="about_us">Contact Us</string>
+    <string name="live_tv">Live TV</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="Watchlist">Watchlist</string>
+    <string name="Play">Play Now</string>
+    <string name="moreInHindi">अधिक</string>
+    <string name="ticket_support">Ticket Support</string>
+    <string name="support">Support</string>
+    <string name="packages">Packs</string>
+    <string name="done">Done</string>
+    <string name="cast_dialog_title">sundirect Play Chromecast</string>
+    <string name="read_more">read more</string>
+    <string name="read_less">read less</string>
+    <string name="server_client_id">388282476269-9bdlecoukk8rd1rt0p3g012vnsm9r8mt.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">289038635721062</string>
+    <string name="fb_login_protocol_scheme">fb289038635721062</string>
+    <string name="my_account">My Account</string>
+    <string name="recharge">Recharge</string>
+    <string name="default_profile_update_message">Can\'t update profile, please try after some time</string>
+    <string name="default_password_update_message">Can\'t update profile, please try after some time</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="search_edit_text">Search LCN / Live TV / Movies / TV Shows</string>
+
+    <string name="change_password">Change Password</string>
+    <string name="name_hint">Name</string>
+    <string name="name_error_msg">Please enter your name</string>
+    <string name="my_watch_list">My Watchlist</string>
+    <string name="my_subscriptions">My Subscriptions</string>
+    <string name="like_text">Like</string>
+    <string name="search">Search</string>
+    <string name="subscription_weblink">www.sundirect.in</string>
+
+    <string name="no_notification_found">No Notifications Found</string>
+    <string name="get_notified">Get notified when new content arrives from your favourite content providers</string>
+
+    <string name="Profile">Profile</string>
+
+    <string name="favorites"> Favorites</string>
+
+    <string name="Reset_password_suggestion">Please enter your Mobile number to\nreceive an OTP on your registered mobile number.</string>
+    <string name="Otp_received_suggestion">Please enter the OTP received on your\nregistered mobile number to set a new password</string>
+    <string name="get_new_connection_message">Please fill the below details\n for getting new connection</string>
+    <string name="create_new_password">You can now create a new Password for your\naccount to successfully register. You can log in \nto Sun Direct Go app using this password in the future.</string>
+    <string name="confirm_pswd_alert"> The password does not match. Please check and try again.</string>
+
+    <string name="Invalid_OTP">The entered OTP is not valid. Please try again later</string>
+    <string name="message_empty__current_pwd">Please enter current password</string>
+    <string name="message_empty__new_pwd">Please enter new password</string>
+    <string name="message_empty__confirm_pwd">Please enter confirm password</string>
+    <string name="message_mismatch_pwd">Passwords didn\'t match</string>
+    <string name="login_required">Please login to view this feature</string>
+
+    <string name="login_with_email_Password">Login with Email ID &amp; Password</string>
+    <string name="email_Password">Email id &amp; Password</string>
+
+    <string name="error_drm_not_supported">Protected content not supported on API levels below 18</string>
+    <string name="error_drm_unknown">An unknown DRM error occurred</string>
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+
+
+    <string name="sun_direct">Sun Direct User</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="channel_list">Channel list as Home Page</string>
+    <string name="language_setting">Language Settings</string>
+    <string name="unregistered_smc">Un Registered SMC</string>
+    <string name="live_channel_as_home_page">Live Channel as Home Page</string>
+    <string name="apps_as_home_page">Keep Apps as landing page</string>
+    <string name="expand">Expand</string>
+    <string name="play">Play</string>
+    <string name="today">today</string>
+    <string name="record">Record</string>
+    <string name="channels">Channels</string>
+
+
+    <string name="chat">Chat with Us</string>
+    <string name="mores">More...</string>
+    <string name="toast_message">Don\'t have the password yet?</string>
+    <string name="password">Please enter valid password</string>
+    <string name="passwords">Password field should not be empty</string>
+    <string name="refer">Refer a Friend</string>
+    <string name="rate">Rate Us</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="register">Please enter your Mobile number to \n receive an OTP on your registered mobile number </string>
+    <string name="register_dot">Please enter your Mobile number to \n receive an OTP on your registered mobile number. </string>
+    <string name="otp_header_text">Please enter the OTP received on your \n updated mobile number </string>
+    <string name="register_text">Register</string>
+    <string name="account_settings_text">Account Settings</string>
+
+    <string name="enter_mobile_no">Enter Mobile Number</string>
+    <string name="sign_in">LOGIN</string>
+    <string name="get_otp">CONTINUE</string>
+    <string name="go_to_home_page">GO TO HOME PAGE</string>
+    <string name="register_with_us">Register With Us</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="proceed">PROCEED</string>
+    <string name="resend_otp">Resend OTP in 30 sec</string>
+    <string name="save_and_login">SAVE AND LOGIN</string>
+    <string name="save_forgot_password">SAVE</string>
+    <string name="confirm_new">Confirm New Password</string>
+    <string name="enter_new">Enter New Password</string>
+    <string name="update_phone">Update Phone Number</string>
+    <string name="password_text">Password</string>
+    <string name="sign_in_text">SIGN IN</string>
+    <string name="new_user">NEW USER</string>
+    <string name="smart_card_numbers">SMC / CDS Number</string>
+    <string name="name_text">Name</string>
+    <string name="email_id_text">Email ID</string>
+    <string name="enter_otp_text">Please enter your name and select your \nsmart card number</string>
+    <string name="content_language">Content Language</string>
+    <string name="mobile_invalid_message">Please check the number and try again</string>
+    <string name="register_mobile_number">Registered Mobile Number</string>
+    <string name="subscription_text">In-app purchases \naren’t allowed in this app,\nbut video purchases and \nrentals can be watched here.</string>
+    <string name="subscription_text_popup">Please visit\nSun Direct Website\nto Subscribe</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--    validate screen-->
+    <string name="validate_text">Validate</string>
+    <string name="register_mobile_numb">Enter Register Mobile Number</string>
+    <string name="register_numb">Enter your Register number</string>
+    <string name="new_mobile_numb">Enter New Mobile Number</string>
+    <string name="note_text">Note: If you lost your Register Mobile Number please Call \n\n76010 12345 or 1800 123 75 75</string>
+    <string name="enter_otp_title">Enter OTP</string>
+    <string name="resend_otp_validate">Resend OTP in 4:59 Secs</string>
+
+
+    <string name="click_here_for_push_notification">Click here for Push Notification</string>
+    <string name="clear_all">Clear All</string>
+    <string name="no_notifications_available">No Notifications Available</string>
+    <string name="label_delete">Delete</string>
+    <string name="label_remind">Remind</string>
+    <string name="by_signing_in_you_agree_to_client_s_t_c_and_privacy_policy">By clicking continue, you agree to our Terms of Use and acknowledge that you have read our Privacy Policy.</string>
+    <string name="terms">Terms of Use</string>
+    <string name="privacypolicy">Privacy Policy</string>
+    <string name="reg_note_text">Note: If you lost your Register Mobile Number please Call 76010 12345 or 1800 123 75 75</string>
+    <string name="audio_subtitle_label">Audio &amp; Subtitles</string>
+    <string name="label_home">Home</string>
+    <string name="label_livetv">Live TV</string>
+    <string name="label_apps">Apps</string>
+    <string name="label_search">Search</string>
+    <string name="not_available">Not Available</string>
+    <string name="audio_language">Audio Language</string>
+
+    <string name="next_episode">Next Episode</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

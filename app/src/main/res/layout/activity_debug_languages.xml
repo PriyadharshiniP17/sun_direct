@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_span="3"
+            android:gravity="center"
+            android:text="device supported languages are shown, to test notification click make symbol"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize_18"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/telugu_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_gap_8"
+                android:background="@drawable/buttonbackground"
+                android:gravity="center"
+                android:onClick="makeNotification"
+                android:text="make"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="telugu"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bengali_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_gap_8"
+                android:background="@drawable/buttonbackground"
+                android:gravity="center"
+                android:onClick="makeNotification"
+                android:text="make"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="bengali"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="\u09ac\u09be\u0999\u09be\u09b2\u09bf"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/gujarati_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_gap_8"
+                android:background="@drawable/buttonbackground"
+                android:gravity="center"
+                android:onClick="makeNotification"
+                android:text="make"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="gujarati"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="\u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/hindi_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_gap_8"
+                android:background="@drawable/buttonbackground"
+                android:gravity="center"
+                android:onClick="makeNotification"
+                android:text="make"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="hindi"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="\u0939\u093f\u0902\u0926\u0940"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/kannada_btn"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_gap_8"
+                android:background="@drawable/buttonbackground"
+                android:gravity="center"
+                android:onClick="makeNotification"
+                android:text="make"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="kannada"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="\u0c95\u0ca8\u0ccd\u0ca8\u0ca1"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/marathi_btn"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_gap_8"
+                android:background="@drawable/buttonbackground"
+                android:gravity="center"
+                android:onClick="makeNotification"
+                android:text="make"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="marathi"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="\u092e\u0930\u093e\u0920\u0940"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/tamil_btn"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_gap_8"
+                android:background="@drawable/buttonbackground"
+                android:gravity="center"
+                android:onClick="makeNotification"
+                android:text="make"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="tamil"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="\u0ba4\u0bae\u0bbf\u0bb4\u0bcd"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_18"/>
+
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>

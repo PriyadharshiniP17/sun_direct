@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/tabLL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_height"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/yellow_tab_bg">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tab_height"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:animateLayoutChanges="true"
+                android:background="@color/yellow_tab_bg"
+                android:elevation="0dp"
+                app:layout_scrollFlags="enterAlways|scroll"
+                app:tabBackground="@color/yellow_tab_bg"
+                app:tabIndicatorColor="@color/transparent"
+                app:tabIndicatorHeight="0dp"
+                app:tabMinWidth="0dp"
+                app:tabMode="scrollable"
+                app:tabPaddingEnd="@dimen/_10sdp"
+                app:tabPaddingStart="@dimen/_10sp"
+                app:tabSelectedTextColor="#FF6600"
+                app:tabTextAppearance="@style/CustomTitleTextAppearance"
+                app:tabTextColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/left_arrow"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_left_arrow" />
+
+            <ImageView
+                android:id="@+id/right_arrow"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/_1sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_right_arrow" />
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:id="@+id/no_data_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/no_favourite_available"
+        android:textColor="@color/white_70"
+        android:textSize="@dimen/_16sdp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/content_searchview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:tag="content_searchview"
+        android:visibility="gone" />
+</FrameLayout>

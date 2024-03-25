@@ -1,0 +1,66 @@
+<resources>
+    <dimen name="carousel_gap">30px</dimen>
+    <dimen name="title_image_gap">15px</dimen>
+    <dimen name="thumbnail_gap">4px</dimen>
+    <dimen name="thumbnail_gap_medium_horizontal_item">3px</dimen>
+    <dimen name="viewpager_margin">12px</dimen>
+    <dimen name="bottom_radius">15px</dimen>
+    <dimen name="margin_2">2px</dimen>
+    <dimen name="margin_4">4px</dimen>
+    <dimen name="genre_item_height">67px</dimen>
+    <dimen name="genre_item_width">107px</dimen>
+    <dimen name="genre_image_width">52px</dimen>
+    <dimen name="dimen_9">9px</dimen>
+    <dimen name="dimen_7.94">7.94px</dimen>
+    <dimen name="dimen_9.44">9.44px</dimen>
+    <dimen name="medium_horizontal_width">155.00px</dimen>
+    <dimen name="medium_horizontal_height">87.00px</dimen>
+    <dimen name="continue_watching_width">139.43px</dimen>
+    <dimen name="continue_watching_height">78.43px</dimen>
+    <dimen name="partner_image_width">81px</dimen>
+    <dimen name="big_horizontal_width">96px</dimen>
+    <dimen name="small_horizontal_width">172px</dimen>
+    <dimen name="extra_small_horizontal_width">204.23px</dimen>
+    <dimen name="long_big_horizontal_width">96.00px</dimen>
+    <dimen name="catchup_item_width">145.43dp</dimen>
+    <dimen name="big_weekly_item_width">168.21px</dimen>
+    <dimen name="movies_slider_height">@dimen/movies_slider_image_height</dimen>
+    <dimen name="movies_slider_image_height">179dp</dimen>
+    <dimen name="margin_7">7px</dimen>
+    <dimen name="margin_8">8px</dimen>
+    <dimen name="margin_10">10px</dimen>
+    <dimen name="margin_237.17">237.17px</dimen>
+    <dimen name="margin_322.2">322.2px</dimen>
+    <dimen name="margin_103">103px</dimen>
+    <dimen name="margin_95">95px</dimen>
+    <dimen name="margin_35">35px</dimen>
+    <dimen name="margin_33">33px</dimen>
+    <dimen name="margin_92">92px</dimen>
+    <dimen name="margin_19">19px</dimen>
+    <dimen name="margin_15">15px</dimen>
+    <dimen name="margin_14">14px</dimen>
+    <dimen name="margin_44">44px</dimen>
+    <dimen name="margin_60">60px</dimen>
+    <dimen name="margin_78">78px</dimen>
+    <dimen name="margin_245">245px</dimen>
+    <dimen name="margin_168">168px</dimen>
+    <dimen name="catchup_landscape_width">193px</dimen>
+    <dimen name="catchup_landscape_height">112px</dimen>
+
+    <dimen name="catchup_portrait_new_height">100.00px</dimen>
+    <dimen name="catchup_portrait_new_width">163.50px</dimen>
+    <dimen name="catchup_portrait_new_width_outer">176.50px</dimen>
+    <dimen name="big_weekly_item_tab_height">281.00px</dimen>
+    <dimen name="big_weekly_item_tab_width">520.00px</dimen>
+    <dimen name="big_weekly_item_tab_height_viewpager">331.00px</dimen>
+
+    <dimen name="big_weekly_item_tab_height_land">304.00px</dimen>
+    <dimen name="big_weekly_item_tab_width_land">561.00px</dimen>
+    <dimen name="promo_width_portrait">405.00px</dimen>
+    <dimen name="promo_height_portrait">720.00px</dimen>
+    <dimen name="promo_width_land">360.00px</dimen>
+    <dimen name="promo_height_land">640.00px</dimen>
+    <dimen name="space_between_details_dialog_portrait">100.00px</dimen>
+    <dimen name="space_between_details_dialog_land">200.00px</dimen>
+
+</resources>

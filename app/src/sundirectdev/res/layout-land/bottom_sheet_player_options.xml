@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dimen_10_dp"
+    style="@style/NoBackgroundDialogTheme"
+    android:layout_marginVertical="@dimen/_15sdp"
+    android:layout_marginHorizontal="@dimen/_10sp"
+    android:backgroundTint="@color/catchup_dialog_background"
+    android:background="@drawable/bottom_sheet_language_bg_selector">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.myplex.myplex.utils.FontBoldTypeFace
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_subtitle_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_16"
+            android:drawableStart="@drawable/subtitle_icon"
+            android:drawablePadding="@dimen/textsize_20"
+            android:gravity="center_vertical"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_subtitles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="8"
+            android:visibility="visible"
+            android:layout_marginStart="@dimen/textsize_35"
+            />
+
+        <com.myplex.myplex.utils.FontBoldTypeFace
+            android:id="@+id/tv_no_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/not_available"
+            android:textColor="@color/white_60"
+            android:textSize="@dimen/textsize_14"
+            android:layout_marginStart="@dimen/margin_gap_52"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.myplex.myplex.utils.FontBoldTypeFace
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/audio_language"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_16"
+            android:drawableStart="@drawable/audio_icon"
+            android:drawablePadding="@dimen/textsize_20"
+            android:gravity="center_vertical"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_audio"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="5"
+            android:visibility="visible"
+            android:layout_marginStart="@dimen/textsize_35"
+            />
+        <com.myplex.myplex.utils.FontBoldTypeFace
+            android:id="@+id/tv_no_audio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/not_available"
+            android:textColor="@color/white_60"
+            android:layout_marginStart="@dimen/margin_gap_52"
+            android:textSize="@dimen/textsize_14"
+            android:layout_marginTop="@dimen/_20sdp"
+            />
+
+    </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:visibility="visible"
+            android:src="@drawable/actionbar_egp_close_icon"
+            android:contentDescription="@string/app_name" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

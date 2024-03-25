@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sp"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/packs_title_div"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_1"
+        android:visibility="gone"
+        />
+    <!--android:background="@color/movies_title_section_border"-->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_height"
+        android:animateLayoutChanges="true"
+        android:background="@color/epg_timebar_background"
+        android:elevation="0dp"
+        app:layout_scrollFlags="enterAlways|scroll"
+        app:tabBackground="@color/epg_timebar_background"
+        app:tabIndicatorColor="@color/transparent"
+        app:tabIndicatorHeight="0dp"
+        app:tabMinWidth="90dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="8dp"
+        app:tabPaddingStart="0dp"
+        app:tabSelectedTextColor="@color/yellow"
+        app:tabTextAppearance="@style/LiveTitleTextAppearance"
+        app:tabTextColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/layout_carousel_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/packs_title_div"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/margin_gap_14">
+
+        <com.myplex.myplex.utils.FontRegularTypeface
+            android:id="@+id/textview_genre_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_alignParentLeft="true"
+            android:text=""
+            android:visibility="visible"
+            android:layout_centerInParent="true"
+            android:textAppearance="@style/TextAppearance.FontBold"
+            android:textColor="@color/carousel_heading_text_color"
+            android:textSize="@dimen/textsize_16" />
+        <RelativeLayout
+            android:id="@+id/layout_carousel_title_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@+id/layout_view_all"
+            android:layout_toLeftOf="@+id/layout_view_all">
+
+            <ImageView
+                android:id="@+id/toolbar_tv_channel_Img"
+                android:layout_width="@dimen/margin_gap_42"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/margin_gap_2"
+                android:layout_marginBottom="@dimen/margin_gap_2"
+                android:scaleType="centerInside"
+                android:src="@drawable/toolbar_logo"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_gap_2"
+                android:layout_toEndOf="@+id/toolbar_tv_channel_Img"
+                android:layout_toRightOf="@+id/toolbar_tv_channel_Img"
+                android:orientation="horizontal">
+
+
+
+                <com.myplex.myplex.utils.FontRegularTypeface
+                    android:id="@+id/clear_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:visibility="gone"
+                    android:text="Clear History"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/textview_other_lang_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_gap_4"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.FontHindi"
+                    android:textColor="@color/gray_text"
+                    android:textSize="@dimen/textsize_14"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_view_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_gap_8"
+            android:layout_marginRight="@dimen/margin_gap_16"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <com.myplex.myplex.utils.FontRegularTypeface
+                    android:id="@+id/textview_view_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/view_all"
+                    android:textColor="@color/more_text_color"
+                    android:textSize="@dimen/textsize_11"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/arrow_view_all"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/textview_view_all"
+                    android:src="@drawable/arrow_right_white"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textview_view_all_other_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_gap_4"
+                android:text="@string/moreInHindi"
+                android:textAppearance="@style/TextAppearance.FontHindi"
+                android:textColor="@color/more_text_color"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/packs_description_div"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_2"
+        android:visibility="gone"
+        android:layout_below="@+id/tabLayout" />
+
+    <!--android:background="@color/movies_title_section_border"-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/packs_description_div"
+        android:layout_marginStart="@dimen/margin_gap_12"
+        android:layout_marginTop="@dimen/margin_gap_20"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textview_error_retry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/msg_tap_to_retry"
+        android:textAppearance="@style/TextAppearance.FontRegular"
+        android:textColor="@color/download_item_subtitle_text_color"
+        android:textSize="@dimen/textsize_12"
+        android:visibility="gone" />
+
+</RelativeLayout>

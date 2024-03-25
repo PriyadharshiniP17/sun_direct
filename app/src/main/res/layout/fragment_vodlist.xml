@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bkg"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentInsetStart="10dp"
+            android:contentInsetLeft="10dp"
+            android:contentInsetRight="10dp"
+            android:minHeight="?attr/actionBarSize"
+            app:contentInsetLeft="10dp"
+            app:contentInsetRight="10dp"
+            app:contentInsetStart="10dp" />
+
+
+        <RelativeLayout
+            android:id="@+id/titlelayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_gap_32"
+            android:layout_below="@id/toolbar"
+            android:background="@color/gray_sony"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/toolbar_tv_channel_Img"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_gap_8"
+                android:layout_marginTop="@dimen/margin_gap_2"
+                android:layout_marginBottom="@dimen/margin_gap_2"
+                android:background="@drawable/ripple_bg"
+                android:scaleType="centerInside"
+                android:src="@drawable/sony_liv_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_gap_8"
+                android:layout_toRightOf="@+id/toolbar_tv_channel_Img"
+                android:gravity="center_vertical"
+                android:text="Sony LIV"
+                android:textAppearance="@style/TextAppearance.FontBold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_14"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/listView_vod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topLayout"
+        android:layout_alignParentBottom="true"
+        android:clipToPadding="false"
+        android:dividerHeight="@dimen/tv_detail_list_divider_height"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:padding="8dp"
+        android:verticalSpacing="10dp"
+        android:visibility="visible"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/margin_gap_12"
+        android:stretchMode="columnWidth"
+        android:layout_marginBottom="@dimen/_40sdp"
+        />
+
+    <TextView
+        android:id="@+id/textview_error_fetch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_gap_16"
+        android:gravity="center"
+        android:text="@string/error_fetch_tvshows"
+        android:textAppearance="@style/TextAppearance.FontMedium"
+        android:textColor="@color/white_100"
+        android:textSize="@dimen/textsize_16"
+        android:visibility="gone" />
+
+</RelativeLayout>

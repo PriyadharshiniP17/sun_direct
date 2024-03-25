@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mlb_lineSpacingBottom">5dp</dimen>
+    <dimen name="mlb_lineSpacingTop">5dp</dimen>
+    <dimen name="mlb_placeholder_horizontal">30dp</dimen>
+    <dimen name="mlb_placeholder_horizontal_end">200dp</dimen>
+    <dimen name="mlb_placeholder_vertical">20dp</dimen>
+    <declare-styleable name="MaterialLeanBack">
+        <attr format="color" name="mlb_titleColor"/>
+        <attr format="dimension" name="mlb_titleSize"/>
+        <attr format="boolean" name="mlb_overlapCards"/>
+        <attr format="boolean" name="mlb_animateCards"/>
+
+        <attr format="integer" name="mlb_cardElevationEnlarged"/>
+        <attr format="integer" name="mlb_cardElevationReduced"/>
+
+        <attr format="dimension" name="mlb_lineSpacing"/>
+
+        <attr format="dimension" name="mlb_paddingTop"/>
+        <attr format="dimension" name="mlb_paddingBottom"/>
+        <attr format="dimension" name="mlb_paddingLeft"/>
+        <attr format="dimension" name="mlb_paddingRight"/>
+
+        <attr format="reference" name="mlb_background"/>
+        <attr format="float" name="mlb_backgroundOverlay"/>
+        <attr format="color" name="mlb_backgroundOverlayColor"/>
+
+    </declare-styleable>
+</resources>

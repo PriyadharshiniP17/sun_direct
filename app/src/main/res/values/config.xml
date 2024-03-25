@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config.domain_name">stag-api.sundirectgo.in</string>
+    <string name="app_name">SunDirect</string>
+    <string name="app_name_play_store">Sun Direct Go</string>
+    <string name="app_sub_version">1.i-1</string>
+    <bool name="crashlytics_enable">true</bool>
+    <string name="current_msisdn">9885331046</string>
+    <bool name="is_hardcoded_msisdn">true</bool>
+    <string name="config.google.developerkey">AIzaSyBGrBleV4-JLjGYh0ZBL0IujzionzSlbrs</string>
+    <string name="chrome_cast_reciever_id">E2D17270</string>
+    <string name="clevertap_account_id">TEST-KZK-ZWK-694Z</string>
+    <string name="clevertap_account_token">TEST-301-313</string>
+
+    <string name="media_domain">preprodmedia.sundirect.in</string>
+    <!-- Do not add "://" to the Scheme they are dynamically added-->
+    <string name="media_scheme">http</string>
+    <bool name="shouldUseFirebaseDevMode">true</bool>
+    <string name="clientSecret">SunDirectAndroid</string>
+    <string name="serviceName">SunDirect</string>
+    <string name="MENU_TYPE_GROUP_ANDROID_NAV_MENU">navMenu</string>
+    <string name="trending_search">smartPhSearch5x</string>
+    <string name="user_id">vfplay_user_id</string>
+    <string name="schemeForBaseUrl">https://</string>
+
+</resources>

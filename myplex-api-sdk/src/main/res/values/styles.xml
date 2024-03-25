@@ -1,0 +1,123 @@
+<resources>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">#2CD7F3</item>
+        <item name="colorPrimaryDark">@color/app_bkg</item>
+        <item name="actionButtonStyle">@style/AppTheme.Widget.ActionButton</item>
+        <item name="android:windowBackground">@color/app_theme_color</item>
+    </style>
+    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/myplex_progress_bar_horizontal</item>
+        <item name="android:minHeight">4dip</item>
+        <item name="android:maxHeight">4dip</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="buttonBarStyle">@style/myButtonBar</item>
+        <item name="colorAccent">#FFBB3B</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.BasicFontRegular</item>
+        <item name="android:background">@color/app_theme_color</item>
+        <item name="buttonBarNegativeButtonStyle">@style/negative</item>
+        <item name="buttonBarPositiveButtonStyle">@style/positive</item>
+    </style>
+
+    <style name="AppCompatEditProfileAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+            <item name="android:textColor">@color/pack_subtext_color</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:headerDividersEnabled">true</item>
+            <item name="android:textColorAlertDialogListItem">@color/pack_subtext_color</item>
+            <item name="dividerHorizontal">@color/title_white</item>
+            <item name="android:typeface">normal</item>
+            <item name="android:background">@color/small_horizontal_item_background</item>
+    </style>
+
+
+    <style name="negative" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/color_999999</item>
+        <item name="android:textAppearance">@style/TextAppearance.BasicFontRegular</item>
+        <item name="materialThemeOverlay">@style/themeOverLayButton</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.MaterialComponents.SmallComponent</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle1" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="myButtonBar" parent="Widget.AppCompat.ButtonBar">
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+    </style>
+
+    <style name="themeOverLayButton">
+        <item name="colorPrimary">#2CD7F3</item>
+    </style>
+
+
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">#FFBB3B</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/black_30</item>
+        <item name="android:windowBackground">@color/black_30</item>
+    </style>
+
+    <style name="AlertDialogCustomVersion" parent="@android:style/Theme.Dialog">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/TextAppearance.BasicFontRegular</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="materialThemeOverlay">@style/themeOverLayButton</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.MaterialComponents.SmallComponent</item>
+    </style>
+
+    <style name="AppTheme.Widget.ActionButton" parent="@style/Widget.AppCompat.ActionButton">
+        <item name="textAllCaps">false</item>
+    </style>
+
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="materialAlertDialogTitleTextStyle">@style/TitleTextStyle</item>
+    </style>
+
+    <style name="TitleTextStyle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="colorAccent">#FFBB3B</item>
+        <item name="android:textSize">20sp</item>
+        <item name="background">@color/black</item>
+        <item name="backgroundColor">@color/black</item>
+    </style>
+
+    <style name="Alert.Button.Positive" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="background">@color/color_eros_now_brand_2EB6F0</item>
+        <item name="rippleColor">@color/color_eros_now_brand_2EB6F0</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Alert.Button.Neutral" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="background">@color/color_eros_now_brand_2EB6F0</item>
+        <item name="rippleColor">@color/color_eros_now_brand_2EB6F0</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+</resources>

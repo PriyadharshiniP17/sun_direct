@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:layout_marginTop="@dimen/margin_gap_12">
+
+    <RelativeLayout
+        android:id="@+id/layout_thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:background="@color/download_item_bg_color">
+
+        <RelativeLayout
+            android:id="@+id/thumbnail_container"
+            android:layout_width="130dp"
+            android:layout_height="@dimen/margin_gap_72"
+            android:layout_marginStart="@dimen/margin_gap_12"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:layout_marginBottom="@dimen/margin_gap_8"
+            android:layout_marginEnd="@dimen/margin_gap_8">
+
+            <com.myplex.myplex.ui.views.RoundedCornerImageView
+                android:id="@+id/imageview_thumbnail"
+                android:layout_width="@dimen/margin_gap_130"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/download_pause_play"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:padding="@dimen/margin_gap_4"
+                android:src="@drawable/thumbnail_overlay_play_icon"
+                android:visibility="visible" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_gap_16"
+            android:layout_marginTop="@dimen/margin_gap_4"
+            android:layout_toLeftOf="@+id/wave_update_layout"
+            android:layout_toRightOf="@id/thumbnail_container"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.NormalFontRegular"
+            android:textColor="@color/download_item_title_text_color"
+            android:textSize="@dimen/textsize_14"
+            />
+
+        <TextView
+            android:id="@+id/genres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_title"
+            android:layout_marginLeft="@dimen/margin_gap_16"
+            android:layout_marginRight="@dimen/margin_gap_42"
+            android:layout_marginTop="@dimen/margin_gap_2"
+            android:layout_toRightOf="@id/thumbnail_container"
+            android:maxLines="1"
+            android:text="Action"
+            android:textAppearance="@style/TextAppearance.NormalFontRegular"
+            android:textColor="@color/download_item_subtitle_text_color"
+            android:textSize="@dimen/textsize_10"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/text_video_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/genres"
+            android:layout_marginLeft="@dimen/margin_gap_16"
+            android:layout_marginTop="@dimen/margin_2"
+            android:layout_toRightOf="@id/thumbnail_container"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.NormalFontRegular"
+            android:textColor="@color/download_item_duration_text_color"
+            android:textSize="@dimen/textsize_10"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/text_video_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_video_length"
+            android:layout_marginLeft="@dimen/margin_gap_16"
+            android:layout_marginTop="@dimen/margin_gap_4"
+            android:layout_toRightOf="@id/thumbnail_container"
+            android:maxLines="1"
+            android:text="Video Type"
+            android:textAppearance="@style/TextAppearance.NormalFontRegular"
+            android:textColor="@color/subtitle_text_color"
+            android:textSize="@dimen/textsize_10"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/text_video_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_video_type"
+            android:layout_marginLeft="@dimen/margin_gap_16"
+            android:layout_marginTop="@dimen/margin_gap_4"
+            android:layout_toRightOf="@id/thumbnail_container"
+            android:maxLines="1"
+            android:text=""
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.NormalFontRegular"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/textsize_10"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumbnail_container"
+            android:layout_below="@+id/text_video_size"
+            android:textAllCaps="false"
+            android:maxLines="2"
+            android:gravity="start"
+            android:ellipsize="end"
+            android:visibility="visible"
+            android:layout_marginLeft="@dimen/margin_gap_16"
+            android:layout_marginTop="@dimen/margin_2"
+            android:textAppearance="@style/TextAppearance.NormalFontRegular"
+            android:textColor="@color/progressbar_color"
+            android:textSize="@dimen/textsize_10"
+            />
+
+
+        <TextView
+            android:id="@+id/cancel_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/status_text"
+            android:padding="8dp"
+            android:text="Cancel Download"
+            android:textAppearance="@style/TextAppearance.NormalFontRegular"
+            android:textColor="@color/progressbar_color"
+            android:textSize="@dimen/textsize_12"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/wave_update_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/deleteIcon"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:id="@+id/download_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_gap_8"
+                android:layout_marginRight="@dimen/margin_gap_8"
+                android:layout_marginLeft="@dimen/margin_gap_8">
+
+                <ImageView
+                    android:id="@+id/downloading_gif_anim"
+                    android:layout_width="@dimen/margin_gap_24"
+                    android:layout_height="@dimen/margin_gap_24"
+                    android:layout_gravity="center"
+                    android:src="@drawable/download_progress_anim" />
+
+                <TextView
+                    android:id="@+id/download_btn_status_percent_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:layout_marginTop="@dimen/margin_gap_1"
+                    android:text="0%"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/download_percent_text_colour"
+                    android:textSize="@dimen/textsize_9"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/carddetailbriefdescription_download_img"
+                android:layout_width="@dimen/margin_gap_36"
+                android:layout_height="@dimen/margin_gap_36"
+                android:layout_marginTop="@dimen/margin_gap_8"
+                android:layout_marginRight="@dimen/margin_gap_8"
+                android:layout_marginLeft="@dimen/margin_gap_8"
+                android:padding="@dimen/margin_gap_4"
+                android:src="@drawable/episode_list_download_icon_complete"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                />
+            <ImageView
+                android:id="@+id/carddetailbriefdescription_favourite_img"
+                android:layout_width="@dimen/margin_gap_36"
+                android:layout_height="@dimen/margin_gap_36"
+                android:layout_marginTop="@dimen/margin_gap_8"
+                android:layout_marginRight="@dimen/margin_gap_8"
+                android:layout_marginLeft="@dimen/margin_gap_8"
+                android:padding="@dimen/margin_gap_4"
+                android:src="@drawable/episode_list_download_icon_complete"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/deleteIcon"
+            android:layout_width="@dimen/margin_gap_36"
+            android:layout_height="@dimen/margin_gap_36"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_gap_8"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:src="@drawable/tv_guide_settings_icon"
+            android:visibility="visible"
+            android:padding="@dimen/margin_gap_4"/>
+    </RelativeLayout>
+</LinearLayout>

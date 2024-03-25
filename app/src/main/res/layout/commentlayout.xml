@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/feedback_bg"
+    android:padding="@dimen/margin_gap_24">
+
+    <TextView
+        android:id="@+id/feedback_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/carddetailcommentsection_editcomment"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18"
+        android:textAppearance="@style/TextAppearance.FontLight"/>
+
+
+    <View
+        android:id="@+id/title_div"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_2"
+        android:background="@color/white_50"
+        android:layout_below="@+id/feedback_heading"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <EditText
+        android:id="@+id/feedback_messagebox"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/title_div"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:padding="@dimen/margin_gap_4"
+        android:textColor="@color/app_theme_color"
+        android:background="@drawable/feedbackeditbox_bg"
+        android:gravity="top"
+        android:ems="10"
+        android:hint="@string/carddetailcommentsection_editcomment"
+        android:singleLine="false"
+        android:textAppearance="@style/TextAppearance.FontRegular" >
+    </EditText>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="20dp"
+        android:layout_below="@+id/feedback_messagebox" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            
+            <Button
+                android:id="@+id/feedback_cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@drawable/button_text_white_red_color"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:background="@drawable/feedback_button_bg"
+                android:text="@string/cancel"
+                android:textAppearance="@style/TextAppearance.FontRegular" />
+
+            <Button
+                android:id="@+id/feedback_ok_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@drawable/button_text_white_red_color"
+                android:textAllCaps="false"
+                android:layout_marginLeft="@dimen/margin_gap_4"
+                android:background="@drawable/feedback_button_bg"
+                android:textSize="18sp"
+                android:text="@string/feedbackokbutton"
+                android:textAppearance="@style/TextAppearance.FontRegular" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/feedback_progressbar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/margin_gap_4"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

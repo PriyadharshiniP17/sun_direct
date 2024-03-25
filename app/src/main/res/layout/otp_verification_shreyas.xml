@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/login_page_logo" />
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_gap_12"
+            android:layout_marginEnd="@dimen/margin_gap_12"
+            android:elevation="@dimen/margin_gap_6"
+            app:cardBackgroundColor="@color/black_50"
+            app:cardCornerRadius="@dimen/margin_gap_12">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.FontBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_gap_24"
+                    android:layout_marginBottom="@dimen/margin_gap_14"
+                    android:gravity="center"
+                    android:text="One time password"
+                    android:textColor="@color/main_heading_text_color"
+                    android:textSize="@dimen/textsize_18" />
+
+                <TextView
+                    android:id="@+id/mobileNumberText"
+                    style="@style/TextAppearance.FontMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_gap_8"
+                    android:layout_marginBottom="@dimen/margin_gap_14"
+                    android:layout_marginEnd="@dimen/margin_gap_8"
+                    android:layout_marginStart="@dimen/margin_gap_8"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="Please enter 6 digit verification code sent by sms on your mobile number"
+                    android:textColor="@color/sub_heading_text_color"
+                    android:textSize="@dimen/textsize_16" />
+
+                <com.myplex.myplex.utils.PinEntryEditTextNew
+                    android:id="@+id/txt_pin_entry"
+                    android:cursorVisible="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_gap_12"
+                    android:layout_gravity="center_horizontal"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textAppearance="@style/TextAppearance.FontRegular"
+                    android:textColor="@color/edit_text_color_new"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/edit_text_text_size"
+                    app:pinBackgroundIsSquare="true"
+                    app:pinLineColors="@color/edit_text_color_new"
+                    tools:ignore="SpUsage"
+                    app:pinCharacterSpacing="24dp"
+                    app:pinTextBottomPadding="16dp"/>
+
+                <Button
+                    android:id="@+id/registerSignUp"
+                    style="@style/TextAppearance.FontMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_gap_42"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="@dimen/margin_gap_12"
+                    android:layout_marginBottom="@dimen/margin_gap_14"
+                    android:background="@drawable/edged_button_red"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/submit_button_text_color"
+                    android:textSize="@dimen/submit_button_text_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="@dimen/margin_gap_12"
+                    android:layout_marginBottom="@dimen/margin_gap_36">
+
+                    <Button
+                        android:id="@+id/timerText"
+                        style="@style/TextAppearance.FontRegular"
+                        android:layout_width="@dimen/margin_gap_64"
+                        android:layout_height="@dimen/margin_gap_42"
+                        android:layout_marginEnd="@dimen/margin_gap_8"
+                        android:paddingStart="@dimen/margin_gap_8"
+                        android:paddingEnd="@dimen/margin_gap_8"
+                        android:background="@drawable/edged_button_grey"
+                        android:visibility="gone"
+                        android:textAllCaps="false"
+                        android:layout_gravity="end"
+                        android:textColor="@color/timer_text_color"
+                        android:textSize="@dimen/textsize_14" />
+
+                <Button
+                    android:id="@+id/resendOtpButton"
+                    style="@style/TextAppearance.FontRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_gap_42"
+                    android:layout_marginStart="@dimen/margin_gap_8"
+                    android:background="@drawable/edged_button_red_alpha"
+                    android:text="Resend"
+                    android:textAllCaps="false"
+                    android:layout_gravity="end"
+                    android:textColor="@color/redirect_button_text_color"
+                    android:textSize="@dimen/textsize_14" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

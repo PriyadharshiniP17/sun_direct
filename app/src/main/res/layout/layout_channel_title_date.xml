@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_guide_layout_today_epg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/app_bkg"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/header_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginTop="@dimen/margin_gap_8"
+        android:layout_marginLeft="@dimen/margin_gap_20"
+        android:text="@string/upcoming_programs_text"
+        android:layout_centerVertical="true"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@drawable/button_text_white_red_color"
+        android:textSize="@dimen/textsize_18" />
+
+    <TextView
+        android:id="@+id/header_sub_title_textLang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/margin_gap_20"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/margin_gap_8"
+        android:layout_below="@+id/header_title_text"
+        android:textAppearance="@style/TextAppearance.FontHindi"
+        android:textColor="@drawable/button_text_white_red_color"
+        android:textSize="@dimen/textsize_18"
+        android:text="Text"
+        />
+
+    <LinearLayout
+        android:id="@+id/date_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/margin_gap_8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/header_drop_down_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Today"
+            android:singleLine="true"
+            android:visibility="visible"
+            android:textAppearance="@style/TextAppearance.NormalFontRegular"
+            android:textColor="@drawable/button_text_white_red_color"
+            android:textSize="@dimen/textsize_14" />
+
+        <ImageView
+            android:id="@+id/drop_down_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/drop_down_icon" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/send_push_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="push message notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_a_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="_id notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_a_aid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="_aid notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_page_notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="page notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_movie_page_notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="movie page notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_music_page_notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="music page notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_tv_shows_page_notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="tv shows page notification"
+            android:textSize="16dp" />
+
+
+        <Button
+            android:id="@+id/send_videos_page_notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="videos page notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_vurl_notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="vurl notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/webPage_launch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="Webpage launch"
+            android:textSize="16dp"
+            android:textStyle="italic|bold"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/send_yuid_notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="youtube video link notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_news_id_notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="news _id notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_news_video_url_notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="news video url notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_id_yuid_notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="youtube _id yuid notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/test_languages_supported_in_device"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="test languages supported in device"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_a_vod_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="vod _id notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_a_vodchannel_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="vodchannel _id notification"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/send_a_vodcategory_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="vodcategory _id notification"
+            android:textSize="16dp" />
+
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="launch hooq app with deep link"
+            android:textSize="16dp" />
+
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="launch hungama app with deep link"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btn_show_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="Show Location"
+            android:textSize="16dp"
+            android:textStyle="italic|bold"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_launch_detailsPage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="Launch Detail Page"
+            android:textSize="16dp"
+            android:textStyle="italic|bold"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_launch_screen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="Launch Specific Screen"
+            android:textSize="16dp"
+            android:textStyle="italic|bold"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/tv_detail_114130"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="Launch tv_detail_110212"
+            android:textSize="16dp"
+            android:textStyle="italic|bold"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/live_84730"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="Launch live_84730"
+            android:textSize="16dp"
+            android:textStyle="italic|bold"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/movi_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="Launch movie/detail/45154"
+            android:textSize="16dp"
+            android:textStyle="italic|bold"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+</ScrollView>
+	

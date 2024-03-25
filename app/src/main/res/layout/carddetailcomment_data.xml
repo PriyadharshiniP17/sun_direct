@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.myplex.myplex.ui.views.VerticalLineRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/margin_gap_4"
+        android:contentDescription="@string/hello_world"
+        android:src="@mipmap/icontimeline"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_gap_4"
+        android:layout_marginRight="@dimen/margin_gap_4"
+        android:layout_toRightOf="@+id/imageView1"
+        android:background="@drawable/commenttextbg"
+        android:paddingBottom="4dp">
+
+        <LinearLayout
+            android:id="@+id/titlelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/margin_gap_8"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/carddetailcomment_personname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#6d6e71"
+                android:textSize="@dimen/textsize_12"
+                android:text="person"
+                android:textAppearance="@style/TextAppearance.FontRegular"/>
+
+            <TextView
+                android:id="@+id/carddetailcomment_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#939597"
+                android:text="person"
+                android:textSize="@dimen/textsize_10"
+                android:textAppearance="@style/TextAppearance.FontRegular"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/carddetailcomment_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titlelayout"
+            android:layout_marginLeft="@dimen/margin_gap_8"
+            android:textColor="#4b4b4c"
+            android:textSize="@dimen/textsize_10"
+            android:text="coment"
+            android:textAppearance="@style/TextAppearance.FontRegular"/>
+    </RelativeLayout>
+
+</com.myplex.myplex.ui.views.VerticalLineRelativeLayout>

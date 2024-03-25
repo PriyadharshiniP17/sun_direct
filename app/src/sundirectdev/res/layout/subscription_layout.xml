@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bkg">
+
+    <ImageView
+        android:id="@+id/back_nav_icon_error"
+        android:layout_width="@dimen/margin_gap_30"
+        android:layout_height="@dimen/margin_gap_30"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:backgroundTint="@color/black"
+        android:background="@null"
+        android:src="@drawable/back_icon"
+        android:visibility="visible"
+        android:layout_margin="@dimen/margin_20"
+        android:layout_marginStart="@dimen/margin_gap_3"/>
+
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:id="@+id/video_title_error"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_37sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_gap_20"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textsize_14"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/previous_content_ll_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_gap_50"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/previous_content_image_sub"
+            android:layout_width="@dimen/_11sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/previous_content_icon"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_gap_16"
+            android:layout_toRightOf="@+id/previous_content_image_sub"
+            android:orientation="vertical">
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/previous_channel_name_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/title_white"
+                android:textSize="@dimen/textsize_13" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/previous_program_name_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_12" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/title_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:background="#ED1E79"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/textsize_14"
+                android:text="In-app purchases \n aren’t allowed in this app."
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/sub_title_error"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:background="@color/white"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/textsize_14"
+                android:text="In-app purchases \n aren’t allowed in this app."
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/next_content_ll_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_gap_50"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/channelLayout_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_gap_16"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/next_channel_name_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/title_white"
+                android:textSize="@dimen/textsize_13"/>
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/next_program_name_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_12"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/next_content_image_sub"
+            android:layout_width="@dimen/_11sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_gap_16"
+            android:layout_toRightOf="@+id/channelLayout_sub"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/next_content_icon"
+            android:visibility="visible" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/playerexitscreen"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/dimen_70_dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/margin_gap_12"
+        android:layout_marginBottom="@dimen/_8sp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/hello_world"
+            android:src="@drawable/icon_minimize_new" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/draggable_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:keepScreenOn="true"
+    android:background="@color/app_bkg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_bkg"
+        android:minHeight="?attr/actionBarSize"
+        android:contentInsetLeft="10dp"
+        android:contentInsetRight="10dp"
+        android:contentInsetStart="10dp"
+        app:contentInsetLeft="10dp"
+        app:contentInsetRight="10dp"
+        app:contentInsetStart="10dp"
+        android:visibility="gone"></androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/carddetail_videolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="#000000"></RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/carddetail_progressBar"
+        style="@style/CustomProgressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/carddetail_videolayout"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/custom_progress_bar_horizontal"
+        android:visibility="invisible" />
+    <ScrollView
+        android:id="@+id/carddetail_scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/carddetail_progressBar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/carddetail_detaillayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/card_loading_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        android:text="@string/progress_message"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_timeshift_help_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="@drawable/help_timeshift_overlay"
+        android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.myplex.myplex.animationviewpager.InfiniteViewPager
+        android:id="@+id/daimajia_slider_viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.myplex.myplex.animationviewpager.indicator.PagerIndicator
+        android:id="@+id/default_center_bottom_indicator"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_gap_48"
+        android:gravity="center"
+        custom:shape="rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingPrefix" />
+</RelativeLayout>

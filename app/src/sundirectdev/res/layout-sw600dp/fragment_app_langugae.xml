@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/app_bkg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/filter_unselected_color"
+        android:gravity="center"
+        android:text="@string/content_language"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_13" />
+
+    <GridView
+        android:id="@+id/listview"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:choiceMode="singleChoice"
+        android:divider="@color/transparent"
+        android:numColumns="2"
+        android:layout_weight="1"
+        android:dividerHeight="2dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_gap_40"
+        android:background="@drawable/rounded_corner_button_white"
+        android:text="@string/apply"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_16"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+
+</LinearLayout>

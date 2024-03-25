@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFBB3B</color>
+    <color name="tab_highlight_color_text">#FF8555</color>
+    <color name="tab_unselected_color_text">#C3C9D5</color>
+
+    <color name="tab_view">#707070</color>
+    <color name="search_suggestion_divider">#40707070</color>
+    <color name="search_chips_background_color">#373443</color>
+    <color name="tab_views">#D8D8D8</color>
+
+    <color name="btn_blue">#FFCC33</color>
+
+    <color name="progressbar_color">#ff6600</color>
+    <color name="continue_watching_progress">#FF0000</color>
+    <color name="red_highlight_color">#FF8555</color>
+    <color name="video_desc_text_color">#BFDEDEDE</color>
+    <color name="moreColor">@color/colorPrimary</color>
+    <color name="more_text_color">#BFFFFFFF</color>
+    //this is for banner circle color
+    <color name="vf_default_circle_indicator_fill_color_main">@color/colorPrimary</color>
+    <color name="circle_indicator_unselected_color">#8C98AF</color>
+
+    <color name="app_newtheme_color_70">#1B1C21</color>
+    <color name="color_e6777777">#232323</color>
+    <color name="live_tv_sub_text_color">#FFFFFF</color>
+    <color name="text_color_bnc">#FFFFFF</color>
+    <color name="textcolorgener">#CCCCCC</color>
+    <!--//this is for search filter  selected color-->
+    <color name="filter_background_color">@color/colorPrimary</color>
+    <color name="filter_selected_color_text">@color/black</color>
+    <color name="filter_unselected_color_text">#26263066</color>
+    <color name="other_lang_title_text_color">#666666</color>
+    <color name="timer_text_background_color">#000000</color>
+    <color name="filter_unselected_color">#66262630</color>
+
+    <color name="recent_search_unselected_text_color">#FFFFFF</color>
+
+    <!--
+        <color name="cast_dialog_sub_header_text">#FFCC33</color>
+        <color name="cast_dialog_close_button_pressed_state">#FFCC33</color>
+        <color name="app_language_save_button_bg">#FFCC33</color>
+    -->
+
+    <color name="navigation_drawer_color_text_sec_iter">#FFFFFF</color>
+
+    <color name="filter_tab_selected_text_color">#FFCC33</color>
+    <color name="filter_tab_selected_indicator_color">#000</color>
+
+
+    <color name="tab_selected_indicator_color">#FF8555</color>
+    <color name="filter_apply_button_color">#FFCC33</color>
+
+    <color name="profile_card_background_color">#171717</color>
+
+    <color name="nav_drawer_subtitle_text_color">#BEBEBE</color>
+    <color name="nav_menu_seperator_colors">#696969</color>
+
+    <color name="subtitle_text_color">#BEBEBE</color>
+    <color name="tab_unselect_color">#383838</color>
+    <color name="title_text_color">#FFFFFF</color>
+
+    <color name="submit_button_color">#EC1F27</color>
+    <color name="edit_text_color_new">#A5A5A5</color>
+    <color name="resend_otp_button_color">#F8CCCC</color>
+    <color name="redirect_button_color">#D6D6D6</color>
+    <color name="forgot_password_text_color">#10BBFA</color>
+    <color name="or_connect_with_color">#C9C9C9</color>
+    <color name="submit_button_text_color">#FCFCFC</color>
+    <color name="redirect_button_text_color">#5D5D5D</color>
+    <color name="main_heading_text_color">#DBDBDB</color>
+    <color name="sub_heading_text_color">#989595</color>
+    <color name="card_back_ground_color">#E5000000</color>
+    <color name="timer_text_color">#CCCCCC</color>
+    <color name="line_color">#C6C6C6</color>
+    <color name="pin_normal">#6B767E</color>
+
+    <color name="details_icons_background_color">#171717</color>
+
+    <color name="rounded_artist_card_background_color">#171717</color>
+    <color name="brief_description_text_color">#E1E1E1</color>
+
+    <color name="unselected_color">#E1E1E1</color>
+    <color name="selected_color">@color/colorPrimary</color>
+    <color name="unselected_light_theme_color">#333333</color>
+    
+    <color name="bd_title_dark_theme_color">#FFFFFF</color>
+    <color name="bd_title_light_color">#333333</color>
+
+    <color name="bd_duration_dark_theme_color">#8C98AF</color>
+    <color name="bd_duration_light_theme_color">#666666</color>
+
+    <color name="bd_language_dark_theme_color">#FF8555</color>
+    <color name="bd_language_light_theme_color">#666666</color>
+
+    <color name="bd_genre_dark_theme_color">#9898DB</color>
+
+    <color name="bd_release_date_dark_theme_color">#8C98AF</color>
+
+    <color name="bd_description_dark_theme_color">#E1E1E1</color>
+    <color name="bd_description_light_theme_color">#666666</color>
+
+    <color name="description_people_also_watch_text_light_color">#000000</color>
+    <color name="description_people_also_watch_text_dark_color">#FFFFFF</color>
+
+    <color name="medium_small_content_light_theme_text_color">#333333</color>
+    <color name="medium_small_content_light_theme_sub_title_text_color">#666666</color>
+
+
+    <color name="light_theme_carousel_heading_text_color">#000000</color>
+    <color name="light_theme_carousel_sub_heading_text_color">#80000000</color>
+
+    <color name="latest_episode_text_color">#9BF1FF</color>
+
+    <color name="carousel_heading_text_color">#FFFFFF</color>
+
+    <color name="news_author_background_color">#80000000</color>
+    <color name="news_author_light_theme_background_color">#F1F2F6</color>
+
+    <color name="news_author_text_color">@color/main_heading_text_color</color>
+    <color name="news_author_light_theme_text_color">#333333</color>
+
+    <color name="splash_background_color">#06031A</color>
+
+    <color name="new_user_buttons_background_color">#FFBB3B</color>
+    <color name="voice_search_icon_tint">#BEBEBE</color>
+
+    <color name="catchup_start_color">#03000000</color>
+    <color name="catchup_center_color">#57000000</color>
+    <color name="catchup_end_color">#A3000000</color>
+    <color name="rounded_button_colors">#212121</color>
+    <color name="partner_cirle_border_color">#BFFFFFFF</color>
+
+
+    <color name="yellow_rent_availble">#FCE45E</color>
+    <color name="grey_bg_rent">#ED85868A</color>
+
+    <color name="new_channel_color">#BFFFFFFF</color>
+
+    <color name="search_close_bg">#777777</color>
+
+    <color name="lang_selection_gradient1">#FFBB3B</color>
+    <color name="lang_selection_gradient2">#805E1E</color>
+
+    <color name="view_pager_unselected">#BEB8B8</color>
+    <color name="view_pager_selected">@color/white</color>
+
+
+
+</resources>

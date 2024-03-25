@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview_genre_title"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginStart="@dimen/margin_gap_8"
+            android:textAppearance="@style/TextAppearance.FontBold"
+        android:textColor="@color/carousel_heading_text_color"
+        android:visibility="gone"
+            android:textSize="@dimen/carousel_title_text_size"
+            />
+        <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/transparent"
+                android:layout_marginLeft="@dimen/_13sp"
+                android:layout_marginRight="@dimen/_13sp"
+                app:cardCornerRadius="@dimen/_5sp"
+                >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/promo_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="H,329:185.06"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+</LinearLayout>

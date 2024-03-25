@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="@dimen/margin_gap_20"
+        android:text="Player Logs:: "
+        android:textAppearance="@style/TextAppearance.FontMedium"
+        android:textColor="@color/player_logs_title_text_color"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/textsize_16" />
+
+    <ImageView
+        android:id="@+id/save_logs_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/description_download_icon_default"
+        android:layout_margin="@dimen/margin_gap_8"/>
+
+</RelativeLayout>

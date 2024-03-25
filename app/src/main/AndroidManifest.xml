@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.myplex.myplex">
+
+ <!--   <uses-permission android:name="android.permission.GET_ACCOUNTS" />-->
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+   <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />--> <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" android:maxSdkVersion="28"/> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <!--
+  <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+<!--    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />-->
+    <queries>
+        <!-- Explicit apps you know in advance about: -->
+        <package android:name="com.myplex.sun.preprod"/>
+        <package android:name="com.suntv.sunnxt"/>
+    </queries>
+    <application
+        android:name="com.myplex.myplex.ApplicationController"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/sundirect_final_app_icon"
+        android:label="${appName}"
+        android:largeHeap="true"
+        android:launchMode="singleTask"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:theme,android:name,android:allowBackup, android:label">
+<!--        android:networkSecurityConfig="@xml/network_certificate_config"-->
+
+        <activity android:name="com.myplex.myplex.ui.activities.CastAndCrewActivity"/>
+        <activity android:name="com.myplex.myplex.ui.activities.MandatoryProfileActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_path" />
+        </provider> <!-- uncomment below block to ensure in-app notification isn't shown on a splash screen -->
+        <meta-data
+            android:name="CLEVERTAP_INAPP_EXCLUDE"
+            android:value="LoginActivity" />
+        <meta-data
+            android:name="CLEVERTAP_REGION"
+            android:value="in" />
+        <meta-data
+            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
+            android:value="1" /> <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9018005071334016~2397319356" /> <!-- replace below value with your GCM project number. Separate multiple sender IDs with a comma -->
+        <meta-data
+            android:name="GCM_SENDER_ID"
+            android:value="@string/gcm_defaultSenderId" />
+
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/sundirect_logo_notification" />
+
+       <!-- <meta-data android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/blue" />-->
+        <!--
+             The Mixpanel library will automatically attempt to show available surveys or in
+             app notifications every time a new Activity is displayed. To disable this behavior,
+             add the following line. The default value for this option is set to true.
+        -->
+        <meta-data
+            android:name="com.mixpanel.android.MPConfig.AutoShowMixpanelUpdates"
+            android:value="false" />
+        <meta-data
+            android:name="CLEVERTAP_NOTIFICATION_ICON"
+            android:value="notification_icon" /> <!-- name of your file in the drawable directory without the file extension. -->
+        <meta-data
+            android:name="com.mixpanel.android.MPConfig.EnableDebugLogging"
+            android:value="false" />
+
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="true" />
+        <!--
+        <activity
+            android:name="com.clevertap.android.sdk.InAppNotificationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            tools:replace="android:configChanges"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        -->
+        <activity
+            android:name="com.myplex.myplex.ui.activities.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|keyboard|screenLayout|uiMode|smallestScreenSize"
+            android:hardwareAccelerated="true"
+            android:label="${appName}"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searcheable" />
+        </activity>
+        <activity
+            android:name="com.myplex.myplex.ui.activities.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="${appName}"
+            android:exported="true"
+            android:theme="@style/Splash.Theme"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Added for Static ShortCuts -->
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/app_static_shortcuts" />
+        </activity>
+        <activity
+            android:name="com.myplex.myplex.ui.activities.ProgramGuideChannelActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="${appName}"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myplex.myplex.ui.activities.ActivityRelatedVODList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="${appName}"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myplex.myplex.debug.DebugActivity"
+            android:label="hooq sdk launcher"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myplex.myplex.debug.NotificationDebugActivity"
+            android:label="${appName}"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myplex.myplex.debug.LanguageDebugActivity"
+            android:label="${appName}"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myplex.myplex.ui.activities.ActivityChangePassword"
+            android:label="${appName}" />
+        <activity
+            android:name="com.myplex.subscribe.SubscriptionView"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myplex.myplex.subscribe.SubscriptionWebActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.myplex.myplex.ui.activities.PartnerPaymentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myplex.myplex.ui.activities.LiveScoreWebView"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myplex.myplex.ui.activities.SettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="${appName}"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myplex.myplex.ui.activities.ProfileActivity"
+            android:label="${appName}"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.myplex.myplex.ui.activities.ActivityViewAllCarousel"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="${appName}"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myplex.myplex.ui.activities.ActivityMyPacks"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myplex.myplex.ui.activities.ExpandedControlsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="${appName}"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:parentActivityName="com.myplex.myplex.ui.activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.myplex.myplex.ui.activities.MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <!--
+<activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name_play_store" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+     <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />-->
+
+        <receiver
+            android:name="io.branch.referral.InstallListener"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.myplex.myplex.recievers.CustomCampaignTrackingReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.myplex.myplex.services.FetchDownloadManagerIntentService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <service
+            android:name="com.myplex.myplex.gcm.MyGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- [END gcm_listener] -->
+        <service
+            android:name="com.myplex.myplex.gcm.RegistrationIntentService"
+            android:exported="false" />
+        <service
+            android:name="com.myplex.myplex.gcm.RegistrationJobScheduler"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver android:name="com.myplex.myplex.recievers.DownloadManagerReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.myplex.myplex.recievers.DownloadManagerIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity
+            android:name="com.myplex.myplex.ui.activities.UrlGatewayActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:autoVerify="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+
+            <!-- Branch App Links -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Accepts URIs that begin with "http://www.myplex.com/watch-movie/*” -->
+                <data android:scheme="http"/>
+
+                <data android:scheme="https"/>
+
+                <data
+                    android:host="${hostname1}"
+
+                    />
+                <data
+                    android:host="${hostname1}"
+
+                    />
+                <data
+                    android:host="${hostname2}"
+
+                    />
+                <data
+                    android:host="${hostname2}"
+
+                    />
+                <data
+                    android:host="${hostname3}"
+
+                    />
+                <data
+                    android:host="${hostname3}"
+
+                    />
+                <data
+                    android:host="open"
+                    />
+                <data
+                    android:host="home"
+                    />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.myplex.myplex.recievers.ReminderReceiver" />
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
+            android:value="false" />
+        <meta-data
+            android:name="com.facebook.sdk.AutoInitEnabled"
+            android:value="true" /> <!-- OPTIONAL -->
+        <!--<activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:exported="false"
+            android:label="${appName}" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>-->
+
+        <receiver android:name="com.myplex.myplex.recievers.ConnectivityReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.myplex.myplex.ui.activities.PlayerViewWebActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|keyboard|screenLayout|uiMode|smallestScreenSize"
+            android:label="${appName}"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+            <!-- Prevent Activity restart on such events (specially on orientation change) -->
+        </activity> <!-- Start Flurry required Activities && -->
+        <activity
+            android:name="com.flurry.android.FlurryFullscreenTakeoverActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" /> <!-- End Flurry && -->
+        <!-- Start Facebook required Activities && -->
+        <!--<activity
+            android:name="com.facebook.ads.AudienceNetworkActivity"
+            android:exported="false"
+            android:configChanges="keyboardHidden|orientation|screenSize" /> &lt;!&ndash; End Facebook && &ndash;&gt;-->
+        <!-- Start Inmobi && -->
+        <activity
+            android:name="com.inmobi.rendering.InMobiAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:resizeableActivity="false"
+            android:theme="@android:style/Theme.NoTitleBar"
+            tools:ignore="UnusedAttribute" />
+
+        <receiver
+            android:name="com.inmobi.commons.core.utilities.uid.ImIdShareBroadCastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="com.inmobi.share.id" />
+            </intent-filter>
+        </receiver>
+
+       <!-- <activity android:name="com.hifx.ssolib.UI.Activity.Login.LoginActivity" />-->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" /> <!-- End Admob && -->
+
+
+        <meta-data
+            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="com.myplex.myplex.utils.CastOptionsProvider" />
+
+        <activity
+            android:name="com.myplex.myplex.ui.activities.FullscreenWebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="${appName}"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myplex.myplex.ui.activities.EditProfileActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.myplex.myplex.ui.activities.NotificationActivityNew"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

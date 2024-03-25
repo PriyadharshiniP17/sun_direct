@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>In-app Monitoring - KOP for Java</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="js/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "In-app Monitoring";
+    var mkdocs_page_input_path = "SF-InAppMonitoring.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="js/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> KOP for Java </a> <img src="./images/IconeKOP4JWhite2.png"> </a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Concepts.html">General concept</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_java.html">Java applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_android.html">Android applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Commands.html">Commands</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="CodeShrinking.html">Code shrinking and optimization</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security features</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="SF-00-FeatureList.html">Feature list</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Renaming.html">Renaming</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Flattening.html">Flattening</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-StringMasking.html">String Masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-OpaquePredicate.html">Opaque Predicate</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CallMasking.html">Call masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckCertificate.html">Certificate Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckInstallers.html">Installers Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckManifest.html">Manifest Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckShelfLife.html">Shelf Life Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexIntegrity.html">DEX integrity Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexSignature.html">DEX signature Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckContext.html">Execution Context Checks</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Odca.html">On Demand Code Activation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-DelayedReaction.html">Delayed Reaction</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="SF-InAppMonitoring.html">In-app Monitoring</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general-description">General description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#protection-configuration">Protection Configuration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#protections-without-environment-check">Protections (without environment check)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#protection-using-environment-checks">Protection using environment checks</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-AnNaNaS.html">Android Nagra Native Secure Lib</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Protection-file.html">How to design the protection file</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Limitations.html">Limitations</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="compatibility.html">Compatibility</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="99.99-license.html">License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">KOP for Java</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Security features &raquo;</li>
+      <li>In-app Monitoring</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="in-app-monitoring">In-App Monitoring</h1>
+<h2 id="general-description">General description</h2>
+<p>For environment checks, KOP4J provides different reactions: an immediate crash, a delayed crash or no reaction at all. <br />
+With in-App monitoring, KOP4J allows the application to implement its own reaction.</p>
+<p>The application can define a variable passed in parameter to the check. KOP4J will then update this variable during the several checks. <br />
+With this mechanism, the application can monitor at runtime, whether the check has been executed, and its result.<br />
+It can then implement a dedicated reaction depending on the result.</p>
+<p><img alt="image1" src="images/In-App-Monitoring.png" style="width:700px" /></p>
+<p>The app developer has the possibility to define different combinations of reaction implemented by the KOP4J protection or the application.  </p>
+<table>
+<thead>
+<tr>
+<th align="left">In-app \ KOP4J</th>
+<th align="left">Immediate</th>
+<th align="left">Delayed</th>
+<th align="left">No Reaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>No Reaction </strong></td>
+<td align="left"><span style="color:Red"> Critical</td>
+<td align="left"><span style="color:Red"> Critical</td>
+<td align="left">Log Only</td>
+</tr>
+<tr>
+<td align="left"><strong>Polling </strong></td>
+<td align="left">NA</td>
+<td align="left"><span style="color:blue">  Mixed</td>
+<td align="left"><span style="color:green"> Managed</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<h2 id="protection-configuration">Protection Configuration</h2>
+<h3 id="protections-without-environment-check">Protections (without environment check)</h3>
+<p>Environment checks commands support a <code>statusField</code> option that provides information about the status of the check.</p>
+<p>This field MUST be <code>static</code> and of primitive type <code>int</code>.</p>
+<p>The status is given as a bit field with following masks:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Mask Binary</th>
+<th align="left">Mask Hexa</th>
+<th align="left">Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>00000001b </strong></td>
+<td align="left"><strong>0x01</strong></td>
+<td align="left">the check is currently running</td>
+</tr>
+<tr>
+<td align="left"><strong>00000010b </strong></td>
+<td align="left"><strong>0x02</strong></td>
+<td align="left">check has been done at least one time</td>
+</tr>
+<tr>
+<td align="left"><strong>00000100b </strong></td>
+<td align="left"><strong>0x04</strong></td>
+<td align="left">the last check is ok</td>
+</tr>
+<tr>
+<td align="left"><strong>00001000b </strong></td>
+<td align="left"><strong>0x08</strong></td>
+<td align="left">all checks done were ok.</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<p>After a check, if no issues happens, the bit field should be at <strong><em> 00001110b </em></strong> or <strong><em> 0x0E </em></strong></p>
+<h4 id="example">Example</h4>
+<p><code>-kop-check-certificate,delayed,statusField:package.name.Main.certificateStatusBitField public class package.name.Main { public static void main(...); }</code><br />
+<code>-kop-shelf-life-check,no-reaction,date:2020-06-06,statusField:package.name.Main.dateStatusBitField public class package.name.Main { public static void main(...); }</code></p>
+<p>will inject 2 checks :</p>
+<ul>
+<li><strong>on certificate</strong> : if it fails, result to an immediate failure. Otherwise the <code>certificateStatusBitField</code> value will be <code>0x0E</code> after the check, indicating the check as been done at least one time and is ok.</li>
+<li><strong>on date</strong> : without reaction strategy, indicating the date didn't pass the 6 june 2020 if the <code>dateStatusBitField</code> value is equal to <code>0x02</code> (check has been done at least one time and has failed), otherwise its value will be <code>0x0E</code> (check has been done at least one time and is ok).</li>
+</ul>
+<p>These fields must exist in appropriate class :   </p>
+<h5 id="in-java">In Java</h5>
+<pre><code class="language-java">
+public class Main {
+
+  public static int certificateStatusBitField = 0;
+  public static int dateStatusBitField = 0;
+
+  public static void main(String[] args) {
+
+    // Print status values in hex
+    System.out.println(&quot;certificateStatusBitField : 0x&quot;
+        + Integer.toHexString(certificateStatusBitField));
+    System.out.println(&quot;dateStatusBitField : 0x&quot;
+        + Integer.toHexString(dateStatusBitField));
+    // ...
+  }
+
+  // ...
+}
+</code></pre>
+<h5 id="in-kotlin">In Kotlin</h5>
+<pre><code class="language-kotlin">
+class KotlinMain {
+
+ companion object {
+
+  @JvmField var certificateStatusBitField = 0
+
+  @JvmField var dateStatusBitField = 0
+
+ }
+
+
+ fun main(args : Array&lt;String&gt;) {
+
+  println(&quot;certificateStatusBitField : 0x&quot;
+          + Integer.toHexString(certificateStatusBitField))
+
+  println(&quot;dateStatusBitField : 0x&quot;
+          + Integer.toHexString(dateStatusBitField))
+
+  // ...
+ }
+
+}
+</code></pre>
+<h3 id="protection-using-environment-checks">Protection using environment checks</h3>
+<p>When using this protection with the environment check (Root/Frida/Exposed detection),
+there are some additional information:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Mask Binary</th>
+<th align="left">Mask Hexa</th>
+<th align="left">Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>00000001b</strong></td>
+<td align="left"><strong>0x01</strong></td>
+<td align="left">the check is currently running</td>
+</tr>
+<tr>
+<td align="left"><strong>00000010b</strong></td>
+<td align="left"><strong>0x02</strong></td>
+<td align="left">check has been done at least one time</td>
+</tr>
+<tr>
+<td align="left"><strong>00000100b</strong></td>
+<td align="left"><strong>0x04</strong></td>
+<td align="left">the last check is ok</td>
+</tr>
+<tr>
+<td align="left"><strong>00001000b</strong></td>
+<td align="left"><strong>0x08</strong></td>
+<td align="left">all checks done were ok.</td>
+</tr>
+<tr>
+<td align="left"><strong>00010000b</strong></td>
+<td align="left"><strong>0x10</strong></td>
+<td align="left">Root is detected.</td>
+</tr>
+<tr>
+<td align="left"><strong>00100000b</strong></td>
+<td align="left"><strong>0x20</strong></td>
+<td align="left">Frida is detected.</td>
+</tr>
+<tr>
+<td align="left"><strong>01000000b</strong></td>
+<td align="left"><strong>0x40</strong></td>
+<td align="left">XPosed is detected.</td>
+</tr>
+<tr>
+<td align="left"><strong>10000000b</strong></td>
+<td align="left"><strong>0x80</strong></td>
+<td align="left">an Emulator is detected.</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<h4 id="example_1">Example</h4>
+<p><code>-kop-check-exe-context,immediate,statusField:package.name.Main.contextStatusBitField public class package.name.Main { public static void main(...); }</code>  </p>
+<p>will inject 1 composite check :</p>
+<ul>
+<li><strong>on Root, Frida, Xposed</strong> : if it fails, results to an immediate failure. Otherwise the <code>contextStatusBitField</code> value will be <code>0x0E</code> after the check, indicating the check as been done at least one time and is ok.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="SF-DelayedReaction.html" class="btn btn-neutral float-left" title="Delayed Reaction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="SF-AnNaNaS.html" class="btn btn-neutral float-right" title="Android Nagra Native Secure Lib">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="SF-DelayedReaction.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="SF-AnNaNaS.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

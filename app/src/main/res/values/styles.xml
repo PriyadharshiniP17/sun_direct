@@ -1,0 +1,393 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/toolbar_bkg</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowBackground">@color/app_theme_color</item>
+<!--        <item name="popupMenuStyle">@style/PopupMenu</item>-->
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <!--<item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>-->
+        <item name="searchViewStyle">@style/MySearchViewStyle</item>
+        <item name="dropDownListViewStyle">@style/PopupMenuListView</item>
+        <item name="actionOverflowButtonStyle">@style/OverflowButton</item>
+        <item name="android:autofilledHighlight" tools:targetApi="o">@android:color/transparent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="popupTheme">@style/PopupMenuTheme</item>
+        <item name="actionButtonStyle">@style/ActionButtonStyle</item>
+
+    </style>
+    <style name="PopupMenuTheme" parent="Theme.AppCompat.Light">
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/textsize_11</item>
+    </style>
+
+   <!-- <style name="ActionButtonStyle" parent="@android:style/Widget.Holo.Light.ActionButton">
+        <item name="android:minWidth">0dip</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+    </style>-->
+
+    <!--this will reduce space between actionBar Icons-->
+    <style name="ActionButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:minWidth">0dip</item>
+        <item name="android:maxWidth">50dip</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+    </style>
+
+
+    <style name="CastVideosTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- ... -->
+        <item name="mediaRouteTheme">@style/CustomMediaRouterTheme</item>
+    </style>
+    <style name="CustomMediaRouterTheme" parent="Theme.MediaRouter">
+        <item name="mediaRouteButtonStyle">@style/CustomMediaRouteButtonStyle</item>
+
+    </style>
+
+    <style name="CustomMediaRouteButtonStyle" parent="Widget.MediaRouter.Light.MediaRouteButton">
+        <item name="mediaRouteButtonTint">@color/white</item>
+        <item name="externalRouteEnabledDrawableStatic">@drawable/ic_baseline_cast_20</item>
+        <item name="externalRouteEnabledDrawable">@drawable/ic_baseline_cast_20</item>
+    </style>
+
+    <style name="NoBackgroundDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="background">@drawable/bottom_sheet_language_bg_selector</item>
+    </style>
+
+    <style name="NoBackgroundDialogThemePlayerOption" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="background">@drawable/bottom_sheet_language_bg_selector</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <!-- Set Custom Icon for Overflow Button in ActionBar -->
+    <style name="OverflowButton" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/tv_guide_settings_icon</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize40Percent" parent="">
+        <item name="cornerSize">25%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize12Percent" parent="">
+        <item name="cornerSize">12%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize10Percent" parent="">
+        <item name="cornerSize">10%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize6Percent" parent="">
+        <item name="cornerSize">6%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize9Percent" parent="">
+        <item name="cornerSize">9%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize1Percent" parent="">
+        <item name="cornerSize">1%</item>
+    </style>
+    <style name="circle">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="CustomTitleTextAppearance">
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:maxLines">2</item>
+        <item name ="android:textAppearance">@style/TextAppearance.FontBold</item>
+    </style>
+    <style name="PartnerTitleTextAppearance">
+        <item name="android:textSize">@dimen/textsize_15</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:maxLines">2</item>
+        <item name ="android:textAppearance">@style/TextAppearance.FontBold</item>
+    </style>
+    <style name="LiveTitleTextAppearance">
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:maxLines">2</item>
+        <item name ="android:textAppearance">@style/TextAppearance.FontBold</item>
+    </style>
+    <style name="LiveTVTitles">
+        <item name="android:textSize">@dimen/textsize_15</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:maxLines">2</item>
+        <item name ="android:textAppearance">@style/TextAppearance.FontBold</item>
+    </style>
+
+    <style name="MyEditTextTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Used for the bottom line when not selected / focused -->
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="colorControlActivated">#ffffff</item>
+
+        <!-- colorControlActivated & colorControlHighlight use the colorAccent color by default -->
+    </style>
+
+    <!-- OverFlow menu Styles -->
+    <style name="PopupMenuListView" parent="@style/Widget.AppCompat.Light.ListView.DropDown">
+        <item name="android:background">@color/app_theme_color</item>
+    </style>
+
+    <style name="EpgCustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/custom_progress_horizontal</item>
+        <item name="android:minHeight">2dip</item>
+        <item name="android:maxHeight">5dip</item>
+    </style>
+
+    <style name="ChannelEpgCustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/custom_progress_horizontal</item>
+        <item name="android:minHeight">3dip</item>
+        <item name="android:maxHeight">5dip</item>
+    </style>
+
+    <style name="Theme.PageIndicatorDefaults" parent="android:Theme">
+        <item name="vpiIconPageIndicatorStyle">@style/Widget.IconPageIndicator</item>
+        <item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator</item>
+    </style>
+
+    <style name="Widget"></style>
+
+    <style name="Widget.TabPageIndicator" parent="Widget">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.TabPageIndicator</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabGravity">center</item>
+    </style>
+
+    <style name="TextAppearance.TabPageIndicator" parent="Widget">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/TextAppearance.NormalFontRegular</item>
+        <item name="android:textColor">@color/vpi__dark_theme</item>
+    </style>
+
+    <style name="MyDownloadTabs" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:fontFamily">@font/amazon_ember_cd_regular</item>
+    </style>
+
+    <style name="Widget.IconPageIndicator" parent="Widget">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+
+
+    <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="searchIcon">@drawable/search_icon</item>
+        <item name="closeIcon">@drawable/search_cancel_icon</item>
+        <item name="background">@drawable/searchview_background</item>
+        <item name="android:textAppearance">@style/TextAppearance.NormalFontRegular</item>
+    </style>
+
+    <style name="notification" parent="@android:style/TextAppearance.StatusBar.EventContent">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--    <style name="AppTheme" parent="android:Theme.Light">-->
+<!--        <item name="android:popupMenuStyle">@style/PopupMenu</item>-->
+<!--    </style>-->
+
+    <style name="PopupMenu" parent="@style/Widget.AppCompat.Light.PopupMenu">
+        <item name="android:popupBackground">@drawable/nav_up</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/dimen_12_dp</item>
+        <item name="android:background">@color/genresdropdown</item>
+
+<!--        <item name="android:fontFamily">@fon</item>-->
+    </style>
+
+<!--    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">-->
+<!--        <item name="android:popupBackground">@drawable/nav_up</item>-->
+<!--    </style>-->
+
+
+    <declare-styleable name="SliderLayout">
+
+        <!-- indicator visibility -->
+        <attr name="indicator_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+
+        <attr name="auto_cycle" format="boolean" />
+
+        <!-- page animation -->
+        <attr name="pager_animation" format="enum">
+            <enum name="Default" value="0">Default</enum>
+            <enum name="Accordion" value="1">Accordion</enum>
+            <enum name="Background2Foreground" value="2">Background2Foreground</enum>
+            <enum name="CubeIn" value="3">CubeIn</enum>
+            <enum name="DepthPage" value="4">DepthPage</enum>
+            <enum name="Fade" value="5">Fade</enum>
+            <enum name="FlipHorizontal" value="6">FlipHorizontal</enum>
+            <enum name="FlipPage" value="7">FlipPage</enum>
+            <enum name="Foreground2Background" value="8">Foreground2Background</enum>
+            <enum name="RotateDown" value="9">RotateDown</enum>
+            <enum name="RotateUp" value="10">RotateUp</enum>
+            <enum name="Stack" value="11">Stack</enum>
+            <enum name="Tablet" value="12">Tablet</enum>
+            <enum name="ZoomIn" value="13">ZoomIn</enum>
+            <enum name="ZoomOutSlide" value="14">ZoomOutSlide</enum>
+            <enum name="ZoomOut" value="15">ZoomOut</enum>
+        </attr>
+
+        <!-- page animation time span -->
+        <attr name="pager_animation_span" format="integer" />
+
+    </declare-styleable>
+    <declare-styleable name="PagerIndicator">
+        <!-- indicator visibility -->
+        <attr name="visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+
+        <attr name="shape" format="enum">
+            <enum name="oval" value="0" />
+            <enum name="rect" value="1" />
+        </attr>
+
+        <attr name="selected_color" format="color" />
+        <attr name="unselected_color" format="color" />
+
+        <!-- indicator style -->
+        <attr name="selected_drawable" format="reference" />
+        <attr name="unselected_drawable" format="reference" />
+
+        <attr name="selected_width" format="dimension" />
+        <attr name="selected_height" format="dimension" />
+
+        <attr name="unselected_width" format="dimension" />
+        <attr name="unselected_height" format="dimension" />
+
+        <attr name="padding_left" format="dimension" />
+        <attr name="padding_right" format="dimension" />
+        <attr name="padding_top" format="dimension" />
+        <attr name="padding_bottom" format="dimension" />
+
+        <attr name="selected_padding_left" format="dimension" />
+        <attr name="selected_padding_right" format="dimension" />
+        <attr name="selected_padding_top" format="dimension" />
+        <attr name="selected_padding_bottom" format="dimension" />
+
+        <attr name="unselected_padding_left" format="dimension" />
+        <attr name="unselected_padding_right" format="dimension" />
+        <attr name="unselected_padding_top" format="dimension" />
+        <attr name="unselected_padding_bottom" format="dimension" />
+
+
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="SliderStyle" format="reference" />
+        <attr name="PagerIndicatorStyle" format="reference" />
+    </declare-styleable>
+
+    <style name="new_user_buttons_text" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+       <item name="android:textAppearance">@style/TextAppearance.FontBold</item>
+    </style>
+    <style name="CustomProgressBarPortraitPlayer" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/preview_player_progressbar</item>
+        <item name="android:minHeight">1dip</item>
+        <item name="android:maxHeight">2dip</item>
+    </style>
+
+    <style name="buy_button_style" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/themeOverLayButton</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+    </style>
+
+    <style name="download_button_style" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/themeOverLayButton</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+    </style>
+
+
+    <style name="themeOverLayButton">
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/margin_gap_144</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="materialAlertDialogTitleTextStyle">@style/TitleTextStyle</item>
+    </style>
+
+    <style name="TitleTextStyle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="Alert.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/transparent</item>
+        <item name="rippleColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_margin">@dimen/margin_gap_10</item>
+    </style>
+
+    <style name="Alert.Button.Neutral" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/transparent</item>
+        <item name="rippleColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_margin">@dimen/margin_gap_10</item>
+    </style>
+
+    <style name="CusrsorBubbleTheme">
+        <![CDATA[<item name="android:textSelectHandle">@drawable/zero_px_trasparent</item> ]]></style>
+
+    <style name="Splash.Theme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+    <style name="SignInEditTextChanges">
+        <item name="android:textColor">@color/signin_edittext_colors</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:fontFamily">@font/amazon_ember_cd_regular</item>
+    </style>
+    <style name="NewUserEditTextChanges">
+        <item name="android:maxLines">2</item>
+        <item name="android:textSize">@dimen/textsize_13</item>
+        <item name="android:textColor">@color/new_user_edittext_color</item>
+        <item name="android:fontFamily">@font/amazon_ember_cd_regular</item>
+    </style>
+
+    <style name="CustomDialog" parent="android:Theme.Dialog">
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+</resources>

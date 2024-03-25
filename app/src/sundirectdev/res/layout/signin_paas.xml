@@ -1,0 +1,532 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@drawable/black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_46sdp"
+        android:layout_weight="2">
+
+        <ImageView
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            android:src="@drawable/signin_sundirect_logo" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_height"
+            android:layout_marginTop="@dimen/_10sp"
+            android:animateLayoutChanges="true"
+            android:background="@color/transparent"
+            android:elevation="0dp"
+            android:fontFamily="@font/amazon_ember_cd_bold"
+            android:visibility="gone"
+            app:layout_scrollFlags="enterAlways|scroll"
+            app:tabBackground="@color/transparent"
+            app:tabGravity="start"
+            app:tabIndicatorColor="@color/yellow_signin_tab"
+            app:tabIndicatorHeight="3dp"
+            app:tabMinWidth="@dimen/dimen_50_dp"
+            app:tabMode="scrollable"
+            app:tabPaddingEnd="@dimen/_70sdp"
+            app:tabPaddingStart="@dimen/_10sp"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/CustomTitleTextAppearance"
+            app:tabTextColor="@color/white" />
+
+        <RelativeLayout
+            android:id="@+id/tab_RL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:layout_marginTop="@dimen/_10sp">
+
+            <LinearLayout
+                android:id="@+id/signin_ll"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <com.myplex.myplex.utils.FontBoldTypeFace
+                    android:id="@+id/signin_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_in_text"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_14">
+
+                </com.myplex.myplex.utils.FontBoldTypeFace>
+
+                <View
+                    android:id="@+id/signin_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/margin_gap_2"
+                    android:background="@color/yellow_signin_tab" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/new_user_layout"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <com.myplex.myplex.utils.FontBoldTypeFace
+                    android:id="@+id/new_user_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_user"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_14">
+
+                </com.myplex.myplex.utils.FontBoldTypeFace>
+
+                <View
+                    android:id="@+id/newuser_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_3sdp"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_gap_2"
+                    android:background="@color/yellow_signin_tab" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sign_in_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tab_RL"
+            android:layout_marginStart="@dimen/_5sp"
+            android:layout_marginEnd="@dimen/_5sp"
+            android:visibility="visible">
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/enter_mobile_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25sp"
+                android:layout_marginTop="@dimen/dimen_30_dp"
+                android:gravity="start"
+                android:text="@string/mobile_number"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textsize_13" />
+
+
+            <TextView
+                android:id="@+id/subTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Please sign in or sign up to continue \n using our app"
+                android:textColor="@color/textSignIN"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enter_mobile_number"
+                android:layout_marginLeft="@dimen/margin_gap_20"
+                android:layout_marginTop="@dimen/_5sp"
+                android:layout_marginRight="@dimen/margin_gap_20"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white_70"
+                android:theme="@style/MyEditTextTheme"
+                android:visibility="visible"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mobile_number"
+                    style="@style/SignInEditTextChanges"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/signin_rounded_corner"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingStart="@dimen/_25sdp"
+                    android:text=""
+                    android:textColor="@color/signin_edittext_colors"
+                    android:textSize="@dimen/textsize_15" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/mobile_valid"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/emailLayout"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_22sdp"
+                android:background="@drawable/validate_background_corner"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_10sdp"
+
+                android:text="@string/otp_msg_invalid_mobile_no"
+                android:textAllCaps="false"
+                android:textColor="@color/gray_border"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/phnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subTitle"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/country_code_spinner"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/rounded_corner"
+                        android:dropDownSelector="@android:drawable/btn_dropdown" />
+
+                    <TextView
+                        android:id="@+id/country_code_text"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/rounded_corner" />
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/phnSignIn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner"
+                    android:hint="Enter phone number"
+                    android:padding="5dp"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/edittextColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pwdlayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobile_valid"
+                android:layout_marginLeft="@dimen/margin_gap_20"
+                android:layout_marginRight="@dimen/margin_gap_20"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white_70"
+                android:theme="@style/MyEditTextTheme"
+                android:visibility="visible"
+                app:hintEnabled="false"
+                app:passwordToggleTint="@color/white">
+
+                <com.myplex.myplex.utils.FontRegularTypeface
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sp"
+                    android:gravity="start"
+                    android:text="@string/password_text"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_13" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pwdSignIn"
+                        style="@style/SignInEditTextChanges"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/signin_rounded_corner"
+                        android:inputType="textPassword"
+                        android:maxLength="32"
+                        android:paddingStart="@dimen/_25sp"
+                        android:paddingEnd="@dimen/_40sdp"
+                        android:text=""
+                        android:textColor="@color/signin_edittext_colors"
+                        android:textSize="@dimen/textsize_17" />
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:id="@+id/textForgotPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="@dimen/_10sp"
+                        android:clickable="true"
+                        android:text="@string/forgot_password"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_12"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/password_valid"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/pwdlayout"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_22sdp"
+                android:background="@drawable/validate_background_corner"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="@string/password"
+                android:textColor="@color/gray_border"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="gone"
+
+                />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/emailIdButtonSignIN"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/password_valid"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_15sp"
+                android:layout_marginEnd="@dimen/_12sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_corner_button_orange"
+                android:fontFamily="@font/amazon_ember_cd_bold"
+                android:paddingLeft="@dimen/margin_gap_8"
+                android:paddingRight="@dimen/margin_gap_8"
+                android:text="@string/sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_14"
+                android:textStyle="bold" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/new_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signUpButtonSignIN"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sp"
+                android:background="@null"
+                android:text="NEW USER"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/phnButtonSignIN"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailIdButtonSignIN"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_gap_10"
+                android:background="@drawable/rounded_corner_button"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="Sign In with Phone No."
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/btnlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phnButtonSignIN"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/facebook_icon_sign_up_social"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_above="@+id/bottomText"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:background="@drawable/facebook" />
+
+
+                <ImageButton
+                    android:id="@+id/sign_in_button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/google"
+                    android:visibility="visible" />
+
+                <!-- <com.facebook.login.widget.LoginButton
+                 android:id="@+id/login_button"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:visibility="gone" />-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/text_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnlayout"
+                android:layout_marginStart="@dimen/_25sp"
+                android:layout_marginTop="@dimen/_15sp"
+                android:layout_marginEnd="@dimen/_25sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_0.2sdp"
+                    android:layout_marginEnd="@dimen/_8sp"
+                    android:layout_marginBottom="@dimen/_3sp"
+                    android:layout_weight="1"
+                    android:background="@color/color_pink"
+                    android:visibility="visible" />
+
+
+                <com.myplex.myplex.utils.FontRegularTypeface
+                    android:id="@+id/bottomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_gap_4"
+                    android:gravity="center"
+                    android:text="@string/toast_message"
+                    android:textColor="@color/tab_views"
+                    android:textSize="@dimen/textsize_14"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_0.2sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_8sp"
+                    android:layout_marginBottom="@dimen/_3sp"
+                    android:layout_weight="1"
+                    android:background="@color/color_pink"
+                    android:visibility="visible" />
+
+
+                <com.myplex.myplex.utils.FontRegularTypeface
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_gap_30"
+                    android:layout_marginBottom="@dimen/margin_gap_4"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_16"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signUpButtonSignIN"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/text_ll"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_25sp"
+                android:layout_marginTop="@dimen/_15sp"
+                android:layout_marginEnd="@dimen/_14sp"
+                android:background="@drawable/rounded_corner_button_border_white"
+                android:fontFamily="@font/amazon_ember_cd_bold"
+                android:text="@string/register_with_us"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_15" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/new_user_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tab_RL"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/get_new_connection"
+                style="@style/new_user_buttons_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_20sp"
+                android:background="@drawable/new_user_buttons_background"
+                android:text="Get New Connection"
+                android:textSize="@dimen/textsize_14"
+                android:textAlignment="center" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/subscribe_to_apps"
+                style="@style/new_user_buttons_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@id/get_new_connection"
+                android:layout_marginTop="@dimen/_10sp"
+                android:layout_marginBottom="@dimen/_20sp"
+                android:visibility="gone"
+                android:background="@drawable/new_user_buttons_background"
+                android:text="Subscribe to Apps"
+                android:textSize="@dimen/textsize_14"
+                android:textAlignment="center" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/explore_offerings"
+                style="@style/new_user_buttons_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@id/subscribe_to_apps"
+                android:layout_marginTop="@dimen/_10sp"
+                android:layout_marginBottom="@dimen/_20sp"
+                android:background="@drawable/new_user_buttons_background"
+                android:text="Explore Offerings"
+                android:textSize="@dimen/textsize_14"
+                android:textAlignment="center" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

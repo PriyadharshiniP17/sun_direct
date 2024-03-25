@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_rv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/gp_background"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_carousel_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:id="@+id/layout_carousel_title_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:layout_toLeftOf="@+id/layout_view_all_poster"
+                android:layout_toStartOf="@+id/layout_view_all_poster">
+
+                <ImageView
+                    android:id="@+id/toolbar_tv_channel_Img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    />
+
+                <TextView
+                    android:id="@+id/textview_genre_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_gap_8"
+                    android:layout_marginStart="@dimen/margin_gap_8"
+                    android:layout_toEndOf="@+id/toolbar_tv_channel_Img"
+                    android:layout_toRightOf="@+id/toolbar_tv_channel_Img"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/gray_text"
+                    android:textSize="@dimen/textsize_18" />
+                <TextView
+                    android:id="@+id/textview_other_lang_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_gap_8"
+                    android:layout_marginStart="@dimen/margin_gap_8"
+                    android:layout_marginTop="@dimen/margin_gap_4"
+                    android:layout_toEndOf="@+id/toolbar_tv_channel_Img"
+                    android:layout_toRightOf="@+id/toolbar_tv_channel_Img"
+                    android:layout_below="@+id/textview_genre_title"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.FontHindi"
+                    android:textColor="@color/gray_text"
+                    android:textSize="@dimen/textsize_18"
+                   />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_view_all_poster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textview_view_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_gap_8"
+                    android:layout_marginRight="@dimen/margin_gap_8"
+                    android:text="@string/view_all"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/more_text_color"
+                    android:textSize="@dimen/textsize_12" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_gap_8"
+                    android:src="@drawable/movies_view_all_arrow"
+                    android:visibility="gone" />
+                <TextView
+                    android:id="@+id/textview_view_all_other_lang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_gap_8"
+                    android:layout_marginRight="@dimen/margin_gap_8"
+                    android:layout_below="@+id/textview_view_all"
+                    android:layout_marginTop="@dimen/margin_gap_4"
+                    android:text="@string/moreInHindi"
+                    android:textAppearance="@style/TextAppearance.FontHindi"
+                    android:textColor="@color/more_text_color"
+                    android:textSize="@dimen/textsize_12" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_gap_32"
+            android:layout_below="@+id/layout_carousel_title">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/parallax_bg_rv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textview_error_retry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/msg_tap_to_retry"
+            android:textAppearance="@style/TextAppearance.FontRegular"
+            android:textColor="@color/download_item_subtitle_text_color"
+            android:textSize="@dimen/textsize_12"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</FrameLayout>

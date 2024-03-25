@@ -1,0 +1,15 @@
+R_DEF: Internal format may change without notice
+local
+attr? autoScroll
+attr? indicator_spacing
+attr? isInfinite
+attr? itemAspectRatio
+attr? scrollInterval
+attr? viewpagerAspectRatio
+attr? wrap_content
+id flSelectedIndicatorContainer
+id llUnselectedIndicators
+layout widget_custom_shape_pager_indicator
+string app_name
+styleable CustomShapePagerIndicator indicator_spacing
+styleable LoopingViewPager isInfinite autoScroll wrap_content scrollInterval viewpagerAspectRatio itemAspectRatio

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="config.domain_name">stag-api.sundirectgo.in</string>
+    <string name="production_domain_name">api.sundirectgo.in</string>
+    <string name="pre_production_domain_name">preprod.sundirectgo.in</string>
+    <string name="staging_domain_name">stag-api.sundirectgo.in</string>
+    <!--<string name="tenant_id">a3e8a0ec-d407-4e23-8ddf-cafdfd0792fc</string>-->
+    <string name="tenant_id">32fdcbc2-8e4f-4d8e-a391-b59f4d9b070c</string>
+    <string name="MENU_TYPE_GROUP_ANDROID_NAV_MENU">navMenuSmartPh5x</string>
+
+    <string name="device_reg_salt1">w3Yp</string>
+    <string name="device_reg_salt2">sr5rtifP</string>
+    <string name="device_reg_salt3">1ioA</string>
+    <string name="app_name">SUN DIRECT GO</string>
+    <string name="app_name_play_store">1SUN DIRECT GO</string>
+    <bool name="crashlytics_enable">true</bool>
+    <bool name="is_hardcoded_msisdn">false</bool>
+    <string name="current_msisdn">9160028374</string>
+    <string name="config.google.developerkey">AIzaSyAOgkb9AWtptd2jULcI3ygeZcIsvZjSbYY</string>
+    <string name="gcm_defaultSenderId">822591294257</string>
+    <string name="clevertap_account_id">65R-84W-894Z</string>
+    <string name="clevertap_account_token">04b-256</string>
+    <string name="file_provider_authority">com.sundirect.android.dev.provider</string>
+    <string name="media_domain">media.sundirect.in</string>
+    <!-- Do not add "://" to the Scheme they are dynamically added-->
+    <string name="media_scheme">https</string>
+    <bool name="shouldUseFirebaseDevMode">false</bool>
+    <string name="clientSecret">ApalyaAndroid</string>
+    <string name="schemeForBaseUrl">https://</string>
+    <string name="chrome_cast_reciever_id">DDBE239C</string>
+    <string name="app_sub_version">i-1</string>
+    <bool name="play_banner_in_landscape">true</bool>
+    <string name="serviceName">SunDirect</string>
+
+    <string name="content_details_fields">relatedMedia,generalInfo,thumbnailSeekPreview,packages,user/currentdata,tags</string>
+
+</resources>

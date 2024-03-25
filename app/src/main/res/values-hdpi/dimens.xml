@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="calendar_layout_weight" format="float" type="integer">0.27</item>
+    <integer name="epg_counter_right">120</integer>
+    <dimen name="tabs_item_padding">22dp</dimen>
+    <dimen name="profile_pic_height">84dp</dimen>
+    <dimen name="home_page_popup_height">-19.5dp</dimen>
+</resources>

@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container_brief_des_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/ll_buy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:background="@color/yellow_rent_availble"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_1sdp">
+
+        <com.myplex.myplex.utils.FontRegularTypeface
+            android:id="@+id/buy_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/margin_15"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:text="@string/rental_expires_on"
+            android:textAllCaps="false"
+            android:textColor="@color/register_button_color"
+            android:textSize="@dimen/textsize_18"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="@color/grey_bg_rent" />
+
+        <LinearLayout
+            android:id="@+id/ll_expiry"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_1sdp">
+
+            <ImageView
+                android:id="@+id/iv_expiry_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:visibility="visible"
+                app:srcCompat="@drawable/icon_expiry" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/tv_expiry_time_left"
+                android:layout_marginTop="@dimen/margin_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0 Hrs Left"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_6" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ad_layout"
+        android:layout_below="@+id/ll_buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/native_custom_below_player_ad" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ad_layout">
+
+        <include
+
+            layout="@layout/carddetailbreifdescription_top_layout" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_container"
+        android:layout_marginTop="@dimen/margin_gap_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/watch_latest_episode_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_gap_10"
+            android:layout_marginBottom="@dimen/margin_gap_4"
+            android:background="@drawable/rounded_corner_button_white"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_gap_8"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/margin_gap_16"
+                android:layout_height="@dimen/margin_gap_16"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_gap_10"
+                app:tint="@color/color_000000"
+                android:visibility="gone"
+                android:src="@drawable/play_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_gap_10"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_gap_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Watch latest episode"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.FontRegular"
+                    android:textColor="@color/color_000000"
+                    android:textSize="@dimen/textsize_12"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/episode_number_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.FontRegular"
+                    android:textColor="@color/latest_episode_text_color"
+                    android:textSize="@dimen/textsize_9"
+                    android:textStyle="bold"
+
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <include layout="@layout/brief_description_bottom_layout" />
+
+        <include layout="@layout/brief_description_bottom_layout_author" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bottom_layout">
+
+        <LinearLayout
+            android:id="@+id/carddetailbriefdescriptionsubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/margin_gap_16"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/txt_trailer"
+                    android:layout_width="@dimen/margin_gap_160"
+                    android:layout_height="@dimen/margin_gap_28"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/trailer_btn_bg"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_gap_4"
+                    android:singleLine="true"
+                    android:text="@string/txt_watch_trailer"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.FontRegular"
+                    android:textColor="@color/white_100"
+                    android:textSize="@dimen/textsize_12"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/description_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/carddetailbriefdescriptionsubtitle"
+            android:layout_marginStart="@dimen/margin_gap_10"
+            android:layout_marginEnd="@dimen/margin_gap_10"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_gap_10">
+
+                <com.myplex.myplex.utils.JustifyFontTextView
+                    android:id="@+id/carddetailbriefdescription_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:ellipsize="end"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="5dp"
+                    android:maxLines="3"
+                    android:visibility="gone"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/descript_color"
+                    android:textSize="@dimen/textsize_12" />
+
+                <com.myplex.myplex.utils.FontRegularTypeface
+                    android:id="@+id/description_expand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/carddetailbriefdescription_description"
+                    android:layout_alignParentStart="true"
+                    android:gravity="start"
+                    android:text="@string/msg_read_more_description"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/descript_color"
+                    android:textSize="@dimen/textsize_12"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/multi_audio_language"
+            android:layout_below="@+id/description_layout"
+            android:visibility="visible"
+            android:layout_marginStart="@dimen/margin_gap_20"
+            android:layout_marginEnd="@dimen/margin_gap_20"
+            android:layout_marginTop="@dimen/margin_gap_20">
+
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:lineSpacingExtra="4dp"
+                android:text="Language"
+                android:letterSpacing="0.01"
+                android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                android:textColor="@color/descript_color"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="visible" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="4dp"
+                android:text=":"
+                android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                android:textColor="@color/descript_color"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="visible" />
+
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/language_value"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_marginStart="@dimen/margin_gap_4"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                android:textColor="@color/descript_color"
+                android:textSize="@dimen/textsize_12"
+                android:text=""
+                android:letterSpacing="0.01"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cast_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/multi_audio_language"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/new_cast_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_gap_20"
+                android:layout_marginEnd="@dimen/margin_gap_20"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.myplex.myplex.utils.FontRegularTypeface
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Cast and Crew "
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textsize_12"
+                    android:layout_marginTop="@dimen/margin_gap_10"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="@dimen/margin_gap_12"
+                    android:layout_height="@dimen/margin_gap_12"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_gap_6"
+                    android:src="@drawable/view_all_arrow"
+                    android:visibility="gone" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/ll_cast"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_gap_20">
+
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Cast"
+                        android:letterSpacing="0.01"
+                        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                        android:textColor="@color/descript_color"
+                        android:textSize="@dimen/textsize_12"
+                        android:visibility="visible" />
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="4dp"
+                        android:text=":"
+                        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                        android:textColor="@color/descript_color"
+                        android:textSize="@dimen/textsize_12"
+                        android:visibility="visible" />
+
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:id="@+id/cast_value"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_marginStart="@dimen/margin_gap_4"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                        android:textColor="@color/descript_color"
+                        android:textSize="@dimen/textsize_12"
+                        android:text=""
+                        android:maxLines="2"
+                        android:letterSpacing="0.01"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:id="@+id/ll_director"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_4">
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.01"
+                        android:layout_weight="0.7"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Director"
+                        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                        android:textColor="@color/descript_color"
+                        android:textSize="@dimen/textsize_12"
+                        android:visibility="visible" />
+
+
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:layout_weight="0.1"
+                        android:text=":"
+                        android:letterSpacing="0.01"
+                        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                        android:textColor="@color/descript_color"
+                        android:textSize="@dimen/textsize_12"
+                        android:visibility="visible" />
+                    <com.myplex.myplex.utils.FontRegularTypeface
+                        android:id="@+id/director_value"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:text=""
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:layout_marginStart="@dimen/margin_gap_4"
+                        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                        android:textColor="@color/descript_color"
+                        android:textSize="@dimen/textsize_12"
+                        android:letterSpacing="0.01"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/carddetailbriefdescription_cast_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:lineSpacingExtra="4dp"
+                android:text="Cast  :"
+                android:letterSpacing="0.01"
+                android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                android:textColor="@color/descript_color"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/margin_gap_16"
+                android:layout_marginEnd="@dimen/margin_gap_16">
+
+
+                <com.myplex.myplex.utils.FontRegularTypeface
+                    android:id="@+id/carddetailbriefdescription_cast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:letterSpacing="0.01"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="4dp"
+                    android:maxLines="2"
+                    android:visibility="gone"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/descript_color"
+                    android:textSize="@dimen/textsize_12" />
+
+                <com.myplex.myplex.utils.FontRegularTypeface
+                    android:id="@+id/carddetailbriefdescription_cast_readmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:layout_below="@+id/carddetailbriefdescription_cast"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:gravity="end"
+                    android:text="More"
+                    android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                    android:textColor="@color/descript_color"
+                    android:textSize="@dimen/textsize_14"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/age_rating_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cast_layout"
+            android:layout_marginStart="@dimen/margin_gap_20"
+            android:layout_marginTop="@dimen/margin_gap_20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/age_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/maturity_border"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:singleLine="true"
+                android:textColor="@color/color_999999"
+                android:textSize="11sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/age_description_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/color_999999"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/related_description_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cast_layout"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/margin_gap_16"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/related_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:lineSpacingExtra="4dp"
+                android:text="Singer : "
+                android:letterSpacing="0.01"
+                android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                android:textColor="@color/brief_description_cast_text_color"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="visible" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/player_divider_color"
+
+            android:layout_marginTop="@dimen/margin_gap_12"
+            android:layout_below="@+id/age_rating_layout"
+            />
+
+        <!--<FrameLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adLayout"
+            android:layout_below="@+id/related_description_layout"
+            android:layout_marginTop="@dimen/margin_20"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/margin_gap_10"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <com.google.android.ads.nativetemplates.TemplateView
+                android:id="@+id/medium_ad_template_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:gnt_template_type="@layout/gnt_medium_template_view" />
+        </FrameLayout>-->
+    </RelativeLayout>
+</RelativeLayout>

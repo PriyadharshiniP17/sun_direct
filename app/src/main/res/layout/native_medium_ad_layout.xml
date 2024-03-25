@@ -1,0 +1,19 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ad_image_view"
+        android:visibility="visible"/>
+
+    <com.google.android.ads.nativetemplates.TemplateView
+        android:id="@+id/medium_ad_template_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:gnt_template_type="@layout/gnt_new_custom_template" />
+</FrameLayout>

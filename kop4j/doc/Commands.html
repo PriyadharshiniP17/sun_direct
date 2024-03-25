@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Commands - KOP for Java</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="js/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Commands";
+    var mkdocs_page_input_path = "Commands.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="js/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> KOP for Java </a> <img src="./images/IconeKOP4JWhite2.png"> </a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Concepts.html">General concept</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_java.html">Java applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_android.html">Android applications</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="Commands.html">Commands</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#class-method-field-variable-designator">Class, method, field, variable designator</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="CodeShrinking.html">Code shrinking and optimization</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security features</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-00-FeatureList.html">Feature list</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Renaming.html">Renaming</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Flattening.html">Flattening</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-StringMasking.html">String Masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-OpaquePredicate.html">Opaque Predicate</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CallMasking.html">Call masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckCertificate.html">Certificate Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckInstallers.html">Installers Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckManifest.html">Manifest Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckShelfLife.html">Shelf Life Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexIntegrity.html">DEX integrity Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexSignature.html">DEX signature Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckContext.html">Execution Context Checks</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Odca.html">On Demand Code Activation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-DelayedReaction.html">Delayed Reaction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-InAppMonitoring.html">In-app Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-AnNaNaS.html">Android Nagra Native Secure Lib</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Protection-file.html">How to design the protection file</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Limitations.html">Limitations</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="compatibility.html">Compatibility</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="99.99-license.html">License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">KOP for Java</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>User Guide &raquo;</li>
+      <li>Commands</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="kop4j-command-options">KOP4J command options</h1>
+<p>KOP4J understands the following command  options to configure the protection.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Commands</strong> Parameters</th>
+<th><strong>Description</strong></th>
+<th><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>-keep</strong> &lt; class designator &gt;</td>
+<td>Disable the renaming and code stripping for classes and class members</td>
+<td><a href="SF-Renaming.html"><strong>Renaming</strong></a> <br><a href="CodeShrinking.html"><strong>Code shrinking and optimization</strong></a></td>
+</tr>
+<tr>
+<td><strong>-keepclassmembers</strong> &lt; class designator &gt;</td>
+<td>Disable the renaming and code stripping for class members only</td>
+<td><a href="SF-Renaming.html"><strong>Renaming</strong></a> <br><a href="CodeShrinking.html"><strong>Code shrinking and optimization</strong></a></td>
+</tr>
+<tr>
+<td><strong>-keepclassmembernames</strong> &lt; class designator &gt;</td>
+<td>Disable the renaming for class members only</td>
+<td><a href="SF-Renaming.html"><strong>Renaming</strong></a></td>
+</tr>
+<tr>
+<td><strong>-keepclasseswithmembers</strong> &lt; class designator &gt;</td>
+<td>Disable the renaming and code stripping for classes and class members, if class members present</td>
+<td><a href="SF-Renaming.html"><strong>Renaming</strong></a> <br><a href="CodeShrinking.html"><strong>Code shrinking and optimization</strong></a></td>
+</tr>
+<tr>
+<td><strong>-keepclasseswithmembernames</strong> &lt; class designator &gt;</td>
+<td>Disable the renaming for classes and class members, if class members present</td>
+<td><a href="SF-Renaming.html"><strong>Renaming</strong></a></td>
+</tr>
+<tr>
+<td><strong>-keepnames</strong> &lt; class designator &gt;</td>
+<td>Disable the renaming for classes and class members</td>
+<td><a href="SF-Renaming.html"><strong>Renaming</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-accessthroughreflection</strong><br>[,{enable|disable}]<br>&lt; class designator &gt;</td>
+<td>Enable or disable the call masking</td>
+<td><a href="SF-CallMasking.html"><strong>Call Masking</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-check-certificate</strong><br>[,statusField:&lt; int field designator &gt;]<br>[,{immediate|delayed|delayed-strong|no-reaction}] <br>&lt; class or method designator &gt;</td>
+<td>Inject a certificate check in a method</td>
+<td><a href="SF-CheckCertificate.html"><strong>Certificate Check</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-check-exe-context</strong><br>[,statusField:&lt; int field designator &gt;]<br>[,{immediate|delayed|delayed-strong|no-reaction}] <br>&lt; class or method designator &gt;</td>
+<td>Inject an execution context check in a method</td>
+<td><a href="SF-CheckContext.html"><strong>Execution Context Checks</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-check-installers</strong><br>[,statusField:&lt; int field designator &gt;]<br>[,{immediate|delayed|delayed-strong|no-reaction}]<br>[,{installers:com.android.vending</td>
+<td>com.amazon.*}] <br>&lt; method designator &gt;</td>
+<td>Inject a check on the installer package</td>
+</tr>
+<tr>
+<td><strong>-kop-check-manifest</strong><br>[,statusField:&lt; int field designator &gt;]<br>[,{immediate|delayed|delayed-strong|no-reaction}] <br>&lt; class or method designator &gt;</td>
+<td>Inject a manifest check in a method</td>
+<td><a href="SF-CheckManifest.html"><strong>Manifest Check</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-check-dex-integrity</strong><br>[,statusField:&lt; int field designator &gt;]<br>[,{immediate|delayed|delayed-strong|no-reaction}] <br>&lt; class or method designator &gt;</td>
+<td>Inject a DEX integrity check in a method</td>
+<td><a href="SF-CheckDexIntegrity.html"><strong>DEX integrity Check</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-check-dex-signature</strong><br>[,statusField:&lt; int field designator &gt;]<br>[,{immediate|delayed|delayed-strong|no-reaction}] <br>&lt; class or method designator &gt;</td>
+<td>Inject a DEX signature check in a method</td>
+<td><a href="SF-CheckDexSignature.html"><strong>DEX signature Check</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-exclude</strong> &lt; class or method designator &gt;</td>
+<td>Exclude some part of the code to the code transformation</td>
+<td><a href="Concepts.html"><strong>general concept</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-flatten</strong><br>[,{enable|disable}]<br>&lt; class or method designator &gt;</td>
+<td>Enable or disable the flattening</td>
+<td><a href="SF-Flattening.html"><strong>Code flattening</strong></a></td>
+</tr>
+<tr>
+<td native_124_java="native|java"><strong>-kop-hash-strategy</strong></td>
+<td>Enable or disable the link with AnNaNaS lib</td>
+<td><a href="SF-AnNaNaS.html"><strong>AnNaNaS Lib</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-mask-string</strong><br>[,{enable|disable}]<br>[,{complexity:<integer>}]<br>&lt; class or method designator &gt;</td>
+<td>Select</td>
+<td><a href="SF-StringMasking.html"><strong>String Masking</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-mask-string-batch-size</strong> &lt; integer &gt;</td>
+<td>Adjust the grouping of masked strings.</td>
+<td><a href="SF-StringMasking.html"><strong>String Masking</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-opacity-control</strong><br>[,{exclude|include}:{bootstrap|certificate|manifest|shelflife|execution-context}]<br>[,{complexity:<integer>}]<br>&lt; class or method designator &gt;</td>
+<td>Exclude a part of code from the opaque predicate computation based on a specific type</td>
+<td><a href="SF-OpaquePredicate.html"><strong>Opaque Predicate</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-opacity-source</strong><br>[,{enable|disable}]<br>&lt; class designator &gt;</td>
+<td>Inject opacity source array (BootStrap) in a class.</td>
+<td><a href="SF-OpaquePredicate.html"><strong>Opaque Predicate</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-opacify-variable-init</strong> &lt; method and constant designator&gt;</td>
+<td>Apply opaque predicate on variable initialization with a constant</td>
+<td><a href="SF-OpaquePredicate.html"><strong>Opaque Predicate</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-rename-strategy</strong></td>
+<td>Select renaming strategy</td>
+<td><a href="SF-Renaming.html"><strong>Renaming</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-shelf-life-check</strong>,<br>date:YYYY-MM-DD <br>[,statusField:&lt;  int field designator &gt;]<br>[,secureTimeField:&lt; long field designator  &gt;]<br>[,{immediate|delayed|delayed-strong|no-reaction}] <br>&lt; class or method designator &gt;</td>
+<td>Inject a shelf life check in a method</td>
+<td><a href="SF-CheckShelfLife.html"><strong>Shelf life Check</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-odca-define</strong>,<br>name:&lt; String &gt; <br>,value:&lt; String representing hexadecimal values &gt; <br>[,field:&lt; field designator &gt;]</td>
+<td>Define the value that will be used for the opaque predicates</td>
+<td><a href="SF-Odca.html"><strong>Odca</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-odca-init</strong>,<br>name:&lt; String &gt; <br>[,value:&lt; String representing hexadecimal values &gt;] <br>&lt; class or method designator &gt;</td>
+<td>Define the initialization value</td>
+<td><a href="SF-Odca.html"><strong>Odca</strong></a></td>
+</tr>
+<tr>
+<td><strong>-kop-report</strong> &lt; filename &gt;</td>
+<td>Print a report on the applied protections to the given file. The report format depends on the file extensions (either .md or .csv).</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>-kop-os-target</strong>,{enable | disable} android</td>
+<td>Os targeted (example : android)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>-printmapping</strong> [filename]</td>
+<td>Print the mapping from the original classes and classes  members names to the renamed ones. If no filename is given the mapping  is printed on the standard output. Names with spaces must be quoted with double quotes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<h2 id="class-method-field-variable-designator">Class, method, field, variable designator</h2>
+<div class="admonition warning inline">
+<p class="admonition-title">Warning</p>
+<p>When targeting <strong>private</strong> or <strong>protected</strong> elements (fields, methods or classes),
+it is recommended to <strong>NOT</strong> specify the visibility.<br />
+It is a limitation of KOP4J for the moment.</p>
+</div>
+<p>Many commands need to specify the class, method or field on which the command are applied.
+The syntax to specify it is the same used by R8 and ProGuard.</p>
+<p>The template was designed to look very Java-like, with some extensions for wildcards. To get a feel for the syntax, you should probably look at the examples, but this is an attempt at a complete formal definition:</p>
+<pre><code class="language-code">    [@annotationtype] [[!]public|final|abstract|@ ...] [!]interface|class|enum classname
+        [extends|implements [@annotationtype] classname]
+    [{
+        [@annotationtype]
+        [[!]public|private|protected|static|volatile|transient ...]
+        &lt;fields&gt; | (fieldtype fieldname [= values]);
+
+        [@annotationtype]
+        [[!]public|private|protected|static|synchronized|native|abstract|strictfp ...]
+        &lt;methods&gt; | &lt;init&gt;(argumenttype,...) | classname(argumenttype,...) | (returntype methodname(argumenttype,...) [ { vartype varname; } ] [return values]);
+    }]
+
+</code></pre>
+<p>Square brackets "[]" mean that their contents are optional. Ellipsis dots "..." mean that any number of the preceding items may be specified. A vertical bar "|" delimits two alternatives. Non-bold parentheses "()" just group parts of the specification that belong together. The indentation tries to clarify the intended meaning, but white-space is irrelevant in actual configuration files.</p>
+<ul>
+<li>
+<p>The <code>class</code> keyword refers to any interface or class. The <code>interface</code> keyword restricts matches to interface classes. The <code>enum</code> keyword restricts matches to enumeration classes. Preceding the <code>interface</code> or <code>enum</code> keywords by a ! restricts matches to classes that are not interfaces or enumerations, respectively.</p>
+</li>
+<li>
+<p>Every <em>classname</em> must be fully qualified, e.g. <code>java.lang.String</code>. Inner classes are separated by a dollar sign "<strong>$</strong>", e.g.<code>java.lang.Thread$State. Class</code> names may be specified as regular expressions containing the following wildcards:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Wildcard</th>
+<th align="left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">?</td>
+<td align="left">matches any single character in a class name, but not the package separator. For example, "com.example.Test?" matches "com.example.Test1" and "com.example.Test2", but not "com.example.Test12".</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">matches any part of a class name not containing the package separator. For example, "com.example.<em>Test</em>" matches "com.example.Test" and "com.example.YourTestApplication", but not "com.example.mysubpackage.MyTest". Or, more generally, "com.example.*" matches all classes in "com.example", but not in its subpackages.</td>
+</tr>
+<tr>
+<td align="left">**</td>
+<td align="left">matches any part of a class name, possibly containing any number of package separators. For example, "<strong>.Test" matches all Test classes in all packages except the root package. Or, "com.example.</strong>" matches all classes in "com.example" and in its subpackages.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;n&gt;</code></td>
+<td align="left">matches the n'th matched wildcard in the same option. For example, "com.example.*Foo&lt;1&gt;" matches "com.example.BarFooBar".</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="run_for_android.html" class="btn btn-neutral float-left" title="Android applications"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="CodeShrinking.html" class="btn btn-neutral float-right" title="Code shrinking and optimization">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="run_for_android.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="CodeShrinking.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

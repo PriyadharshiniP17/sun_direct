@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="design_tint_password_toggle" type="color"/>
+    <item name="mtrl_btn_bg_color_disabled" type="color"/>
+    <item name="mtrl_textinput_box_bottom_offset" type="dimen"/>
+    <item name="mtrl_textinput_box_padding_end" type="dimen"/>
+    <item name="mtrl_snackbar_background" type="drawable"/>
+    <item name="save_image_matrix" type="id"/>
+    <item name="save_scale_type" type="id"/>
+    <item name="text_input_password_toggle" type="id"/>
+    <item name="design_text_input_password_icon" type="layout"/>
+    <string name="abc_font_family_body_1_material">Download Example</string>
+    <string name="abc_font_family_body_2_material">Download Example</string>
+    <string name="abc_font_family_button_material">Download Example</string>
+    <string name="abc_font_family_caption_material">Download Example</string>
+    <string name="abc_font_family_display_1_material">Download Example</string>
+    <string name="abc_font_family_display_2_material">Download Example</string>
+    <string name="abc_font_family_display_3_material">Download Example</string>
+    <item name="abc_font_family_display_4_material" type="string"/>
+    <item name="abc_font_family_headline_material" type="string"/>
+    <item name="abc_font_family_menu_material" type="string"/>
+    <item name="abc_font_family_subhead_material" type="string"/>
+    <item name="abc_font_family_title_material" type="string"/>
+    <string name="app_name">SUN DIRECT GO</string>
+    <string name="character_counter_overflowed_content_description">Overflow</string>
+    <string name="chip_text">Download Example</string>
+    <string name="clear_text_end_icon_content_description">Download Example</string>
+    <string name="common_google_play_services_unknown_issue">Download Example</string>
+    <string name="download_start_error">Failed to start download</string>
+    <string name="error_icon_content_description">Download Example</string>
+    <string name="exposed_dropdown_menu_content_description">Download Example</string>
+    <string name="icon_content_description">Download Example</string>
+    <string name="mtrl_badge_numberless_content_description">Download Example</string>
+    <string name="mtrl_exceed_max_badge_number_suffix">Download Example</string>
+    <string name="track_selection_title">Select tracks</string>
+    <item name="TextAppearance.MaterialComponents.Tab" type="style"/>
+    <style name="TrackSelectionDialogThemeOverlay" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="windowNoTitle">false</item>
+    </style>
+</resources>

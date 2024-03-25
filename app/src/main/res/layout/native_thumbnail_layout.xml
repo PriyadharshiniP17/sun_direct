@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ad_main_layout"
+    android:layout_width="@dimen/margin_gap_108"
+    android:layout_height="162dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/margin_gap_108"
+        android:layout_height="162dp"
+        app:cardBackgroundColor="@color/color_e6777777"
+        app:cardCornerRadius="@dimen/margin_gap_6"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <FrameLayout
+            android:id="@+id/ad_layout"
+            android:layout_width="108dp"
+            android:layout_height="162dp"
+            android:visibility="visible" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.ads.nativetemplates.TemplateView
+        android:id="@+id/thumbnail_ad_layout"
+        android:layout_width="@dimen/margin_gap_108"
+        android:layout_height="158dp"
+        android:visibility="gone"
+        app:gnt_template_type="@layout/gnt_only_video_image_custom" />
+</LinearLayout>

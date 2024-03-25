@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_gap_12"
+    android:paddingTop="@dimen/margin_gap_12"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/carddetail_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_gap_16"
+        android:text="Title"
+        android:textAppearance="@style/TextAppearance.FontBold"
+        android:textColor="@color/description_people_also_watch_text_dark_color"
+        android:textSize="@dimen/textsize_12" />
+    <TextView
+        android:id="@+id/title_other_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_gap_16"
+        android:text="Title"
+        android:textAppearance="@style/TextAppearance.FontBold"
+        android:textColor="@color/description_people_also_watch_text_dark_color"
+        android:textSize="@dimen/textsize_12" />
+</LinearLayout>

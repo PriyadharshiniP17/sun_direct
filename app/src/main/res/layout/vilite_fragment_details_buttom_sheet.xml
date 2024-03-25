@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_margin="@dimen/_20sdp"
+    android:background="#000000CC"
+    android:orientation="vertical"
+    android:foregroundGravity="bottom"
+    >
+
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:id="@+id/date_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="top"
+        android:text="3rd Februavary"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_23" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_below="@id/date_txt"
+        android:paddingStart="@dimen/_30sdp"
+        android:paddingEnd="@dimen/_30sdp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_below="@id/viewPager"
+        android:layout_marginTop="@dimen/margin_gap_10"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvCategoryName"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iVClose"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/details_popup_close"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

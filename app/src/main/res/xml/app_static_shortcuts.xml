@@ -1,0 +1,56 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:targetApi="25">
+    <!--<shortcut
+        android:enabled="true"
+        android:shortcutId="shortcut_home"
+        android:shortcutShortLabel="@string/label_home">
+&lt;!&ndash;        android:icon="@drawable/icon_name"&ndash;&gt;
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.myplex.myplex.ui.activities.LoginActivity"
+            android:targetPackage="com.myplex.myplex.ui.activities">
+        </intent>
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="shortcut_livetv"
+        android:shortcutShortLabel="@string/live_tv">
+&lt;!&ndash;        android:icon="@drawable/icon_name"&ndash;&gt;
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.myplex.myplex.ui.activities.LoginActivity"
+            android:targetPackage="com.myplex.myplex.ui.activities">
+        </intent>
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="shortcut_apps"
+        android:shortcutShortLabel="@string/label_apps">
+&lt;!&ndash;        android:icon="@drawable/icon_name"&ndash;&gt;
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.myplex.myplex.ui.activities.LoginActivity"
+            android:targetPackage="com.myplex.myplex.ui.activities">
+        </intent>
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="shortcut_search"
+        android:shortcutShortLabel="@string/label_search">
+&lt;!&ndash;        android:icon="@drawable/icon_name"&ndash;&gt;
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.myplex.myplex.ui.activities.LoginActivity"
+            android:targetPackage="com.myplex.myplex.ui.activities">
+        </intent>
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>-->
+</shortcuts>

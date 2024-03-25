@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_90sdp"
+    android:layout_height="wrap_content"
+    android:id="@+id/search_language_layout"
+    android:layout_marginRight="@dimen/margin_gap_10"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/rounded_filter_un_selected"
+    >
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:id="@+id/regional_language_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Live Tv"
+        android:textAllCaps="false"
+        android:gravity="top"
+        android:layout_marginTop="@dimen/_5sp"
+        android:layout_marginStart="@dimen/_5sp"
+        android:layout_marginBottom="15dp"
+        android:textSize="@dimen/textsize_14"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/white_65"
+        />
+
+    <com.myplex.myplex.utils.FontBoldTypeFace
+        android:id="@+id/default_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regional_language_name"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_3sp"
+        android:layout_marginEnd="@dimen/_5sp"
+        android:layout_marginBottom="@dimen/_2sp"
+        android:gravity="end"
+        android:text="Live Tv"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.FontBold"
+        android:textColor="@color/white_65"
+        android:textSize="@dimen/textsize_14" />
+
+</RelativeLayout>

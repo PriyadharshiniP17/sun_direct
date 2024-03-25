@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/feedback_bg"
+                android:padding="@dimen/margin_gap_24">
+
+    <TextView
+        android:id="@+id/feedback_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/feedbackheading"
+        android:textColor="@color/progress_bar_loading_text_color"
+        android:textSize="@dimen/textsize_18"/>
+
+    <View
+        android:id="@+id/title_div"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_2"
+        android:background="@color/rate_us_divider"
+        android:layout_below="@+id/feedback_heading"
+        android:layout_marginTop="20dp"
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/feedback_ratingbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_div"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/feedback_ratingbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/margin_gap_2"
+            android:layout_weight="1"
+            android:splitTrack="false"
+            android:max="5"
+            android:progress="5"
+            android:progressDrawable="@drawable/apptheme_scrubber_progress_horizontal_holo_light"
+            android:thumb="@drawable/apptheme_scrubber_control_disabled_holo" />
+
+        <TextView
+            android:id="@+id/feedback_ratingtext_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="5"
+            android:textColor="@color/rate_us_divider"
+            android:textSize="@dimen/textsize_20"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/feedback_messageheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/feedback_ratingbar_layout"
+        android:layout_marginTop="40dp"
+        android:text="@string/feedbackheading"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18"/>
+
+    <EditText
+        android:id="@+id/feedback_messagebox"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/feedback_messageheading"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/feedbackeditbox_bg"
+        android:ems="10"
+        android:padding="@dimen/margin_gap_4"
+        android:visibility="gone"
+        android:gravity="top"
+        android:hint="@string/feedbackmessagehint"
+        android:paddingTop="4dp"
+        android:singleLine="false"
+        android:textColor="@color/app_theme_color"
+        android:textSize="15sp">
+
+        <requestFocus/>
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/feedback_messagebox"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_gap_16">
+
+        <Button
+            android:id="@+id/feedback_cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/feedback_button_bg"
+            android:text="@string/cancel"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/margin_gap_16"/>
+
+        <Button
+            android:id="@+id/feedback_ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/feedback_button_bg"
+            android:text="@string/feedbacksubmitbtn"
+            android:textAllCaps="false"
+            android:layout_marginLeft="@dimen/margin_gap_4"
+            android:textColor="@drawable/button_text_white_blue_color"
+            android:textSize="@dimen/margin_gap_16"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/feedback_progressbar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

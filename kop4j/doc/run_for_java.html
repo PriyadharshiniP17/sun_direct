@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Java applications - KOP for Java</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="js/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Java applications";
+    var mkdocs_page_input_path = "run_for_java.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="js/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> KOP for Java </a> <img src="./images/IconeKOP4JWhite2.png"> </a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Concepts.html">General concept</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="run_for_java.html">Java applications</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#input-files">Input files</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#input-files-filtered">Input files, filtered</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#output-files">Output files</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#output-files-filtered">Output files, filtered</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#library-files">Library files</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#library-files-filtered">Library files, filtered</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#inputoutput-examples">Input/Output, examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#merging-contents">Merging contents</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hash-strategy-option">Hash strategy option</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_android.html">Android applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Commands.html">Commands</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="CodeShrinking.html">Code shrinking and optimization</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security features</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-00-FeatureList.html">Feature list</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Renaming.html">Renaming</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Flattening.html">Flattening</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-StringMasking.html">String Masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-OpaquePredicate.html">Opaque Predicate</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CallMasking.html">Call masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckCertificate.html">Certificate Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckInstallers.html">Installers Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckManifest.html">Manifest Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckShelfLife.html">Shelf Life Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexIntegrity.html">DEX integrity Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexSignature.html">DEX signature Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckContext.html">Execution Context Checks</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Odca.html">On Demand Code Activation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-DelayedReaction.html">Delayed Reaction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-InAppMonitoring.html">In-app Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-AnNaNaS.html">Android Nagra Native Secure Lib</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Protection-file.html">How to design the protection file</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Limitations.html">Limitations</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="compatibility.html">Compatibility</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="99.99-license.html">License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">KOP for Java</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>User Guide &raquo;</li>
+      <li>Java applications</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="running-kop4j-on-plain-java-and-android-projects">Running KOP4J on plain Java and Android projects</h1>
+<p>KOP4J can obfuscate plain Java projects that are already packaged as <code>.jars</code>, or as plain directories containing <code>.class</code> files.</p>
+<h2 id="input-files">Input files</h2>
+<p>Input files are specified using the <code>-injars &lt;path&gt;</code> option in <code>proguard-rules.pro</code>.<br />
+Input files are the files to be protected.</p>
+<p>The <code>path</code> can be:</p>
+<ul>
+<li>A path to a java <code>.jar</code> file.</li>
+<li>A path to a directory containing <code>.class</code> files.</li>
+</ul>
+<p>Example: protect the contents of <code>myapp.jar</code>.</p>
+<pre><code class="language-bash">-injars myapp.jar
+</code></pre>
+<h3 id="input-files-filtered">Input files, filtered</h3>
+<p>Optional filters can be applied to the contents specified by the <code>-injars</code> option <code>proguard-rules.pro</code>.<br />
+These optional filters should immediately follow <code>-injar</code>'s <code>&lt;path&gt;</code>, and be specified between parenthesis.</p>
+<p>Example: protect the contents of <code>myapp.jar</code>, but only consider the contents of the <code>mypackage</code> subdirectory.</p>
+<pre><code class="language-bash">-injars myapp.jar(mypackage/**.class)
+</code></pre>
+<h2 id="output-files">Output files</h2>
+<p>Output files are specified using the <code>-outjars &lt;path&gt;</code> option.</p>
+<p>The <code>path</code> can be:</p>
+<ul>
+<li>A path to a java <code>.jar</code> file.</li>
+<li>A path to a directory that will contain <code>.class</code> files.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The output type is based on extension: it is not possible to create an output directory with the <code>.jar</code> suffix.</p>
+</div>
+<h3 id="output-files-filtered">Output files, filtered</h3>
+<p>Optional filters can be applied to the contents specified in the <code>-outjars</code> option in <code>proguard-rules.pro</code>.<br />
+The syntax is identical to that of the <code>-injars</code> option.</p>
+<h2 id="library-files">Library files</h2>
+<p>Library files are specified using the <code>-libraryjars &lt;path&gt;</code> option.<br />
+Library files are files that are dependencies of the input files.<br />
+Library files are <em>not</em> protected.</p>
+<p>The <code>path</code> can be;</p>
+<ul>
+<li>A path to a java <code>.jar</code> file.</li>
+<li>A path to a directory containing <code>.class</code> files.</li>
+</ul>
+<p>Example: indicate the file <code>library.jar</code> as a non-protected dependency.</p>
+<pre><code class="language-bash">-libraryjars library.jar
+</code></pre>
+<h3 id="library-files-filtered">Library files, filtered</h3>
+<p>Optional filters can be applied to the contents specified by the <code>-libraryjars</code> option.<br />
+These optional filters should immediately follow <code>-libraryjar</code>'s <code>&lt;path&gt;</code>, and be specified between parenthesis.</p>
+<p>Example: use the contents of <code>library.jar</code>, but only consider the contents of the <code>mypackage</code> subdirectory as dependencies.</p>
+<pre><code class="language-bash">-libraryjars library.jar(mypackage/**.class)
+</code></pre>
+<h2 id="inputoutput-examples">Input/Output, examples</h2>
+<p>Multiple <code>-injars</code> and <code>-outjars</code> can be combined to rearrange the contents of an application.</p>
+<h3 id="merging-contents">Merging contents</h3>
+<p>This can be done using multiple <code>-injars</code> and a single <code>-outjar</code>.  </p>
+<p>Example: Read the contents of <code>myapp.jar</code> and <code>mylib.jar</code> , consolidate to <code>myoutput.jar</code></p>
+<pre><code class="language-bash">-injars myapp.jar -injars mylib.jar -outjar myoutput.jar
+</code></pre>
+<h2 id="hash-strategy-option">Hash strategy option</h2>
+<p>By default, the hash strategy is using external AnNaNaS library, only delivered for Android targets.<br />
+To use the pure java implementation (no external dependency), you will need to add the following option in <code>kop-rules.pro</code> when invoking KOP4J :  </p>
+<pre><code class="language-bash">-kop-hash-strategy java
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="Concepts.html" class="btn btn-neutral float-left" title="General concept"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="run_for_android.html" class="btn btn-neutral float-right" title="Android applications">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="Concepts.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="run_for_android.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

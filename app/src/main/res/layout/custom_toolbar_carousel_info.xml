@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_icon"
+        android:layout_centerVertical="true"
+        android:id="@+id/toolbar_settings_button"/>
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/toolbar_header_title"
+        android:layout_alignBottom="@+id/toolbar_header_title"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/dummy_middle_view"
+        android:padding="3dp"
+        android:scaleType="centerInside"
+        android:visibility="invisible"
+        android:src="@drawable/shreyaset_logo" />
+    <View
+        android:id="@+id/dummy_middle_view"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:id="@+id/toolbar_header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/dummy_middle_view"
+        android:ellipsize="end"
+        android:text="Speed News"
+        android:singleLine="true"
+        android:layout_centerInParent="true"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/navigation_drawer_color_text"
+        android:textSize="20sp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/actionbar_search_icon"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible"
+        android:id="@+id/action_search"/>
+</RelativeLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/alert_round_corners"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:hint="Complete Profile"
+                android:paddingStart="15dp"
+                android:textColor="@color/white_80"
+                android:textColorHint="@color/white_80"
+                android:textSize="20dp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextAppearance.NormalFontRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:enabled="false"
+                        android:gravity="start"
+                        android:hint="Country  *"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/white_80"
+                        android:textColorHint="@color/white_80"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/countrySpinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/rounded_corner"
+                        android:dropDownSelector="@android:drawable/btn_dropdown"
+                        android:padding="5dp"
+                        android:paddingStart="15dp"
+                        android:popupBackground="@color/white"
+                        android:textColor="@color/edittextColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+
+                    <EditText
+                        android:id="@+id/cityEdit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/rounded_corner"
+                        android:enabled="true"
+                        android:hint="Enter City"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="@dimen/margin_gap_10"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/non_editable_color"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        style="@style/TextAppearance.NormalFontRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:enabled="false"
+                        android:gravity="start"
+                        android:hint="State  *"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/white_80"
+                        android:textColorHint="@color/white_80"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/stateSpinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/rounded_corner"
+                        android:dropDownSelector="@android:drawable/btn_dropdown"
+                        android:padding="5dp"
+                        android:paddingStart="15dp"
+                        android:popupBackground="@color/white"
+                        android:textColor="@color/edittextColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        style="@style/TextAppearance.NormalFontRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:gravity="start"
+                        android:hint="City  *"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/white_80"
+                        android:textColorHint="@color/white_80"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/citySpinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/rounded_corner"
+                        android:dropDownSelector="@android:drawable/btn_dropdown"
+                        android:padding="5dp"
+                        android:paddingStart="15dp"
+                        android:popupBackground="@color/white"
+                        android:textColor="@color/edittextColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        style="@style/TextAppearance.NormalFontRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:gravity="start"
+                        android:hint="Address"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/white_80"
+                        android:textColorHint="@color/white_80"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/addressEt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/rounded_corner"
+                        android:padding="5dp"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/edittextColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        style="@style/TextAppearance.NormalFontRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:gravity="start"
+                        android:hint="Pincode"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/white_80"
+                        android:textColorHint="@color/white_80"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/pincodeEt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/rounded_corner"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/edittextColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="14sp" />
+
+
+                    <Button
+                        android:id="@+id/updateProfile"
+                        style="@style/buy_button_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_gap_18"
+                        android:layout_marginBottom="12dp"
+                        android:background="@color/colorPrimary"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

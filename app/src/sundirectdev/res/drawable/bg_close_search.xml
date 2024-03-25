@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<solid android:color="@color/search_close_bg"/>
+<stroke android:width="3dp" android:color="@color/search_close_bg"/>
+<corners android:radius="@dimen/_4sdp" />
+<padding android:left="10dp" android:top="10dp"
+    android:right="10dp" android:bottom="10dp" />
+</shape>

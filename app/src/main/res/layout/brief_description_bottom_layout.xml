@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_gap_8"
+    android:layout_marginTop="@dimen/margin_gap_4"
+    android:layout_marginEnd="@dimen/margin_gap_8"
+    android:visibility="gone"
+    android:gravity="start"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:id="@+id/watchlistLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_gap_4"
+        android:layout_marginEnd="@dimen/margin_gap_4"
+        android:layout_marginBottom="@dimen/margin_gap_4"
+        android:layout_weight="1"
+        android:background="@drawable/background_bd_details_icons"
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/watchListIv"
+            android:layout_width="@dimen/margin_gap_18"
+            android:layout_height="@dimen/margin_gap_18"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:src="@drawable/unselected_watchlist" />
+
+        <TextView
+            android:id="@+id/watchListTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:layout_marginBottom="@dimen/margin_gap_8"
+            android:text="Add to Playlist"
+            android:textColor="@color/unselected_color"
+            android:textSize="@dimen/textsize_8"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/download_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_gap_4"
+        android:layout_marginEnd="@dimen/margin_gap_4"
+        android:layout_marginBottom="@dimen/margin_gap_4"
+        android:layout_weight="1"
+        android:background="@drawable/background_bd_details_icons"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/carddetailbriefdescription_download_image"
+                android:layout_width="@dimen/margin_gap_18"
+                android:layout_height="@dimen/margin_gap_18"
+                android:layout_marginTop="@dimen/margin_gap_8"
+                android:src="@drawable/download_default"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+
+            <TextView
+
+                android:id="@+id/detail_download_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_gap_8"
+                android:layout_marginBottom="@dimen/margin_gap_8"
+                android:textColor="@color/unselected_color"
+                android:textSize="@dimen/textsize_8"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/margin_gap_1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/vf_start_download"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.NormalFontRegular"
+                android:visibility="visible" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shareLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_gap_4"
+        android:layout_marginEnd="@dimen/margin_gap_4"
+        android:layout_marginBottom="@dimen/margin_gap_4"
+        android:layout_weight="1"
+        android:background="@drawable/background_bd_details_icons"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/carddetailbriefdescription_share_img"
+            android:layout_width="@dimen/margin_gap_18"
+            android:layout_height="@dimen/margin_gap_18"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:src="@drawable/description_share_icon" />
+
+        <TextView
+            android:id="@+id/shareTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:layout_marginBottom="@dimen/margin_gap_8"
+            android:text="Share"
+            android:textColor="@color/unselected_color"
+            android:textSize="@dimen/textsize_8"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/favourite_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_gap_4"
+        android:layout_marginEnd="@dimen/margin_gap_4"
+        android:layout_marginBottom="@dimen/margin_gap_4"
+        android:layout_weight="1"
+        android:background="@drawable/background_bd_details_icons"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/favourite_iv"
+            android:layout_width="@dimen/margin_gap_18"
+            android:layout_height="@dimen/margin_gap_18"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:src="@drawable/unselected_like_icon" />
+
+        <TextView
+            android:id="@+id/favourite_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:layout_marginBottom="@dimen/margin_gap_8"
+            android:text="@string/unselected_favourite_text"
+            android:textColor="@color/unselected_color"
+            android:textSize="@dimen/textsize_8"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/likeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_gap_4"
+        android:layout_marginEnd="@dimen/margin_gap_4"
+        android:layout_marginBottom="@dimen/margin_gap_4"
+        android:layout_weight="1"
+        android:background="@drawable/background_bd_details_icons"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/likeIv"
+            android:layout_width="@dimen/margin_gap_24"
+            android:layout_height="@dimen/margin_gap_24"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:src="@drawable/unselected_like_icon" />
+
+        <TextView
+            android:id="@+id/liketv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_gap_8"
+            android:layout_marginBottom="@dimen/margin_gap_8"
+            android:text="Like"
+            android:textColor="@color/unselected_color"
+            android:textSize="@dimen/textsize_8"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/viewsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="@dimen/margin_gap_16"
+        android:layout_marginRight="@dimen/margin_gap_16"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/margin_gap_24"
+            android:layout_height="@dimen/margin_gap_24"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_2"
+
+            android:src="@drawable/views_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/viewsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingTop="@dimen/margin_gap_1"
+            android:singleLine="true"
+            android:text=""
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.NormalFontRegular"
+            android:textColor="@color/download_percent_text_colour"
+            android:textSize="@dimen/textsize_12"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+

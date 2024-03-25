@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_btn_grey"
+    android:layout_marginLeft="@dimen/dimen_10_dp"
+    android:layout_marginRight="@dimen/dimen_10_dp">
+
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:paddingRight="@dimen/margin_gap_10"
+        android:paddingLeft="@dimen/margin_gap_10"
+        android:paddingTop="@dimen/margin_gap_4"
+        android:paddingBottom="@dimen/margin_gap_4"
+        android:textAllCaps="false"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

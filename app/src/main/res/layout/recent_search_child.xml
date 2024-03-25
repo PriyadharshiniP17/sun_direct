@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:id="@+id/searchItem"
+        android:textColor="@color/recent_search_text"
+        android:padding="@dimen/margin_gap_6"
+        tools:text="Spider Man"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginStart="@dimen/margin_gap_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

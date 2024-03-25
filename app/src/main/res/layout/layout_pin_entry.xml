@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:background="@color/app_theme_color"
+    android:paddingLeft="@dimen/margin_gap_16"
+    android:paddingRight="@dimen/margin_gap_16"
+    android:paddingTop="@dimen/margin_gap_8"
+    android:paddingBottom="@dimen/margin_gap_8"
+    >
+
+    <TextView
+        android:id="@+id/txt_pin_entry_title"
+        android:text="@string/parental_text_set_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textSize="@dimen/textsize_16"
+        android:textColor="@color/subscription_subtitle__text_color"
+        android:visibility="visible"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/txt_pin_entry_message"
+        android:text="@string/parental_text_activate_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textSize="@dimen/textsize_14"
+        android:layout_marginTop="@dimen/margin_gap_16"
+        android:layout_marginLeft="@dimen/margin_gap_8"
+        android:textColor="@color/subscription_subtitle__text_color"
+        android:visibility="visible"/>
+
+    <com.myplex.myplex.ui.views.PinEntryEditText
+        android:id="@+id/txt_pin_entry"
+        android:focusedByDefault="true"
+        android:focusable="true"
+
+        android:defaultFocusHighlightEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cursorVisible="false"
+        android:digits="1234567890"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:textIsSelectable="false"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textSize="@dimen/textsize_16"
+        android:textColor="@color/subscription_subtitle__text_color"
+        android:layout_margin="@dimen/margin_gap_8"
+        android:padding="@dimen/margin_gap_8"
+        android:layout_marginTop="@dimen/margin_gap_16"
+        android:imeOptions="actionDone"
+        />
+
+    <TextView
+        android:id="@+id/txt_forgot_pin_note"
+        android:text="@string/parental_text_forgot_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textSize="@dimen/textsize_14"
+        android:textColor="@color/color_999999"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_gap_16"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/margin_gap_8">
+
+        <TextView
+            android:id="@+id/negative_button"
+            android:text="@string/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.NormalFontRegular"
+            android:textSize="@dimen/textsize_16"
+            android:textColor="@color/otp_login_text"
+            android:visibility="visible"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:padding="@dimen/margin_gap_8"
+            android:layout_marginRight="@dimen/margin_gap_24"/>
+
+        <TextView
+            android:id="@+id/positive_button"
+            android:text="@string/text_okay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.NormalFontRegular"
+            android:textSize="@dimen/textsize_16"
+            android:textColor="@color/parental_text_color"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:padding="@dimen/margin_gap_8"
+            />
+
+    </LinearLayout>
+</LinearLayout>

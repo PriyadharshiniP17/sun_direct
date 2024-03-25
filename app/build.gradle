@@ -1,0 +1,311 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+//apply plugin: 'com.nagra.kop'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    flatDir {
+        dirs 'libs'
+    }
+    flatDir {
+        dirs 'aars'
+    }
+
+    flatDir {
+        dirs '/generated/aar',
+                '../thirdparty/PulseAds','../myplex-api-event-logger'
+    }
+}
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.31.2'
+    }
+    apply plugin: 'maven-publish'
+
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.google.android.material:material:1.4.0"
+    implementation "androidx.appcompat:appcompat:1.2.0"
+    implementation 'androidx.mediarouter:mediarouter:1.2.5'
+    implementation "androidx.cardview:cardview:1.0.0"
+
+//    myplex platform dependencies
+    //implementation project(':myplex-api-sdk')
+    implementation project(':myplex-analytics')
+    implementation project(':myplex-branch-io-analytics')
+    implementation(name: 'eventlogger-release', ext: 'aar')
+    implementation project(':myplex-api-sdk')
+    implementation project(path: ':carouselrecyclerviewNew')
+    implementation files('libs/analytics_sdk-1.0-release.aar')
+    implementation files('libs/exoplayerinterface-1.4-debug.aar')
+//    implementation project(path: ':carouselrecyclerview')
+    //implementation (name:'myplex_api_sdk_release', ext:'aar')
+
+    debugImplementation "com.github.chuckerteam.chucker:library:3.5.2"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
+
+//    implementation 'com.google.android.gms:play-services-analytics:17.0.1'
+    implementation 'com.google.android.gms:play-services-ads:20.4.0'
+    implementation 'com.google.android.gms:play-services-cast:21.2.0'
+    implementation 'com.google.android.gms:play-services-cast-framework:21.2.0'
+    // Recommended: Add the Firebase SDK for Google Analytics.
+    implementation 'com.google.firebase:firebase-analytics:20.0.0'
+
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.4'
+
+
+
+//    Exoplayer dependency
+    //implementation project(':thirdparty:Exo-library-v2.2')
+    // implementation project(':myplex-player-config-google-release')
+    // implementation project(':myplex-player-sdk-release')
+    //  implementation(name: 'myplex-player-config-google-release', ext: 'aar')
+    //  implementation(name: 'myplex-player-sdk-release-new', ext: 'aar')
+    implementation(name: 'myplex-player-config-google-release3', ext: 'aar')
+    implementation(name: 'myplex-player-sdk-release3', ext: 'aar')
+
+
+//Pulse SDK
+    //implementation(name: 'pulse.2.1.16.3.0-release', ext: 'aar')
+
+//Youtube dependencies
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation files('libs/android-query.0.25.10.jar')
+
+
+    implementation 'com.google.ads.interactivemedia.v3:interactivemedia:3.24.0'
+
+
+//    draggable panel dependecies
+    implementation project(':thirdparty:draggablepanel')
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    // implementation 'com.clevertap.android:clevertap-android-sdk:3.6.0'
+//    implementation 'com.google.ads.interactivemedia.v3:interactivemedia:3.2.1'
+    implementation 'de.greenrobot:eventbus:2.4.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'junit:junit:4.13.2'
+    implementation project(path: ':nativetemplates')
+    implementation project(path: ':pageindicatorview')
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    implementation "com.jakewharton:disklrucache:$diskLruCache"
+    implementation 'jp.wasabeef:blurry:2.1.1'
+    implementation 'org.apache.commons:commons-lang3:3.6'
+    implementation 'com.google.firebase:firebase-core:20.0.0'
+    implementation 'com.google.firebase:firebase-config:21.0.1'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.5.1'
+    implementation 'com.google.firebase:firebase-perf:20.0.3'
+    implementation 'com.google.firebase:firebase-messaging:23.0.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:21.0.0'
+    implementation 'androidx.core:core:1.6.0'
+    implementation  'joda-time:joda-time:2.9.9'
+    implementation 'com.google.guava:guava:27.0.1-android'
+    //Adobe Analytics dependencies
+    implementation files('libs/adobeMobileLibrary-4.17.9.jar')
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.2.+'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.2.+'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.2.+'
+    implementation "com.google.android.gms:play-services-location:17.0.0"
+    // implementation 'com.squareup.okhttp:logging-interceptor:2.7.5'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0'
+    androidTestImplementation('androidx.test.espresso:espresso-contrib:3.1.0') {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        //exclude module: 'support-annotations'
+        exclude module: 'recyclerview-v7'
+    }
+    implementation 'androidx.annotation:annotation:1.1.0'
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+    implementation 'com.google.android.play:core:1.10.2'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation  'jp.wasabeef:glide-transformations:2.0.2'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //implementation 'com.facebook.android:facebook-login:8.1.0'
+    //implementation 'com.twitter.sdk.android:twitter:3.1.1'
+//    implementation "com.comscore:android-analytics:6.+"
+
+    implementation 'androidx.browser:browser:1.3.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'com.google.android.gms:play-services-pal:18.0.0'
+    implementation 'com.yqritc:android-scalablevideoview:1.0.4'
+    implementation 'com.eightbitlab:blurview:1.6.6'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:20.1.2'
+    implementation 'androidx.work:work-runtime:2.7.1'
+
+//    implementation 'com.airbnb.android:lottie:5.2.0'
+
+}
+android {
+
+    dataBinding {
+        enabled = true
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    useLibrary 'org.apache.http.legacy'
+    compileSdk 31
+
+    defaultConfig {
+        versionCode 10
+        versionName "2.0g" //4.8b
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        applicationId "com.sundirect.android"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders.hostname1 = "sundirect";
+        manifestPlaceholders.hostname2 = "sundirect";
+        manifestPlaceholders.hostname3 = "www.sundirect.com";
+        manifestPlaceholders.hostname4 = "sundirect";
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        packagingOptions {
+            exclude 'jsr305_annotations/Jsr305_annotations.gwt.xml'
+        }
+        exclude 'error_prone/Annotations.gwt.xml'
+        exclude 'third_party/java_src/error_prone/project/annotations/Annotations.gwt.xml'
+        exclude 'third_party/java_src/error_prone/project/annotations/Google_internal.gwt.xml'
+        exclude 'META-INF/maven/org.apache.commons/commons-lang3/pom.xml'
+        exclude 'META-INF/maven/org.apache.commons/commons-lang3/pom.properties'
+        exclude("META-INF/*.kotlin_module")
+    }
+
+    signingConfigs {
+        sundirectdev {
+            storeFile file("$System.env.BUILD_KEYSTORE_PATH")
+            storePassword "$System.env.BUILD_KEYSTORE_PASS"
+            keyAlias "$System.env.BUILD_KEY_ALIAS"
+            keyPassword "$System.env.BUILD_KEY_PASS"
+        }
+    }
+    flavorDimensions "server"
+
+    productFlavors {
+        sundirectdev {
+            applicationId "com.sundirect.android.staging"
+            versionCode 10
+            versionName "2.0j" //4.8b
+            signingConfig signingConfigs.sundirectdev
+            ext.betaDistributionReleaseNotesFilePath = "release_notes.txt"
+            dimension "server"
+            manifestPlaceholders.appName = "Staging SUN DIRECT GO"
+            manifestPlaceholders.hostname1 = "sundirectgo";
+            manifestPlaceholders.hostname2 = "stag-pwa.sundirectgo.in";
+            manifestPlaceholders.hostname3 = "www.sundirectgo.in";
+            manifestPlaceholders.hostname4 = "sundirect";
+        }
+        sundirectpreprod {
+            applicationId "com.sundirect.android.preprod"
+            versionCode 10
+            versionName "2.0j" //4.8b
+            signingConfig signingConfigs.sundirectdev
+            ext.betaDistributionReleaseNotesFilePath = "release_notes.txt"
+            dimension "server"
+            manifestPlaceholders.appName = "PreProd SUN DIRECT GO"
+            manifestPlaceholders.hostname1 = "sundirectgo";
+            manifestPlaceholders.hostname2 = "stag-pwa.sundirectgo.in";
+            manifestPlaceholders.hostname3 = "www.sundirectgo.in";
+            manifestPlaceholders.hostname4 = "sundirect";
+        }
+        sundirectprod {
+            applicationId "com.sundirect.android"
+            versionCode 10
+            versionName "2.0j" //4.8b
+            signingConfig signingConfigs.sundirectdev
+            ext.betaDistributionReleaseNotesFilePath = "release_notes.txt"
+            dimension "server"
+            manifestPlaceholders.appName = "SUN DIRECT GO"
+            manifestPlaceholders.hostname1 = "sundirectgo";
+            manifestPlaceholders.hostname2 = "stag-pwa.sundirectgo.in";
+            manifestPlaceholders.hostname3 = "www.sundirectgo.in";
+            manifestPlaceholders.hostname4 = "sundirect";
+        }
+
+    }
+
+
+    buildTypes {
+
+        release {
+            minifyEnabled true
+            debuggable false
+            crunchPngs false
+            proguardFiles file("proguard-android-optimize.txt"), 'proguard-rules-hooq.pro'
+//           kop.ruleFiles.put(name, [kop.getDefaultKopFile('kop-android-default.txt'), 'kop-rules.pro'])
+        }
+
+        
+        debug {
+            minifyEnabled false
+            debuggable true
+            ext.alwaysUpdateBuildId = false
+            proguardFiles file("proguard-android-optimize.txt"), 'proguard-rules-hooq.pro'
+        }
+
+        dexOptions {
+            javaMaxHeapSize "4g"
+        }
+
+        apply plugin: 'com.google.gms.google-services'
+
+        compileOptions {
+            sourceCompatibility 1.8
+            targetCompatibility 1.8
+        }
+        sourceSets {
+            sundirectprod {
+                res {
+                    srcDirs 'src/sundirectdev/res'
+                }
+            }
+            sundirectpreprod {
+                res {
+                    srcDirs 'src/sundirectdev/res'
+                }
+            }
+        }
+    }
+}

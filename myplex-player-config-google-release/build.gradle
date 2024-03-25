@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('myplex-player-config-google-release.aar'))

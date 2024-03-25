@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_100"
+    android:padding="@dimen/margin_gap_12">
+
+    <LinearLayout
+        android:id="@+id/title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_gap_4"
+        android:paddingRight="@dimen/margin_gap_4"
+        android:paddingTop="@dimen/margin_gap_4"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/carddetailpack_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.FontMedium"
+            android:textColor="@color/red_highlight_color"
+            android:textSize="@dimen/textsize_14" />
+
+        <RelativeLayout
+            android:id="@+id/carddetailpack_subscribe_text_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:background="@drawable/subscribe_button_bg"
+            android:padding="@dimen/margin_gap_6">
+
+            <TextView
+                android:id="@+id/carddetailpack_subscribe_text"
+                android:layout_width="@dimen/margin_gap_92"
+                android:layout_height="@dimen/margin_gap_32"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Subscribe"
+                android:textAppearance="@style/TextAppearance.FontMedium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_14" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/carddetailpack_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title_container"
+        android:layout_marginTop="12dp"
+        android:lineSpacingExtra="4dp"
+        android:text="No Info"
+        android:textAppearance="@style/TextAppearance.FontLight"
+        android:textColor="@color/color_grey_444444"
+        android:textSize="@dimen/textsize_12" />
+
+    <TextView
+        android:id="@+id/carddetailpack_offer_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/carddetailpack_description"
+        android:layout_marginTop="12dp"
+        android:lineSpacingExtra="4dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.FontLight"
+        android:textColor="@color/color_e60000"
+        android:textSize="@dimen/textsize_13" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_gap_1"
+        android:layout_below="@+id/carddetailpack_offer_description"
+        android:layout_marginTop="@dimen/margin_gap_8"
+        android:background="@color/color_dadada"
+        android:id="@+id/divider_view"/>
+</RelativeLayout>

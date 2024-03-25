@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    app:class="com.myplex.myplex.ui.activities.LoginActivity"
+    android:layout_height="match_parent"
+    app:ignore="NamespaceTypo">
+    <com.yqritc.scalablevideoview.ScalableVideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        custom:scalableType="centerCrop"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/splash_icon"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"/>
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/errorWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <ProgressBar
+        android:id="@+id/card_loading_progres_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_gap_48"
+        android:gravity="bottom"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/progressbar_color"
+        android:indeterminateTintMode="src_atop" />
+    <RelativeLayout
+        android:id="@+id/pager_ottapps_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/image_blur_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <com.myplex.myplex.animationviewpager.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            custom:auto_cycle="true"
+            custom:indicator_visibility="visible"
+            custom:pager_animation="Stack"
+            custom:pager_animation_span="1100" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/retry_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:onClick="onClicks"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageview_error_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/reload_image" />
+
+        <com.myplex.myplex.utils.FontRegularTypeface
+            android:id="@+id/textview_error_retry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageview_error_retry"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/msg_tap_to_retry"
+            android:textAppearance="@style/TextAppearance.FontRegular"
+            android:textColor="@color/download_item_subtitle_text_color"
+            android:textSize="@dimen/textsize_12"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

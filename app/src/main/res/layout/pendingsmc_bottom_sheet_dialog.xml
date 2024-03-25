@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/register_bottom_sheet_dialog_background">
+
+    <LinearLayout
+        android:id="@+id/navigation_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.myplex.myplex.utils.FontBoldTypeFace
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Sample Text"
+            android:textColor="@color/color_399c1e"
+            android:textSize="@dimen/textsize_26"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/back_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nav_drawer_close" />
+    </LinearLayout>
+
+    <com.myplex.myplex.utils.FontBoldTypeFace
+        android:id="@+id/hello_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigation_details"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:text="Hello!!"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_20" />
+
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:id="@+id/second_time_register_suggestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hello_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/margin_35"
+        android:layout_marginTop="@dimen/_20sp"
+        android:layout_marginRight="@dimen/margin_35"
+        android:text="@string/pending_smc_numbers_in_settingspage"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_13" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/second_smc_register_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_buttons_height"
+        android:layout_below="@id/second_time_register_suggestion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/margin_35"
+        android:layout_marginTop="@dimen/_40sp"
+        android:layout_marginRight="@dimen/margin_35"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:background="@drawable/new_user_buttons_background"
+        android:fontFamily="@font/amazon_ember_cd_bold"
+        android:paddingLeft="@dimen/margin_gap_8"
+        android:paddingRight="@dimen/margin_gap_8"
+        android:text="@string/move_to_register_button"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_14"
+        android:textStyle="bold" />
+</RelativeLayout>

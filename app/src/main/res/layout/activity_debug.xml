@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+<TextView
+    android:id="@+id/dateTxt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text=""
+    />
+    <LinearLayout
+        android:id="@+id/status_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="API calls testing"
+            android:textSize="24dp"/>
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/status_text_layout"
+                android:layout_margin="4dp"
+                android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/launch_hooq_sdk_player"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="launch hooq sdk player"
+                android:textSize="16dp"/>
+
+            <Button
+                android:id="@+id/device_registration"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="dev registration"
+                android:textSize="16dp"/>
+
+            <Button
+                android:id="@+id/sign_up"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="sign up"
+                android:textSize="16dp"/>
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="login"
+                android:textSize="16dp"/>
+
+            <Button
+                android:id="@+id/content_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="content list"
+                android:textSize="16dp"/>
+
+            <Button
+                android:id="@+id/channel_epg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="channel epg"
+                android:textSize="16dp"/>
+
+            <Button
+                android:id="@+id/epg_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="epg list"
+                android:textSize="16dp"/>
+
+            <Button
+                android:id="@+id/medi_links"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="media links"
+                android:textSize="16dp"/>
+
+            <Button
+                android:id="@+id/card_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="card details"
+                android:textSize="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

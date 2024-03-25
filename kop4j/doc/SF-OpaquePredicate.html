@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Opaque Predicate - KOP for Java</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="js/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Opaque Predicate";
+    var mkdocs_page_input_path = "SF-OpaquePredicate.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="js/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> KOP for Java </a> <img src="./images/IconeKOP4JWhite2.png"> </a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Concepts.html">General concept</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_java.html">Java applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_android.html">Android applications</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Commands.html">Commands</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="CodeShrinking.html">Code shrinking and optimization</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security features</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="SF-00-FeatureList.html">Feature list</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Renaming.html">Renaming</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Flattening.html">Flattening</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-StringMasking.html">String Masking</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="SF-OpaquePredicate.html">Opaque Predicate</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general-description">General description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#security-note">Security note</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#protection-configuration">Protection Configuration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example">example:​​​​​​​</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CallMasking.html">Call masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckCertificate.html">Certificate Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckInstallers.html">Installers Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckManifest.html">Manifest Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckShelfLife.html">Shelf Life Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexIntegrity.html">DEX integrity Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexSignature.html">DEX signature Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckContext.html">Execution Context Checks</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Odca.html">On Demand Code Activation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-DelayedReaction.html">Delayed Reaction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-InAppMonitoring.html">In-app Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-AnNaNaS.html">Android Nagra Native Secure Lib</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Protection-file.html">How to design the protection file</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Limitations.html">Limitations</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="compatibility.html">Compatibility</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="99.99-license.html">License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">KOP for Java</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Security features &raquo;</li>
+      <li>Opaque Predicate</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="opaque-predicate">Opaque Predicate</h1>
+<h2 id="general-description">General description</h2>
+<p>The opaque predicate is a technique used to mask constant value initialization. <br />
+The constant value is no more initialized with a constant but with a computation based on transient variable that should have the expected result.   </p>
+<p>A static analysis cannot determine the constant value.</p>
+<p>The Opaque predicate computation will be based on transient data table 
+</br></p>
+<p><img alt="image1" src="images/Opaque%20Predicate.png" style="width:800px" /></p>
+<p>Those transient table are generated by different ways:</p>
+<ul>
+<li><strong>Bootstrap</strong> :  These tables are generated automatically at the boot strap in the classes extending an Activity. The user 
+can also inject others tables with the option -kop-opacity-source. </li>
+<li><strong>Certificate</strong> :  This table is computed at the <a href="SF-CheckCertificate.html"><strong>Certificate Checks</strong></a> and generates a table based on the Certificate.</li>
+<li><strong>Installer</strong> :  This table is computed at the <a href="SF-CheckInstallers.html"><strong>Installer Checks</strong></a> and generates a table based on the application installer.</li>
+<li><strong>Manifest</strong> :  This table is computed at the <a href="SF-CheckManifest.html"><strong>Manifest Checks</strong></a> and generates a table based on the Manifest.</li>
+<li><strong>Shelf Life</strong> :  This table is computed at the <a href="SF-CheckShelfLife.html"><strong>Shelf Life Checks</strong></a> and generates a table based on the expiration date compared to the current date.</li>
+<li><strong>Execution context</strong> :  This table is computed at the <a href="SF-CheckContext.html"><strong>Execution context</strong></a> and generates a table based on the root, Frida, Xposed status. </li>
+<li><strong>DEX Integrity</strong> :  This table is computed at the <a href="SF-CheckDexIntegrity.html"><strong>DEX Integrity Checks</strong></a> and generates a table based on the integrity of the DEX files.  </li>
+<li><strong>DEX Signature</strong> :  This table is computed at the <a href="SF-CheckDexSignature.html"><strong>DEX Signature Checks</strong></a> and generates a table based on the signature of the DEX files.  </li>
+</ul>
+<p>Then Bootstrap table is computed at the start-up of the app and the other are computed when the related checks are called, then at the runtime. <br />
+We can easily understand that if an opaque predicate is used when the related transient data table is not yet initialized, then the result of the computation will be wrong. <br />
+This is why the tables based on environment check aren't applied by default. They must be explicitly included in the opaque predicate source to make the code dependent of the checks results. </p>
+<h2 id="security-note">Security note</h2>
+<div class="admonition danger">
+<p class="admonition-title">Security</p>
+<p>Opaque predicate is required to fully obfuscate the control flow of the flattened code. <br />
+This protection is efficient against the static analysis but not against the dynamic analysis.  </p>
+</div>
+<h2 id="protection-configuration">Protection Configuration</h2>
+<p><strong>By default the Bootstrap tables are inserted in all the classes extending an Activity.<br />
+It is recommended to insert Bootstrap tables in some others classes in order to improve the protection.</strong></p>
+<p>To insert additional Bootstrap tables : <code>-kop-opacify-source,enable &lt; class designator&gt;</code></p>
+<p><strong>By default the opaque predicates are applied on all the variable initializations of the switch case of the flattening.</strong></p>
+<p>It is possible to apply this protection on any other variable initialization with a constant: <code>-kop-opacify-variable-init &lt; method and constant designator&gt;</code></p>
+<p>To include a part of code from the opaque predicate computation based on a specific type :</p>
+<ul>
+<li><strong>bootstrap</strong> : <code>-kop-opacity-control,include:bootstrap &lt; code area designator&gt;</code></li>
+<li><strong>Certificate</strong> : <code>-kop-opacity-control,include:certificate &lt; code area designator&gt;</code></li>
+<li><strong>Installer</strong> : <code>-kop-opacity-control,include:installer &lt; code area designator&gt;</code></li>
+<li><strong>Manifest</strong> :  <code>-kop-opacity-control,include:manifest &lt; code area designator&gt;</code></li>
+<li><strong>Shelf Life</strong> :  <code>-kop-opacity-control,include:shelflife &lt; code area designator&gt;</code></li>
+<li><strong>Execution context</strong> :  <code>-kop-opacity-control,include:execution-context &lt; code area designator&gt;</code></li>
+<li><strong>DEX Integrity</strong> :  <code>-kop-opacity-control,include:dex-integrity &lt; code area designator&gt;</code></li>
+</ul>
+<p>In the case of shelflife, the opaque predicate source will be a combination of all multiple expiration date check results. </p>
+<p>To exclude a part of code from the opaque predicate computation based on a specific type :</p>
+<ul>
+<li><strong>bootstrap</strong> : <code>-kop-opacity-control,exclude:bootstrap &lt; code area designator&gt;</code></li>
+<li><strong>Certificate</strong> : <code>-kop-opacity-control,exclude:certificate &lt; code area designator&gt;</code></li>
+<li><strong>Installe</strong> :  <code>-kop-opacity-control,exclude:installer &lt; code area designator&gt;</code></li>
+<li><strong>Manifest</strong> :  <code>-kop-opacity-control,exclude:manifest &lt; code area designator&gt;</code></li>
+<li><strong>Shelf Life</strong> :  <code>-kop-opacity-control,exclude:shelflife &lt; code area designator&gt;</code>  </li>
+<li><strong>Execution context</strong> :  <code>-kop-opacity-control,exclude:execution-context &lt; code area designator&gt;</code></li>
+<li><strong>DEX Integrity</strong> :  <code>-kop-opacity-control,exclude:dex-integrity &lt; code area designator&gt;</code></li>
+</ul>
+<p>To control the complexity of the generated opaque predicate: </p>
+<ul>
+<li><strong>default</strong> : Not indicating a complexity is equivalent to <code>-kop-opacity-control,complexity:2 &lt; code area designator&gt;</code></li>
+<li><strong>less complexity</strong> : <code>-kop-opacity-control,complexity:1 &lt; code area designator&gt;</code></li>
+<li><strong>more complexity</strong> : <code>-kop-opacity-control,complexity:7 &lt; code area designator&gt;</code></li>
+</ul>
+<h3 id="example">example:​​​​​​​</h3>
+<p><code>-kop-opacify-variable-init public class com.nagra.kop.demo.ui.login.LoginActivity {private void updateUiWithUser(...) { int k; }; }</code></p>
+<p>Will apply opaque predicate on the variable <code>k</code></p>
+<p><code>-kop-opacity-control,exclude:bootstrap public class com.nagra.kop.demo.ui.login.LoginActivity { private void updateUiWithUser(...); }</code></p>
+<p>Prevent <code>k</code> in LoginActivity.updateUiWithUser from being opacified with bootstrap arrays</p>
+<p><code>-kop-opacity-control,exclude:certificate,include:manifest public class com.nagra.kop.demo.ui.login.LoginActivity {private int opposite(...) {int k;};}</code></p>
+<p>The variable <code>k</code> will be opacified with arrays from the manifest check and NOT from arrays computed with the certificate check</p>
+<p><code>-kop-opacity-source,enable class com.nagra.**</code></p>
+<p>Insert additional Bootstrap tables in <code>com.nagra.**</code> classes</p>
+              
+            </div>
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="SF-StringMasking.html" class="btn btn-neutral float-left" title="String Masking"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="SF-CallMasking.html" class="btn btn-neutral float-right" title="Call masking">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="SF-StringMasking.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="SF-CallMasking.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

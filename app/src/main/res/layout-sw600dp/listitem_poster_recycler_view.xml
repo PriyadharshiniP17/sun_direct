@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_gap_8">
+
+    <com.myplex.myplex.ui.views.posterview.PosterRecyclerView
+        android:id="@+id/poster_rv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_320"
+        app:background_step="4"
+        app:end_background_alpha="0.7"
+        app:end_background_offset="-12dp"
+        app:start_offset="@dimen/margin_gap_188" />
+</RelativeLayout>
+
+    <!--
+        <PosterRecyclerView
+            android:id="@+id/poster_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/packs_description_div"
+            android:layout_marginTop="@dimen/margin_gap_4"
+            app:background_step="4"
+            app:end_background_alpha="0.5"
+            app:end_background_offset="-50dp"
+            app:image="@drawable/bg_img_1_xxhdpi"
+            app:start_background_offset="15dp"
+            app:start_offset="56dp" />
+            app:background_step="1"
+        app:end_background_alpha="0.5"
+        app:end_background_offset="-4dp"
+        app:image="@drawable/bg_img_1_xxhdpi"
+        app:start_background_offset="16dp"
+        app:start_offset="56dp"
+    -->

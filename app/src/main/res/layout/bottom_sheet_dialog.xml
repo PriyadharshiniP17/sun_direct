@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dimen_10_dp"
+    style="@style/NoBackgroundDialogTheme"
+    android:backgroundTint="@color/catchup_dialog_background"
+    android:background="@drawable/bottom_sheet_language_bg_selector">
+
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_9sdp"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:src="@drawable/close_icon">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/left_arrow"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:background="@drawable/icon_previous_new"
+            android:layout_gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginEnd="@dimen/_5sp"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/right_arrow"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:background="@drawable/icon_next_new"
+            android:layout_gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/left_arrow"
+            android:layout_toLeftOf="@id/right_arrow"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_catchup_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sp"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/_5sp"
+                android:layout_marginEnd="@dimen/_10sp"
+                android:visibility="gone"
+                android:layout_gravity="bottom"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

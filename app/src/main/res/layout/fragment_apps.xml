@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_item_bkg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/previewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/movies_slider_height"
+        android:background="@drawable/tv_guide_thumbnail_default"
+        android:orientation="horizontal"
+        android:visibility="gone"></LinearLayout>
+
+    <autoscroll.AutoScrollViewPager
+        android:id="@+id/pager_ottapps"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/movies_slider_height" />
+
+    <LinearLayout
+        android:id="@+id/offer_description_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/list_item_bkg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/slider_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxEms="100"
+            android:layout_gravity="center_vertical"
+            android:padding="4dp"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.FontRegular"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/textsize_14" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView_movie_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:divider="@color/white_50"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/listitem_selector_bg">
+
+    </ListView>
+</LinearLayout>

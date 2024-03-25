@@ -1,0 +1,54 @@
+<resources>
+
+    <!--dev registration request params-->
+    <string name="osname">Android</string>
+    <string name="profile">work</string>
+    <string name="mode">APP_CLENT</string>
+    <string name="hello_world">hello_world</string>
+    <string name="clientSecrete">sundirectAndroid</string>
+
+    <!--   ExoPlayer -->
+
+
+    <!--Alert messages-->
+
+    <!-- Transaction related errors-->
+    <string name="transaction_server_error">Our server thinks this is a duplicate transaction.if
+        you think not, select ‘continue’, otherwise select ‘cancel’ and retry your transaction again in 60 seconds.</string>
+    <string name="retry">Continue</string>
+    <string name="cancel">Cancel</string>
+    <string name="transaction_cancel_msg">Do you really want to cancel the transaction ?</string>
+    <string name="transaction_cancel_yes">Yes</string>
+    <string name="transaction_cancel_no">No</string>
+    <string name="transaction_inprogress_message">Your activation is in-progress , Please check after sometime</string>
+
+    <string name="feedbackokbutton">@android:string/ok</string>
+    <string name="feedbacksubmitbtn">Submit</string>
+    <string name="subscriptionconfirmationdialogtext">Do you want to buy</string>
+    <string name="subscription_drm_not_supported_alert">Looks like your device may not be able to play drm enabled movies, however you can watch this movie at http://www.myplex.com, do you still want to proceed?</string>
+    <string name="subscription_msisdn_failed">Unable to connect , Mobile data connection is
+        required for  operator payment.</string>
+
+
+    <string name="subscription_operator_data_disable">Please Turn off Wi-Fi and use mobile data connection to make the payment for subscription.</string>
+    <string name="alert_dataconnection_cancel">Cancel</string>
+    <string name="alert_dataconnection_viewsetttings">Enable now</string>
+    <string name="play_button_retry">Retry now</string>
+
+    <string name="network_error">Please check your network connection</string>
+    <string name="random_string_txt">afdinahPtyu %1$s sgwewhtnaKERG </string>
+    <string name="loading_txt">Loading...</string>
+    <string name="msg_tap_to_retry">Tap to Retry</string>
+    <string name="no_content">No content available</string>
+    <!--
+    <string name="key_1">w3Yp</string>
+-->
+    <string name="skip_text">Skip</string>
+    <string name="error_fetch_videos">Sorry! We are unable to fetch the Videos right now. Please try again later.</string>
+    <string name="canot_connect_server">We’re unable to connect to the Remote server right now. Please try again a little later.</string>
+    <string name="failed_to_process_request">We could not process the request. Please make sure the sundirect number, %1$s is your primary number and try again.</string>
+
+    <string name="error_fetch_filter_data">No content available for applied filters. Please try with other filters.</string>
+    <string name="manual_login_msg">Auto login failed. Please enter your number manually to continue.</string>
+
+</resources>

@@ -1,0 +1,12 @@
+include ':pageindicatorview'
+include ':myplex-player-sdk-release'
+include ':myplex-player-config-google-release'
+include ':paasanalytics'
+include ':nativetemplates'
+include ':app'
+include ':myplex-api-sdk'
+include ':myplex-analytics'
+include ':myplex-branch-io-analytics'
+include ':thirdparty:draggablepanel'
+
+include ':carouselrecyclerviewNew'

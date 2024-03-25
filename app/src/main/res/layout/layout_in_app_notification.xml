@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <com.google.firebase.inappmessaging.display.internal.layout.FiamFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:clipToPadding="false"
+    android:focusable="true"
+    android:padding="24dp">
+
+
+    <FrameLayout android:id="@+id/image_content_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/image_view_app"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        android:focusable="true"
+        tools:visibility="visible"/>
+
+</FrameLayout>
+
+    <Button
+        android:id="@+id/collapse_button"
+        style="@style/FiamUI.CollapseButton"
+        android:layout_gravity="top|end"
+        android:foreground="@drawable/close_icon"/>
+
+</com.google.firebase.inappmessaging.display.internal.layout.FiamFrameLayout>

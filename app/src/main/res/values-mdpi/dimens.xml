@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tabs_item_padding">22dp</dimen>
+    <dimen name="profile_pic_height">70dp</dimen>
+    <dimen name="pagestrip_height">60dp</dimen>
+    <dimen name="home_page_popup_height">-13dp</dimen>
+
+</resources>

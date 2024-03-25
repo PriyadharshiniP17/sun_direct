@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "920956840296",
+    "project_id": "sun-direct-go",
+    "storage_bucket": "sun-direct-go.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920956840296:android:e920e0244d8d84af448edd",
+        "android_client_info": {
+          "package_name": "com.sundirect.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920956840296-91561q3hvpb37tiqtpis6jtfvhafgg4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD92RN3BSRdDUp512uYYyYgu6IK2R-YLnU"
+        },
+        {
+          "current_key": "AIzaSyB4oxg5p2h4Dsac8LHpFuWAn3t_ST9Bxc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920956840296-91561q3hvpb37tiqtpis6jtfvhafgg4t.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "920956840296-2ng4si3td58mf84kq9ct1dhi2docnga0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ottapps.sundirect",
+                "app_store_id": "6443402057"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,143 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+
+    <!-- margins -->
+    <dimen name="margin_gap_0">0dp</dimen>
+    <dimen name="margin_gap_1">1dp</dimen>
+    <dimen name="margin_gap_1_95">1.95dp</dimen>
+    <dimen name="margin_gap_2">2dp</dimen>
+    <dimen name="margin_gap_2_5">2.5dp</dimen>
+    <dimen name="margin_gap_3">3dp</dimen>
+    <dimen name="margin_gap_4">4dp</dimen>
+
+
+    <dimen name="margin_gap_5">5dp</dimen>
+    <dimen name="margin_gap_6">6dp</dimen>
+    <dimen name="margin_gap_8" tools:ignore="MissingDefaultResource">8dp</dimen>
+    <dimen name="margin_gap_9">8dp</dimen>
+    <dimen name="margin_gap_10">10dp</dimen>
+
+    <dimen name="margin_gap_12">12dp</dimen>
+    <dimen name="margin_gap_14">14dp</dimen>
+    <dimen name="margin_gap_15">15dp</dimen>
+    <dimen name="margin_gap_16">16dp</dimen>
+    <dimen name="margin_gap_18">18dp</dimen>
+    <dimen name="margin_gap_20">20dp</dimen>
+    <dimen name="margin_gap_25">25dp</dimen>
+    <dimen name="margin_gap_21">21dp</dimen>
+    <dimen name="margin_gap_22">22dp</dimen>
+    <dimen name="margin_gap_24">24dp</dimen>
+    <dimen name="margin_gap_28">28dp</dimen>
+    <dimen name="margin_gap_32">32dp</dimen>
+    <dimen name="margin_gap_30">30dp</dimen>
+    <dimen name="margin_gap_35">35dp</dimen>
+    <dimen name="margin_gap_33">33dp</dimen>
+    <dimen name="margin_gap_36">36dp</dimen>
+    <dimen name="margin_gap_42">42dp</dimen>
+    <dimen name="margin_gap_48">48dp</dimen>
+    <dimen name="margin_gap_54">54dp</dimen>
+    <dimen name="margin_gap_64">@dimen/bottom_tab_height</dimen>
+    <dimen name="bottom_tab_height">64dp</dimen>
+    <dimen name="margin_gap_56">56dp</dimen>
+    <dimen name="margin_gap_65">65dp</dimen>
+    <dimen name="margin_gap_86">86dp</dimen>
+    <dimen name="margin_gap_100">100dp</dimen>
+    <dimen name="margin_gap_110">110dp</dimen>
+    <dimen name="margin_gap_115">115dp</dimen>
+    <dimen name="margin_gap_120">120dp</dimen>
+    <dimen name="margin_gap_200">200dp</dimen>
+    <dimen name="margin_gap_240">240dp</dimen>
+    <dimen name="margin_gap_250">250dp</dimen>
+    <dimen name="margin_gap_275">270dp</dimen>
+    <dimen name="margin_gap_300">300dp</dimen>
+    <dimen name="margin_gap_278">278dp</dimen>
+    <dimen name="margin_gap_439">439dp</dimen>
+
+
+    <!-- textSize -->
+
+    <dimen name="textsize_6">6sp</dimen>
+    <dimen name="textsize_8">8sp</dimen>
+    <dimen name="textsize_9">9sp</dimen>
+    <dimen name="textsize_10">10sp</dimen>
+    <dimen name="textsize_11">11sp</dimen>
+    <dimen name="textsize_12">12sp</dimen>
+    <dimen name="textsize_13">13sp</dimen>
+    <dimen name="textsize_14">14sp</dimen>
+    <dimen name="textsize_15">15sp</dimen>
+    <dimen name="textsize_16">16sp</dimen>
+    <dimen name="textsize_17">17sp</dimen>
+    <dimen name="textsize_18">18sp</dimen>
+    <dimen name="textsize_20">20sp</dimen>
+    <dimen name="textsize_22">22sp</dimen>
+    <dimen name="textsize_23">23sp</dimen>
+    <dimen name="textsize_24">24sp</dimen>
+    <dimen name="textsize_26">26sp</dimen>
+    <dimen name="textsize_30">30sp</dimen>
+    <dimen name="margin_gap_40">40dp</dimen>
+    <dimen name="margin_gap_90">90dp</dimen>
+    <dimen name="margin_gap_92">92dp</dimen>
+    <dimen name="margin_gap_95">95dp</dimen>
+    <dimen name="margin_gap_96">96dp</dimen>
+    <dimen name="margin_gap_125">115dp</dimen>
+    <dimen name="margin_gap_108">108dp</dimen>
+    <dimen name="margin_gap_144">144dp</dimen>
+    <dimen name="margin_gap_150">150dp</dimen>
+    <dimen name="margin_gap_128">128dp</dimen>
+    <dimen name="margin_gap_192">192dp</dimen>
+    <dimen name="margin_gap_216">216dp</dimen>
+    <dimen name="margin_gap_210">210dp</dimen>
+    <dimen name="margin_gap_164">164dp</dimen>
+    <dimen name="margin_gap_160">160dp</dimen>
+    <dimen name="margin_gap_168">168dp</dimen>
+    <dimen name="margin_gap_176">176dp</dimen>
+
+    <dimen name="title_right_spacing">47dp</dimen>
+
+
+    <dimen name="action_bar_height">56dp</dimen>
+    <dimen name="epg_counter_height">56dp</dimen>
+    <dimen name="pagestrip_height">50dp</dimen>
+    <dimen name="list_item_height">95dp</dimen>
+    <dimen name="item_channel_title_size">16sp</dimen>
+    <dimen name="item_status_title_size">14sp</dimen>
+    <dimen name="tv_detail_sub_header_height">40dp</dimen>
+    <dimen name="tv_detail_list_item_height">92dp</dimen>
+    <dimen name="tv_detail_list_item_width">123dp</dimen>
+    <dimen name="tv_detail_list_divider_height">4dp</dimen>
+
+
+    <dimen name="title_indicator_footer_indicator_height">1dp</dimen>
+    <dimen name="tabs_item_padding">22dp</dimen>
+
+    <dimen name="movies_slider_height">202dp</dimen>
+    <dimen name="movies_slider_image_height">202dp</dimen>
+
+
+    <item name="x_scale_factor" format="float" type="dimen">80</item>
+    <item name="y_scale_factor" format="float" type="dimen">2</item>
+    <dimen name="top_fragment_margin_bottom">@dimen/pagestrip_height</dimen>
+    <bool name="isTablet">false</bool>
+
+    <dimen name="title_text_size">12sp</dimen>
+    <dimen name="sub_title_text_size">12sp</dimen>
+
+    <dimen name="carousel_title_text_size">16sp</dimen>
+    <dimen name="tab_height">40sp</dimen>
+    <dimen name="carousel_gap">20dp</dimen>
+    <dimen name="title_image_gap">10dp</dimen>
+    <dimen name="thumbnail_gap">@dimen/margin_gap_4</dimen>
+    <dimen name="viewpager_margin">@dimen/margin_gap_12</dimen>
+    <dimen name="genre_item_height">100.5px</dimen>
+    <dimen name="channel_number">10sp</dimen>
+    <dimen name="design_navigation_icon_size" tools:ignore="PrivateResource">36dp</dimen>
+    <dimen name="thumbnail_gap_medium_horizontal_item">@dimen/margin_gap_3</dimen>
+    <dimen name="search_curve_radius">30dp</dimen>
+    <dimen name="promo_width_portrait">405.00px</dimen>
+    <dimen name="promo_height_portrait">720.00px</dimen>
+    <dimen name="promo_width_land">360.00px</dimen>
+    <dimen name="promo_height_land">640.00px</dimen>
+    <dimen name="space_between_details_dialog_portrait">70.00px</dimen>
+    <dimen name="space_between_details_dialog_land">120.00px</dimen>
+</resources>

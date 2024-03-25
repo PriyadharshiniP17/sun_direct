@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bkg"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_bkg"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:id="@+id/browse"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/recyclerview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_gap_20"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.15"
+                android:text="Browse"
+                android:textAlignment="center"
+                android:textColor="@color/white_70"
+                android:textSize="@dimen/textsize_14" />
+
+            <ImageView
+                android:layout_width="@dimen/_8sp"
+                android:layout_height="@dimen/_8sp"
+                android:layout_marginTop="@dimen/margin_gap_2"
+                android:src="@drawable/ic_down" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tabs_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sp"
+            android:layout_below="@+id/browse"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.myplex.myplex.utils.FontBoldTypeFace
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CATEGORIES"
+                android:textAlignment="center"
+                android:letterSpacing="0.4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_20"
+                />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/nested_carousels_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sp"
+                android:layout_marginTop="@dimen/_25sp"
+                android:background="@color/app_bkg"
+                app:tabGravity="fill"
+                android:layout_marginLeft="@dimen/_10sdp"
+                app:tabIndicatorColor="@color/yellow"
+                app:tabMaxWidth="@dimen/_70sdp"
+                app:tabPaddingStart="0dp"
+                app:tabPaddingEnd="0dp"
+                app:tabMode="fixed"
+                app:tabIndicatorHeight="@dimen/margin_gap_0"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextAppearance="@style/MyDownloadTabs"
+                app:tabTextColor="@color/subtitle_text_color" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/nested_carousels_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_gap_70"
+               />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/retry_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageview_error_retry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/reload_image" />
+
+            <TextView
+                android:id="@+id/textview_error_retry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageview_error_retry"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/msg_tap_to_retry"
+                android:textAppearance="@style/TextAppearance.FontRegular"
+                android:textColor="@color/download_item_subtitle_text_color"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/loading_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/progressbar_color"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="gone" />
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbar_bg_colour"
+            android:contentInsetStart="10dp"
+            android:contentInsetLeft="10dp"
+            android:contentInsetRight="10dp"
+            android:visibility="gone"
+            app:contentInsetLeft="10dp"
+            app:contentInsetRight="10dp"
+            app:contentInsetStart="10dp">
+
+            <include layout="@layout/custom_toolbar_carousel_info" />
+        </androidx.appcompat.widget.Toolbar>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

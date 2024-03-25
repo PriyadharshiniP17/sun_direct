@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/apply_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/apply_bkg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="Apply"
+                android:textAppearance="@style/TextAppearance.FontRegular"
+                android:textColor="@color/red_highlight_color"
+                android:textSize="16sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+<RelativeLayout
+    android:layout_below="@id/apply_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/packs_title_div"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_2"
+        android:background="@color/movies_title_section_border"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/carddetail_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_32"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/list_item_bkg"
+        >
+
+        <TextView
+            android:id="@+id/carddetail_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_gap_8"
+            android:text="Title"
+            android:textAppearance="@style/TextAppearance.FontBold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_16" />
+
+        <ImageView
+            android:id="@+id/thumbnail_filter_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/margin_gap_24"
+            android:background="@drawable/ripple_bg"
+            android:layout_toLeftOf="@+id/carddetail_minusbar"
+            android:src="@drawable/filter_clear_btn"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/carddetail_minusbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_gap_16"
+            android:background="@drawable/ripple_bg"
+            android:src="@drawable/filter_expand_icon"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/packs_description_div"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_gap_2"
+        android:layout_below="@+id/carddetail_title_layout"
+        android:background="@color/movies_title_section_border" />
+</RelativeLayout>
+</RelativeLayout>

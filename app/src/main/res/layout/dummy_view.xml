@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_item_episode"
+    android:background="@color/live_tv_element_background"
+    android:layout_margin="@dimen/margin_gap_8">
+
+</RelativeLayout>

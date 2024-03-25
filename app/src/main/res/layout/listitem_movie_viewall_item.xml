@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_gap_64"
+    android:id="@+id/rl_parent"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="@dimen/_96sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="@dimen/margin_gap_9"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardUseCompatPadding="false">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageview_thumbnail_voditem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/movie_thumbnail_placeholder"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize6Percent" />
+
+            <com.myplex.myplex.utils.FontRegularTypeface
+                android:id="@+id/channel_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageview_thumbnail_voditem"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_5sp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="Sun TV"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_10"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_partener_logo_right"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignEnd="@+id/card_view"
+        android:layout_alignParentTop="true"
+        android:layout_margin="6dp"
+        />
+</RelativeLayout>

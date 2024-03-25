@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.FontBold" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">font/amazon_cd_bold.ttf</item>
+    </style>
+    <style name="TextAppearance.FontLight" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">font/amazon_ember_cd_light.ttf</item>
+    </style>
+    <style name="TextAppearance.FontMedium" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/Roboto-Medium.ttf</item>
+    </style>
+    <style name="TextAppearance.FontRegular" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">font/amazon_ember_cd_regular.ttf</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="TextAppearance.NormalFontRegular" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <!-- As per requirement changed it to robot regular here instead of changing it in entire application uses -->
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+    </style>
+
+    <style name="TextAppearance.FontHindi" parent="android:TextAppearance">
+        <item name="fontPath">fonts/hindi.ttf</item>
+    </style>
+
+
+</resources>

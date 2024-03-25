@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.myplex.myplex.utils.FontRegularTypeface
+        android:id="@+id/quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text=""
+        android:paddingLeft="@dimen/margin_gap_8"
+        android:paddingRight="@dimen/margin_gap_20"
+        android:paddingTop="@dimen/margin_gap_5"
+        android:paddingBottom="@dimen/margin_gap_5"
+        android:textSize="@dimen/textsize_13" />
+
+</RelativeLayout>

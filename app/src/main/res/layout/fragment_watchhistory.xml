@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bkg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bkg">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbar_bg_colour"
+            android:contentInsetLeft="10dp"
+            android:contentInsetRight="10dp"
+            android:contentInsetStart="10dp"
+            android:minHeight="?attr/actionBarSize"
+            app:contentInsetLeft="10dp"
+            app:contentInsetRight="10dp"
+            app:contentInsetStart="10dp"/>
+
+
+        <ProgressBar
+            android:id="@+id/card_loading_progres_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/margin_gap_48"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:indeterminateTint="@color/progressbar_color"
+            android:indeterminateTintMode="src_atop" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/gridview_movies"/>
+
+        <!--<GridView
+            android:id="@+id/gridview_movies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/margin_gap_8"
+            android:layout_marginBottom="@dimen/margin_gap_12"
+            android:layout_marginLeft="@dimen/margin_gap_12"
+            android:layout_marginRight="@dimen/margin_gap_12"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/margin_gap_10"
+            android:layout_below="@+id/toolbar"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/margin_gap_10"
+            android:visibility="visible" />
+-->
+        <ImageView
+            android:id="@+id/coming_soon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_gap_16"
+            android:src="@drawable/watchlist_empty_img"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/grid_footer_text_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_gap_4"
+            android:text="@string/loading_txt"
+            android:textAppearance="@style/TextAppearance.FontLight"
+            android:textColor="@color/white_100"
+            android:textSize="@dimen/textsize_14"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

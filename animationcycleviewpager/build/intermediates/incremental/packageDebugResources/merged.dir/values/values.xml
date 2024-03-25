@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="dimension" name="icvp_center_page_scale_offset"/>
+    <attr format="reference" name="icvp_interpolator"/>
+    <attr format="float" name="icvp_max_page_scale"/>
+    <attr format="boolean" name="icvp_medium_scaled"/>
+    <attr format="float" name="icvp_min_page_scale"/>
+    <attr format="dimension" name="icvp_min_page_scale_offset"/>
+    <attr format="integer" name="icvp_scroll_duration"/>
+    <string name="app_name">AnimationCycleViewPager</string>
+    <declare-styleable name="HorizontalInfiniteCycleViewPager">
+        <attr name="icvp_min_page_scale_offset"/>
+        <attr name="icvp_center_page_scale_offset"/>
+        <attr name="icvp_min_page_scale"/>
+        <attr name="icvp_max_page_scale"/>
+        <attr name="icvp_medium_scaled"/>
+        <attr name="icvp_scroll_duration"/>
+        <attr name="icvp_interpolator"/>
+    </declare-styleable>
+    <declare-styleable name="VerticalInfiniteCycleViewPager">
+        <attr name="icvp_min_page_scale_offset"/>
+        <attr name="icvp_center_page_scale_offset"/>
+        <attr name="icvp_min_page_scale"/>
+        <attr name="icvp_max_page_scale"/>
+        <attr name="icvp_medium_scaled"/>
+        <attr name="icvp_scroll_duration"/>
+        <attr name="icvp_interpolator"/>
+    </declare-styleable>
+</resources>

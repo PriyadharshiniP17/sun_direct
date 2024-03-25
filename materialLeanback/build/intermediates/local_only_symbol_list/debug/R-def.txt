@@ -1,0 +1,36 @@
+R_DEF: Internal format may change without notice
+local
+attr? mlb_animateCards
+attr? mlb_background
+attr? mlb_backgroundOverlay
+attr? mlb_backgroundOverlayColor
+attr? mlb_cardElevationEnlarged
+attr? mlb_cardElevationReduced
+attr? mlb_lineSpacing
+attr? mlb_overlapCards
+attr? mlb_paddingBottom
+attr? mlb_paddingLeft
+attr? mlb_paddingRight
+attr? mlb_paddingTop
+attr? mlb_titleColor
+attr? mlb_titleSize
+dimen mlb_lineSpacingBottom
+dimen mlb_lineSpacingTop
+dimen mlb_placeholder_horizontal
+dimen mlb_placeholder_horizontal_end
+dimen mlb_placeholder_vertical
+drawable shadow_rect
+id cardView
+id mlb_imageBackground
+id mlb_imageBackgroundOverlay
+id mlb_recyclerView
+id row_layout
+id row_recyclerView
+id row_title
+layout mlb_cell
+layout mlb_layout
+layout mlb_placeholder
+layout mlb_placeholder_end
+layout mlb_placeholder_vertical
+layout mlb_row
+styleable MaterialLeanBack mlb_titleColor mlb_titleSize mlb_overlapCards mlb_animateCards mlb_cardElevationEnlarged mlb_cardElevationReduced mlb_lineSpacing mlb_paddingTop mlb_paddingBottom mlb_paddingLeft mlb_paddingRight mlb_background mlb_backgroundOverlay mlb_backgroundOverlayColor

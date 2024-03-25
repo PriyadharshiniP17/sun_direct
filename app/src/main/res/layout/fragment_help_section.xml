@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bkg"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/text_support"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        android:text="@string/ticket_support"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/static_help_text"
+        android:textSize="@dimen/textsize_14" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="@dimen/dimen_15_dp"
+        android:layout_marginRight="@dimen/dimen_15_dp"
+        android:background="@color/divider_color" />
+    <TextView
+        android:id="@+id/text_refund_policy"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        android:text="@string/refund_policy"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/static_help_text"
+        android:textSize="@dimen/textsize_14" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="@dimen/dimen_15_dp"
+        android:layout_marginRight="@dimen/dimen_15_dp"
+        android:background="@color/divider_color" />
+
+    <TextView
+        android:id="@+id/text_faq"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        android:text="@string/faq"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/static_help_text"
+        android:textSize="@dimen/textsize_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="@dimen/dimen_15_dp"
+        android:layout_marginRight="@dimen/dimen_15_dp"
+        android:background="@color/divider_color" />
+
+    <TextView
+        android:id="@+id/text_share_app"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        android:text="@string/share_app"
+        android:textColor="@color/static_help_text"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textSize="@dimen/textsize_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="@dimen/dimen_15_dp"
+        android:layout_marginRight="@dimen/dimen_15_dp"
+        android:background="@color/divider_color" />
+
+    <TextView
+        android:id="@+id/text_rate_app"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        android:text="@string/rate_app"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/static_help_text"
+        android:textSize="@dimen/textsize_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="@dimen/dimen_15_dp"
+        android:layout_marginRight="@dimen/dimen_15_dp"
+        android:background="@color/divider_color" />
+
+    <TextView
+        android:id="@+id/text_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        android:text="@string/feedback"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/static_help_text"
+        android:textSize="@dimen/textsize_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="@dimen/dimen_15_dp"
+        android:layout_marginRight="@dimen/dimen_15_dp"
+        android:background="@color/divider_color" />
+
+    <TextView
+        android:id="@+id/text_cancel_subscription"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        android:text="@string/cancel_subscription"
+        android:visibility="gone"
+        android:textAppearance="@style/TextAppearance.NormalFontRegular"
+        android:textColor="@color/static_help_text"
+        android:textSize="@dimen/textsize_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="@dimen/dimen_15_dp"
+        android:layout_marginRight="@dimen/dimen_15_dp"
+        android:visibility="gone"
+        android:background="@color/divider_color" />
+
+</LinearLayout>

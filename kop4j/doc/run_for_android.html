@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Android applications - KOP for Java</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="js/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Android applications";
+    var mkdocs_page_input_path = "run_for_android.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="js/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> KOP for Java </a> <img src="./images/IconeKOP4JWhite2.png"> </a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Concepts.html">General concept</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="run_for_java.html">Java applications</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="run_for_android.html">Android applications</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#top-level-buildgradle-file">Top-level build.gradle file</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#include-kop4j-gradle-plugin">Include KOP4J gradle plugin</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#upgrade-android-gradle-plugin">Upgrade Android Gradle plugin</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#module-level-buildgradle-file">Module-level build.gradle file</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#add-a-separate-kop4j-rule-file">Add a separate KOP4J rule file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#annanas-library">AnNaNaS library</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#force-the-path-to-kop-core-jar">Force the path to kop-core-.jar</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configure-kop4j-protections-with-rule-files">Configure KOP4J protections with rule file(s)</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Commands.html">Commands</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="CodeShrinking.html">Code shrinking and optimization</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Security features</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-00-FeatureList.html">Feature list</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Renaming.html">Renaming</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Flattening.html">Flattening</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-StringMasking.html">String Masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-OpaquePredicate.html">Opaque Predicate</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CallMasking.html">Call masking</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckCertificate.html">Certificate Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckInstallers.html">Installers Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckManifest.html">Manifest Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckShelfLife.html">Shelf Life Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexIntegrity.html">DEX integrity Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckDexSignature.html">DEX signature Check</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-CheckContext.html">Execution Context Checks</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-Odca.html">On Demand Code Activation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-DelayedReaction.html">Delayed Reaction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-InAppMonitoring.html">In-app Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SF-AnNaNaS.html">Android Nagra Native Secure Lib</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="Protection-file.html">How to design the protection file</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="Limitations.html">Limitations</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="compatibility.html">Compatibility</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="99.99-license.html">License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">KOP for Java</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>User Guide &raquo;</li>
+      <li>Android applications</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="running-kop4j-on-android-projects">Running KOP4J on Android projects</h1>
+<p>KOP4J can obfuscate Android Java projects that are built with the <code>gradle</code> toolchain.</p>
+<p>To integrate KOP4J, you will have to update or add the following files in your project :  </p>
+<ul>
+<li>Top level build.gradle file, to include KOP4J gradle plugin.</li>
+<li>Module level gradle file, to include KOP4J rules files.</li>
+<li>KOP4J rules file to configure your protections.</li>
+<li>Proguard file to add options to make only class to dex conversion.</li>
+</ul>
+<h2 id="top-level-buildgradle-file">Top-level build.gradle file</h2>
+<p>The changes has to be done in the top-level ̀<code>build.gradle</code> file.</p>
+<h3 id="include-kop4j-gradle-plugin">Include KOP4J gradle plugin</h3>
+<ul>
+<li>In the <code>repositories</code> section, add the path containing the KOP4J libraries.  </li>
+<li>In the <code>dependencies</code> section, add the KOP4J plugin to the classpath.  </li>
+</ul>
+<pre><code class="language-gradle">
+buildscript {
+
+    repositories {
+        ...
+
+        flatDir {dirs '/path/to/KOP4J/installation/directory/bin'}
+    }
+    dependencies {
+        ...
+        classpath ':kop-gradle:1.12.1'
+    }
+    ...
+
+}
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This must be the path to the <code>bin</code> subdirectory of the KOP4J installation dir. </p>
+</div>
+<h3 id="upgrade-android-gradle-plugin">Upgrade Android Gradle plugin</h3>
+<p>As shrinking and optimization of class files are based on R8, we encountered some issues with the Android Gradle plugin in version prior to 4.1.1.  </p>
+<p>Be sure to use a version superior or equal to 4.1.1, as in example below  :  </p>
+<pre><code class="language-gradle">
+buildscript {
+
+    dependencies {
+        ...
+        classpath 'com.android.tools.build:gradle:4.1.1'
+        ...
+    }
+    ...
+}
+</code></pre>
+<h2 id="module-level-buildgradle-file">Module-level build.gradle file</h2>
+<p>The changes need to be done in the app-level <code>app/build.gradle</code> file.<br />
+Open it and:</p>
+<ul>
+<li>Apply the KOP4J plugin.</li>
+<li>Set <code>minifyEnabled</code> to <code>true</code>.</li>
+<li>Reference the KOP4J  configuration files, both default for the platform, and app-specific.</li>
+</ul>
+<pre><code class="language-gradle">
+...
+apply plugin: 'com.nagra.kop'
+...
+
+android {
+    ...
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            kop.ruleFiles.put(name, [kop.getDefaultKopFile('kop-android-default.txt'), 'kop-rules.pro'])
+            ...
+        }
+        ...
+    }
+    ...
+}
+</code></pre>
+<p><img alt="image1" src="images/process.png" style="width:600px" /></p>
+<p>The proguard rules are dedicated to optimization, shrinking and print mapping.</p>
+<p>The KOP4J rules will contains the protections rules : <strong> commands starting by <code>-kop</code> </strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>apply plugin: 'com.nagra.kop' must be set at the beginning of the file.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The KOP4J options starting by <code>-kop</code> must be declared inside KOP4J rules files.</p>
+</div>
+<h3 id="add-a-separate-kop4j-rule-file">Add a separate KOP4J rule file</h3>
+<p>To add a separate KOP4J rule file, create it, and reference it in the app-level build.gradle file.</p>
+<pre><code class="language-gradle">    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            kop.ruleFiles.put(name, [kop.getDefaultKopFile('kop-android-default.txt'), 'kop-rules.pro', 'my-kop-rules.pro'])
+            ...
+        }
+    }
+</code></pre>
+<h3 id="annanas-library">AnNaNaS library</h3>
+<p><strong>Mandatory when using native hash implementation</strong> (default one).  </p>
+<p>The AnNaNaS Android ARchive (aar file), delivered in the KOP4J package, must be included when native hash strategy is used, which is the default behaviour.<br />
+You have to edit the app-level <code>app/build.gradle</code> file and add:</p>
+<pre><code class="language-gradle">kop {
+    repositories { flatDir { dirs '/path/to/KOP4J/installation/directory/aar'} }
+    dependencies.add('implementation', [name:'annanas-Release', ext:'aar']);
+}
+</code></pre>
+<p>AnNaNaS Library can be disabled. All the details are described on chapter on <a href="SF-AnNaNaS.html"><strong>AnNaNaS Library</strong></a></p>
+<h3 id="force-the-path-to-kop-core-jar">Force the path to kop-core-.jar</h3>
+<p>The path to <code>kop-core-*.jar</code> should automatically be detected by the plugin.<br />
+If this does not work, or if you need to force the use of a different, non-default KOP4J library, this can be specified by editing the app-level <code>app/build.gradle</code> file, and adding:</p>
+<pre><code class="language-gradle">kop {
+    pathToKopCoreJar = '/path/to/KOP4J/lib/kop-core-1.12.1.jar'
+}
+</code></pre>
+<h2 id="configure-kop4j-protections-with-rule-files">Configure KOP4J protections with rule file(s)</h2>
+<p>The KOP4J specific options must be declared in specific rule file(s).<br />
+Below, an example of a kop-rules.pro :</p>
+<pre><code># -- KOP4J protections --
+
+# Tag a method for certificate check
+-kop-check-certificate public class com.example.myapp.MainActivity {private int method1(...);}
+
+#  Tag a method for manifest check
+-kop-check-manifest public class com.example.myapp.SecondActivity {private int method2(...);}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="run_for_java.html" class="btn btn-neutral float-left" title="Java applications"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="Commands.html" class="btn btn-neutral float-right" title="Commands">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="run_for_java.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="Commands.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

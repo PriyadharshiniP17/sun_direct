@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/margin_gap_64"
+    android:id="@+id/main_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:animateLayoutChanges="true"
+    android:gravity="center">
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:id="@+id/tab_icon"
+        android:gravity="center_vertical"
+        android:src="@drawable/ic_navigation_settings"/>
+    <com.myplex.myplex.utils.FontBoldTypeFace
+        android:id="@+id/tabContent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:textSize="@dimen/textsize_12"
+        android:textColor="@color/white"
+        android:text="Home"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:visibility="visible"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+</LinearLayout>

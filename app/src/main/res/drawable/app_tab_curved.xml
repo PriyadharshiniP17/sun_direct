@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <padding android:right="@dimen/_5sdp"/>
+            <solid android:color="@color/tab_bg_yellow"/>
+            <corners
+                android:topLeftRadius="500dp"
+                android:bottomLeftRadius="500dp"
+                />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/black" />
+
+        </shape>
+    </item>
+</layer-list>
